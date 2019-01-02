@@ -69,6 +69,22 @@
     <servlet-name>controlador_register</servlet-name>
     <url-pattern>/register</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_home</servlet-name>
+    <servlet-class>controladores.ControladorHome</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_home</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_profile</servlet-name>
+    <servlet-class>controladores.ControladorProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_profile</servlet-name>
+    <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

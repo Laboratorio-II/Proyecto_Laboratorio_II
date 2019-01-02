@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ControladorLogin")
-public class ControladorLogin extends HttpServlet {
+@WebServlet("/ControladorProfile")
+public class ControladorProfile extends HttpServlet {
 	
 	/**
 	 * 
@@ -20,11 +20,15 @@ public class ControladorLogin extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/login.ftl").forward(request, response);		
+		
+		String user = request.getParameter("user");
+		request.setAttribute("user", user);
+		request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		doGet(request, response);
 	}
 }
