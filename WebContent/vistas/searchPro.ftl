@@ -13,7 +13,7 @@
 </head>
 
 <body class="profile-page sidebar-collapse">
-  <#include "/vistas/includes/navbar.html">
+  <#include "/vistas/includes/navbarLogon.html">
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
   <div class="main main-raised">
     <div class="profile-content">

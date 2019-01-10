@@ -25,13 +25,13 @@
 	                    <li class="nav-item">
 	                        <a class="nav-link active" href="#registerOne" data-toggle="tab">
 	                        	<i class="material-icons">dashboard</i>
-	                        	Candidato???
+	                        	Como profesional
 	                        </a>
 	                    </li>
 	                    <li class="nav-item">
 	                        <a class="nav-link" href="#updates" data-toggle="tab">
 	                        	<i class="material-icons">dashboard</i>
-	                        	Empresa???
+	                        	Como empresa
 	                        </a>
 	                    </li>
 	                </ul>
