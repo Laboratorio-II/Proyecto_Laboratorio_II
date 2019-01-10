@@ -25,7 +25,7 @@
     </init-param>
     <init-param>
       <param-name>default_encoding</param-name>
-      <param-value>ISO-8859-1</param-value>
+      <param-value>UTF-8</param-value>
     </init-param>
     <init-param>
       <param-name>number_format</param-name>
@@ -84,6 +84,14 @@
   <servlet-mapping>
     <servlet-name>controlador_profile</servlet-name>
     <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_search_pro</servlet-name>
+    <servlet-class>controladores.ControladorSearchPro</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_search_pro</servlet-name>
+    <url-pattern>/searchProfesional</url-pattern>
   </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
