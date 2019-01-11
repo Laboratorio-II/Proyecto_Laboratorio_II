@@ -93,6 +93,22 @@
     <servlet-name>controlador_search_pro</servlet-name>
     <url-pattern>/searchProfesional</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_candidateRegister</servlet-name>
+    <servlet-class>controladores.ControladorCandidateRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_candidateRegister</servlet-name>
+    <url-pattern>/candidateRegister</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>controlador_companyRegister</servlet-name>
+    <servlet-class>controladores.ControladorCompanyRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_companyRegister</servlet-name>
+    <url-pattern>/companyRegister</url-pattern>
+  </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Proyecto laboratorio II
+    Find a Job - Tu p&aacute;gina para encontrar empleos
   </title>
   <#include "/vistas/includes/links.html">
 </head>
@@ -18,8 +18,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="title">Your Story Starts With Us.</h1>
-          <h4>Every landing page needs a small description after the big bold title, that&apos;s why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
+          <h1 class="title">Tu historia empieza con nosotros</h1>
+          <h4>Cada momento que pasa en el que no te has registrado en la plataforma, es una posible oportunidad de trabajo que pierdes.</h4>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
             <h2 class="title">Informaci&oacute;n de la plataforma</h2>
-            <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5>
+            <h5 class="description">Miles de empresas y candidatos publican sus ofertas de trabajo y sus curriculos aqui. Busca empleo y recibe gratis por correo nuevas vacantes.</h5>
           </div>
         </div>
         <div class="features">
