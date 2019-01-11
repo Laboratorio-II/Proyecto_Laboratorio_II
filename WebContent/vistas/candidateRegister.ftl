@@ -39,11 +39,9 @@
 	       <!-- Nav tabs -->
         <ul class="nav justify-content-end">
           <li><ul class="nav nav-pills nav-pills-danger" id="myTab" role="tablist">
+            
             <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#datosPersonales" role="tab" aria-controls="datosPersonales" aria-selected="true">2</a>
+              <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#datosPersonales" role="tab" aria-controls="datosPersonales" aria-selected="true">2</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="messages-tab" data-toggle="tab" href="#estudiosFormales" role="tab" aria-controls="estudiosFormales" aria-selected="false">3</a>

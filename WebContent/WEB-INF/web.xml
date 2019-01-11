@@ -94,6 +94,14 @@
     <url-pattern>/searchProfesional</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>controlador_search_empresa</servlet-name>
+    <servlet-class>controladores.ControladorSearchEmpresa</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_search_empresa</servlet-name>
+    <url-pattern>/searchOferta</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>controlador_candidateRegister</servlet-name>
     <servlet-class>controladores.ControladorCandidateRegister</servlet-class>
   </servlet>
@@ -107,7 +115,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>controlador_companyRegister</servlet-name>
-    <url-pattern>/companyRegister</url-pattern>
+    <url-pattern>/companyProfile</url-pattern>
   </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
