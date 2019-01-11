@@ -36,7 +36,7 @@
 				        <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
 				      </div>
 				      <h6>Conocimientos
-				      	<span data-toggle="modal" data-target="#exampleModal">
+				      	<span data-toggle="modal" data-target="#conocimientos">
 					      <button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
 					      data-toggle="tooltip" data-placement="top" title="Modificar">
 	  						<i class="material-icons">edit</i>
@@ -53,7 +53,7 @@
 				      	<span class="badge badge-info">Redes</span>
 				      </div>
 				      <h6>&Aacute;reas
-				      	<span data-toggle="modal" data-target="#exampleModal">
+				      	<span data-toggle="modal" data-target="#areas">
 					      	<button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
 					      	data-toggle="tooltip" data-placement="top" title="Modificar">
 		  						<i class="material-icons">edit</i>
@@ -67,7 +67,7 @@
 				      	<span class="badge badge-primary">Contenido</span>
 				      </div>
 				      <h6>Dedicaci&oacute;n
-				      	<span data-toggle="modal" data-target="#exampleModal">
+				      	<span data-toggle="modal" data-target="#dedicaciones">
 					      	<button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
 					      	data-toggle="tooltip" data-placement="top" title="Modificar">
 		  						<i class="material-icons">edit</i>
@@ -134,6 +134,9 @@
 				  Mi lista de empresas
 				</button>
     			<#include "/vistas/tests/modal.html">
+    			<#include "/vistas/modals/conocimientos.ftl">
+    			<#include "/vistas/modals/areas.ftl">
+    			<#include "/vistas/modals/dedicacion.ftl">
   				</div>
   			</div>
   		</div>
