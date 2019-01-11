@@ -125,6 +125,30 @@
     <servlet-name>controlador_admin</servlet-name>
     <url-pattern>/admin</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_admin_candidato</servlet-name>
+    <servlet-class>controladores.ControladorAdminCandidato</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_admin_candidato</servlet-name>
+    <url-pattern>/adminCandidato</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_admin_empresa</servlet-name>
+    <servlet-class>controladores.ControladorAdminEmpresa</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_admin_empresa</servlet-name>
+    <url-pattern>/adminEmpresa</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_acceso</servlet-name>
+    <servlet-class>controladores.ControladorAcceso</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_acceso</servlet-name>
+    <url-pattern>/acceso</url-pattern>
+  </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

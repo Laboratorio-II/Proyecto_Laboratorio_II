@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ControladorSearchEmpresa")
-public class ControladorSearchEmpresa extends HttpServlet {
+@WebServlet("/ControladorAcceso")
+public class ControladorAcceso extends HttpServlet {
 	
 	/**
 	 * 
@@ -19,7 +19,7 @@ public class ControladorSearchEmpresa extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/searchCompany.ftl").forward(request, response);		
+		request.getRequestDispatcher("vistas/acceso.ftl").forward(request, response);		
 	}
 	
 	@Override
@@ -27,5 +27,4 @@ public class ControladorSearchEmpresa extends HttpServlet {
 			throws ServletException, IOException {
 	
 	}
-
 }

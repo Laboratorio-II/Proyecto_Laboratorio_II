@@ -13,21 +13,21 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
 		  <li class="nav-item">
-            <a href="searchProfesional" class="nav-link">
-             	Búsqueda de ...
-  				<i class="material-icons">search</i>
+            <a href="adminCandidato" class="nav-link">
+             	Usuarios
+  				<i class="material-icons">star</i>
 			</a>
           </li>
           <li class="nav-item">
-            <a href="adminCandidato" class="nav-link">
-             	Postularse/Crear oferta
+            <a href="adminEmpresa" class="nav-link">
+             	Empresas
   				<i class="material-icons">star</i>
 			</a>
           </li>
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <img src="assets/img/faces/christian.jpg" width="30px" class="img-raised rounded-circle img-fluid"/>
-              Usuario
+              Admin
             </a>
             <div class="dropdown-menu dropdown-with-icons">
               <a href="profile" class="dropdown-item">

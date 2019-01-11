@@ -39,8 +39,31 @@
           <#include "/vistas/forms/registerEmpresa.html">
 		  
 	    	<!-- Fin Formulario de registro de empresas -->
+	    	
+	    	
+	    	
 	    </div>
 	  </div>
+	</div>
+	
+	
+	    	<div class="row">
+  		<div class="col-md-11 ml-auto mr-auto">
+ 			<div class="card">
+  				<div class="card-body text-center">
+  				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+				  Postulaciones realizadas
+				</button>
+				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+				  Mi lista de empresas
+				</button>
+    			<#include "/vistas/tests/modal.html">
+    			<#include "/vistas/modals/conocimientos.ftl">
+    			<#include "/vistas/modals/areas.ftl">
+    			<#include "/vistas/modals/dedicacion.ftl">
+  				</div>
+  			</div>
+  		</div>
 	</div>
 
 
