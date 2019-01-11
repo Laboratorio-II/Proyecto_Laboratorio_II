@@ -148,6 +148,14 @@
   <servlet-mapping>
     <servlet-name>controlador_acceso</servlet-name>
     <url-pattern>/acceso</url-pattern>
+    </servlet-mapping>
+	<servlet>
+    <servlet-name>controlador_jobOffer</servlet-name>
+    <servlet-class>controladores.ControladorJobOffer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_jobOffer</servlet-name>
+    <url-pattern>/jobOffer</url-pattern>
   </servlet-mapping>
   <security-constraint>
     <web-resource-collection>

@@ -115,6 +115,9 @@
 			          <div class="tab-pane text-center gallery" id="favorite">
 			            <#include "/vistas/forms/estudio.ftl">
 			          </div>
+			          <div class="tab-pane text-center gallery" id="postulations">
+			            <#include "/vistas/forms/postulaciones.html">
+			          </div>
 			        </div>
 			        
     			</div>
@@ -127,9 +130,10 @@
   		<div class="col-md-11 ml-auto mr-auto">
  			<div class="card">
   				<div class="card-body text-center">
-  				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-				  Postulaciones realizadas
-				</button>
+  				<a href="postulations"  class="btn btn-danger" role="tab" data-toggle="tab">
+  					Postulaciones realizadas
+  				</a>  
+				  
 				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
 				  Mi lista de empresas
 				</button>
