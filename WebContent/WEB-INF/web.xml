@@ -109,13 +109,21 @@
     <servlet-name>controlador_candidateRegister</servlet-name>
     <url-pattern>/candidateRegister</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>controlador_companyRegister</servlet-name>
     <servlet-class>controladores.ControladorCompanyRegister</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>controlador_companyRegister</servlet-name>
     <url-pattern>/companyProfile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_admin</servlet-name>
+    <servlet-class>controladores.ControladorAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_admin</servlet-name>
+    <url-pattern>/admin</url-pattern>
   </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
