@@ -14,7 +14,7 @@
 
 <body class="landing-page sidebar-collapse">
   <#include "/vistas/includes/navbar.ftl">
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/profile_city.jpg')">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/working.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -66,18 +66,18 @@
         </div>
       </div>
       <div class="section text-center">
-        <h2 class="title">Opiniones de usuarios</h2>
+        <h2 class="title">Conoce a los desarrolladores:</h2>
         <div class="team">
           <div class="row">
             <div class="col-md-4">
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                    <img src="assets/img/faces/Hermes.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
-                  <h4 class="card-title">Gigi Hadid
+                  <h4 class="card-title">Hermes Soto
                     <br>
-                    <small class="card-description text-muted">Model</small>
+                    <small class="card-description text-muted">Developer</small>
                   </h4>
                   <div class="card-body">
                     <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
@@ -90,11 +90,11 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                    <img src="assets/img/faces/Zai.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
-                  <h4 class="card-title">Christian Louboutin
+                  <h4 class="card-title">Zaidibeth Ramos
                     <br>
-                    <small class="card-description text-muted">Designer</small>
+                    <small class="card-description text-muted">Web Designer</small>
                   </h4>
                   <div class="card-body">
                     <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
@@ -107,9 +107,9 @@
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
-                    <img src="assets/img/faces/kendall.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                    <img src="assets/img/faces/Jonas.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
-                  <h4 class="card-title">Kendall Jenner
+                  <h4 class="card-title">Jonas Valdez
                     <br>
                     <small class="card-description text-muted">Model</small>
                   </h4>

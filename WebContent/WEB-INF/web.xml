@@ -125,6 +125,14 @@
     <servlet-name>controlador_admin</servlet-name>
     <url-pattern>/admin</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_jobOffer</servlet-name>
+    <servlet-class>controladores.ControladorJobOffer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_jobOffer</servlet-name>
+    <url-pattern>/jobOffer</url-pattern>
+  </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

@@ -5,26 +5,26 @@
 				<div class="input-group">
 	                <div class="input-group-prepend">
 	                    <span class="input-group-text">
-	                      <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+	                      <i class="fa fa-id-card-o" aria-hidden="true"></i>
 	                    </span>
 	                </div>
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
-			                <label for="fechaNac" class="bmd-label-floating">Nombre</label>
-			                <input type="text" class="form-control" id="fechaNac">
+			                <label for="nombre" class="bmd-label-floating">Nombre</label>
+			                <input type="text" class="form-control" id="nombre">
 			            </div>
 				    </div>
 	            </div>
 	            <div class="input-group">
 	                <div class="input-group-prepend">
 	                    <span class="input-group-text">
-	                      <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+	                      <i class="fa fa-id-card-o" aria-hidden="true"></i>
 	                    </span>
 	                </div>
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
-			                <label for="fechaNac" class="bmd-label-floating">Apellido</label>
-			                <input type="text" class="form-control" id="fechaNac">
+			                <label for="apellido" class="bmd-label-floating">Apellido</label>
+			                <input type="text" class="form-control" id="apellido">
 			            </div>
 				    </div>
 	            </div>
@@ -308,6 +308,6 @@
 
 </div>
 
-			  <button type="submit" class="btn btn-primary">Guardar</button>
+			  <button type="submit" class="btn btn-danger">Guardar</button>
 
 		</form>
