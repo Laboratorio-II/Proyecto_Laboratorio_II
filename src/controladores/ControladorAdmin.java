@@ -19,7 +19,7 @@ public class ControladorAdmin extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/admin.ftl").forward(request, response);		
+		request.getRequestDispatcher("vistas/administrador.ftl").forward(request, response);		
 	}
 	
 	@Override
