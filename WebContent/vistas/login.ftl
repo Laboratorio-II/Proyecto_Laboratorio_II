@@ -14,7 +14,7 @@
 
 <body class="signup-page sidebar-collapse">
   <#include "/vistas/includes/navbar.ftl">
-  <div class="page-header header-filter" style="background-image: url('assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+  <div class="page-header header-filter" style="background-image: url('assets/img/1.jpg'); background-size: cover; background-position: top center;">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
