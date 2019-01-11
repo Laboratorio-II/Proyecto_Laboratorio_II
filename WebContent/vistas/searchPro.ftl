@@ -13,12 +13,12 @@
 </head>
 
 <body class="profile-page sidebar-collapse">
-  <#include "/vistas/includes/navbarLogon.html">
+  <#include "/vistas/includes/navbarLogon.ftl">
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
   <div class="main main-raised">
     <div class="profile-content">
     	<div class="container">
-    		<#include "/vistas/forms/searchPro.html">
+    		<#include "/vistas/forms/searchPro.ftl">
     	</div>
     </div>
   </div>

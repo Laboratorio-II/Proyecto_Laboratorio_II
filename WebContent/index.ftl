@@ -13,7 +13,7 @@
 </head>
 
 <body class="landing-page sidebar-collapse">
-  <#include "/vistas/includes/navbar.html">
+  <#include "/vistas/includes/navbar.ftl">
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/profile_city.jpg')">
     <div class="container">
       <div class="row">

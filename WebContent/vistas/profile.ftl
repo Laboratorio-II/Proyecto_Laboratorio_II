@@ -13,7 +13,7 @@
 </head>
 
 <body class="profile-page sidebar-collapse">
-  <#include "/vistas/includes/navbarLogon.html">
+  <#include "/vistas/includes/navbarLogon.ftl">
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
   <div class="main main-raised">
     <div class="profile-content">
@@ -35,7 +35,15 @@
 		              <div class="description text-center">
 				        <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
 				      </div>
-				      <h6>Conocimientos</h6>
+				      <h6>Conocimientos
+				      	<span data-toggle="modal" data-target="#exampleModal">
+					      <button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
+					      data-toggle="tooltip" data-placement="top" title="Modificar">
+	  						<i class="material-icons">edit</i>
+						  </button>
+						</span>
+					  </h6>
+				      
 				      <div class="">
 				      	<span class="badge badge-info">Ingl&eacute;s</span>
 				      	<span class="badge badge-info">PHP</span>
@@ -44,14 +52,28 @@
 				      	<span class="badge badge-info">SQL</span>
 				      	<span class="badge badge-info">Redes</span>
 				      </div>
-				      <h6>&Aacute;reas</h6>
+				      <h6>&Aacute;reas
+				      	<span data-toggle="modal" data-target="#exampleModal">
+					      	<button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
+					      	data-toggle="tooltip" data-placement="top" title="Modificar">
+		  						<i class="material-icons">edit</i>
+							</button>
+						</span>
+				      </h6>
 				      <div class="">
 				      	<span class="badge badge-primary">Programaci&oacute;n</span>
 				      	<span class="badge badge-primary">Comercio</span>
 				      	<span class="badge badge-primary">Publicidad</span>
 				      	<span class="badge badge-primary">Contenido</span>
 				      </div>
-				      <h6>Dedicaci&oacute;n</h6>
+				      <h6>Dedicaci&oacute;n
+				      	<span data-toggle="modal" data-target="#exampleModal">
+					      	<button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
+					      	data-toggle="tooltip" data-placement="top" title="Modificar">
+		  						<i class="material-icons">edit</i>
+							 </button>
+						</span>
+				      </h6>
 				      <div class="">
 				      	<span class="badge badge-success">Full-time</span>
 				      	<span class="badge badge-success">Part-time</span>
@@ -85,13 +107,13 @@
 		            
 		            <div class="tab-content tab-space">
 			          <div class="tab-pane active text-center gallery" id="studio">
-			            <#include "/vistas/tests/form.html">
+			            <#include "/vistas/forms/personal.ftl">
 			          </div>
 			          <div class="tab-pane text-center gallery" id="works">
-			            <#include "/vistas/tests/form3.html">
+			            <#include "/vistas/forms/laboral.ftl">
 			          </div>
 			          <div class="tab-pane text-center gallery" id="favorite">
-			            <#include "/vistas/tests/form2.html">
+			            <#include "/vistas/forms/estudio.ftl">
 			          </div>
 			        </div>
 			        

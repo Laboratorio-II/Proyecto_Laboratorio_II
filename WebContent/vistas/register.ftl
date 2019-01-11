@@ -13,8 +13,10 @@
 </head>
 
 <body class="signup-page sidebar-collapse">
-  <#include "/vistas/includes/navbar.html">
+
+  <#include "/vistas/includes/navbar.ftl">
   <div class="page-header header-filter" style="background-image: url('assets/img/coworking.jpg'); background-size: cover; background-position: top center;">
+
     <div class="container">
       <div class="card card-nav-tabs">
 	    <div class="card-header card-header-danger">
