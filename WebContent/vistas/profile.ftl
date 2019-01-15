@@ -130,14 +130,17 @@
   		<div class="col-md-11 ml-auto mr-auto">
  			<div class="card">
   				<div class="card-body text-center">
-  				<a href="postulations"  class="btn btn-danger" role="tab" data-toggle="tab">
+  				<!-- <a href="postulations"  class="btn btn-danger" role="tab" data-toggle="tab">
   					Postulaciones realizadas
-  				</a>  
+  				</a>   -->
+  				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+				  Postulaciones realizadas
+				</button>
 				  
 				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
 				  Mi lista de empresas
 				</button>
-    			<#include "/vistas/tests/modal.html">
+    			<#include "/vistas/tests/modal.ftl">
     			<#include "/vistas/modals/conocimientos.ftl">
     			<#include "/vistas/modals/areas.ftl">
     			<#include "/vistas/modals/dedicacion.ftl">

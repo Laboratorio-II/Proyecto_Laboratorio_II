@@ -12,7 +12,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <#include "/vistas/tests/lista1.html">
+        <!--<#include "/vistas/tests/lista1.html">-->
+        <#include "/vistas/forms/postulaciones.html">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
