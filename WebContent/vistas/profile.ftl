@@ -115,9 +115,6 @@
 			          <div class="tab-pane text-center gallery" id="favorite">
 			            <#include "/vistas/forms/estudio.ftl">
 			          </div>
-			          <div class="tab-pane text-center gallery" id="postulations">
-			            <#include "/vistas/forms/postulaciones.html">
-			          </div>
 			        </div>
 			        
     			</div>

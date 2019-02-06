@@ -147,7 +147,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>controlador_postulations</servlet-name>
-    <url-pattern>/profile/postulations</url-pattern>
+    <url-pattern>/postulations</url-pattern>
   </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
