@@ -130,7 +130,7 @@
     <servlet-class>controladores.ControladorAdministrator</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>controlador_admin_candidato</servlet-name>
+    <servlet-name>controlador_administrator</servlet-name>
     <url-pattern>/administrator</url-pattern>
   </servlet-mapping>
   <servlet>
