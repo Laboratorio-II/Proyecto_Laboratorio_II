@@ -8,9 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ControladorCompanyRegister")
-public class ControladorCompanyRegister extends HttpServlet {
-	
+@WebServlet("/ControladorOfertas")
+public class ControladorOfertas extends HttpServlet {
 	/**
 	 * 
 	 */
@@ -19,12 +18,12 @@ public class ControladorCompanyRegister extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/PerfilEmpresa.ftl").forward(request, response);		
+		request.getRequestDispatcher("vistas/PostularseOferta.ftl").forward(request, response);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	
+		doGet(request, response);
 	}
 }

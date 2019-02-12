@@ -53,6 +53,7 @@
   </div>
   
   <#include "/vistas/includes/scripts.html">
+  <script src="assets/js/registros.js" type="text/javascript"></script>
 </body>
 
 </html>

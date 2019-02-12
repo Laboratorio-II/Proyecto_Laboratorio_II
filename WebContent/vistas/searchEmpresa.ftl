@@ -7,18 +7,18 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Búsqueda de profesionales
+    Busqueda de Profesionales
   </title>
   <#include "/vistas/includes/links.html">
 </head>
 
 <body class="profile-page sidebar-collapse">
-  <#include "/vistas/includes/navbarLogon.ftl">
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
+  <#include "/vistas/includes/navbarEmpresas.ftl">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/1512148994695.png');"></div>
   <div class="main main-raised">
     <div class="profile-content">
     	<div class="container">
-    		<#include "/vistas/forms/searchEmpresa.ftl">
+    		<#include "/vistas/forms/searchEmpresa2.ftl">
     	</div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<form class="form" method="POST" action="home">
+<form id="formLogin" class="form" method="POST" action="#">
   <div class="card-header card-header-danger text-center">
     <h4 class="card-title">Iniciar sesi&oacute;n</h4>
     <!-- <div class="social-line">
@@ -31,8 +31,9 @@
       </div>
       <input type="password" class="form-control" placeholder="Contrase&ntilde;a...">
     </div>
+    <input name="operacion" type="hidden" value="login">
   </div>
   <div class="footer text-center">
-    <button type="submit" class="btn btn-danger" >Ingresar</button>
+    <button type="submit" class="btn btn-danger" onclick="login(event)">Ingresar</button>
   </div>
 </form>

@@ -28,6 +28,7 @@
   </div>
   
   <#include "/vistas/includes/scripts.html">
+  <script src="assets/js/login.js" type="text/javascript"></script>
 </body>
 
 </html>

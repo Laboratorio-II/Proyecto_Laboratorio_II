@@ -40,7 +40,7 @@
                 <div class="icon icon-info">
                   <i class="material-icons">chat</i>
                 </div>
-                <h4 class="info-title">Free Chat</h4>
+                <h4 class="info-title">Busca ofertas</h4>
                 <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
               </div>
             </div>
@@ -49,7 +49,7 @@
                 <div class="icon icon-success">
                   <i class="material-icons">verified_user</i>
                 </div>
-                <h4 class="info-title">Verified Users</h4>
+                <h4 class="info-title">Usuarios Verificados</h4>
                 <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
               </div>
             </div>
@@ -58,34 +58,19 @@
                 <div class="icon icon-danger">
                   <i class="material-icons">fingerprint</i>
                 </div>
-                <h4 class="info-title">Fingerprint</h4>
+                <h4 class="info-title">Consigue profesionales</h4>
                 <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      
-      	<div class="section text-center">
-       	 <div class="row">
-         <div class="col-md-8 ml-auto mr-auto">
-          
-          		<script async defer data-pin-hover="true" data-pin-tall="true" data-pin-lang="es" src="//assets.pinterest.com/js/pinit.js"></script>
-				<a data-pin-do="embedBoard" data-pin-board-width="2000" data-pin-scale-height="300" data-pin-scale-width="602" href="https://www.pinterest.com/pinterest/official-news/"></a>				
-				<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-          
-          	</div>
-        	</div>
-      		</div>
-      
-    
-      
       <div class="section text-center">
         <h2 class="title">Conoce a los desarrolladores:</h2>
         <div class="team">
           <div class="row">
-            <div class="col-md-4">
+          
+            <div class="col-md-6">
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
@@ -96,13 +81,13 @@
                     <small class="card-description text-muted">Developer</small>
                   </h4>
                   <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                    <p class="card-description">23 años, Estudiante de Ingeniería en Informática, desarrollador especialista en php, laravel, java. Conocimientos en redes. Tipo serio. Siguelo en
+                      <a href="https://www.facebook.com/hermesgabriel.sotouranga">facebook</a></p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
@@ -113,29 +98,13 @@
                     <small class="card-description text-muted">Web Designer</small>
                   </h4>
                   <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                    <p class="card-description">22 años, Estudiante de Ingeniería en Informática, T.S.U. en Construcción Civil, conocimientos en python, R, java. Rockera. Siguela en
+                      <a href="https://www.facebook.com/ZaidibethRamos">facebook</a>.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="assets/img/faces/Jonas.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Jonas Valdez
-                    <br>
-                    <small class="card-description text-muted">Model</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+         
           </div>
         </div>
       </div>
@@ -147,12 +116,5 @@
   <#include "/vistas/includes/scripts.html">
   
 </body>
-<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-
-
-
-
-
 
 </html>

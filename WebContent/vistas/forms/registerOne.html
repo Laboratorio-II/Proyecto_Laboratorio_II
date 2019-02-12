@@ -1,4 +1,4 @@
-<form class="form" method="POST" action="">
+<form id="form.createProfesional" class="form" method="POST" action="#">
     
     <div class="input-group">
       <div class="input-group-prepend">
@@ -6,7 +6,7 @@
           <i class="material-icons">mail</i>
         </span>
       </div>
-      <input name="correo" type="email" class="form-control" placeholder="Correo electr&oacute;nico">
+      <input id="emailProfesional" name="emailProfesional" type="email" class="form-control" placeholder="Correo electr&oacute;nico" required />
     </div><br>
     <div class="input-group">
       <div class="input-group-prepend">
@@ -14,7 +14,7 @@
           <i class="material-icons">lock_outline</i>
         </span>
       </div>
-      <input name="pass" type="password" class="form-control" placeholder="Contrase&ntilde;a">
+      <input id="passProfesional" name="passProfesional" type="password" class="form-control" placeholder="Contrase&ntilde;a" required />
     </div><br>
     <div class="input-group">
       <div class="input-group-prepend">
@@ -22,10 +22,13 @@
           <i class="material-icons">lock_outline</i>
         </span>
       </div>
-      <input name="rpass" type="password" class="form-control" placeholder="Repita su contrase&ntilde;a">
+      <input id="repProfesional" name="repProfesional" type="password" class="form-control" placeholder="Repita su contrase&ntilde;a" required />
     </div><br>
+    
+    <input name="operacion" type="hidden" value="registrarProfesional">
   
   <div class="footer text-center">
-    <a href="profile" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Registrar</a>
+    <!-- <a href="profile" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Registrar</a>-->
+    <button type="submit" class="btn btn-primary btn-lg active" onclick="registrarProfesional(event)">Registrar</button>
   </div>
 </form>

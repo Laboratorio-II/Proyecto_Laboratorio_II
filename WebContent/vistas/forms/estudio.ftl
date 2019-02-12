@@ -101,24 +101,6 @@
 				  	
 
 
-				<div class="col-lg-12">
-				  	
-				  	<div class="col-sm-12">
-				      <div class="card">
-				         <div class="card-header card-header-text card-header-primary">
-				            <div class="card-text">
-				              <h4 class="card-title">Formaciones guardadas</h4>
-				            </div>
-				          </div>
-				          <div class="card-body">
-				              <ul class="list-group list-group-flush">
-				              	<li class="list-group-item">Universidad Centroccidental "Lisandro Alvarado</li>
-				              	<li class="list-group-item">Liceo Rafael Villavicencio</li>
-				              	<li class="list-group-item">Escuela "Venezuela"</li>
-				              </ul>
-				          </div>
-				      	</div>
-				  	  </div>
-					</div>
+				
 
 				</div>

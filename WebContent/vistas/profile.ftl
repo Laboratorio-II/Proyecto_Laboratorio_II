@@ -13,7 +13,7 @@
 </head>
 
 <body class="profile-page sidebar-collapse">
-  <#include "/vistas/includes/navbarLogon.ftl">
+  <#include "/vistas/includes/navbarProfesional.ftl">
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
   <div class="main main-raised">
     <div class="profile-content">
@@ -110,11 +110,62 @@
 			            <#include "/vistas/forms/personal.ftl">
 			          </div>
 			          <div class="tab-pane text-center gallery" id="works">
-			            <#include "/vistas/forms/laboral.ftl">
+
+				          <div class="col-lg-12">
+						  	<div class="col-sm-12">
+						      <div class="card">
+						         <div class="card-header card-header-text card-header-primary">
+						            <div class="card-text">
+						              <h4 class="card-title">Experiencias guardadas</h4>
+						            </div>
+						          </div>
+						          <div class="card-body">
+						              <ul class="list-group list-group-flush">
+						              	<li class="list-group-item">Alcald&iacute;a de Palavecino</li>
+						              	<li class="list-group-item">---------------</li>
+						              	<li class="list-group-item">---------------</li>
+						              </ul>
+						          </div>
+						      	</div>
+						  	  </div>
+							</div>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#laboralModal">
+							  Añadir
+							</button>
+						</div>
+						<div class="tab-pane text-center gallery" id="favorite">
+						
+							
+							<div class="col-lg-12">
+							  	
+							  	<div class="col-sm-12">
+							      <div class="card">
+							         <div class="card-header card-header-text card-header-primary">
+							            <div class="card-text">
+							              <h4 class="card-title">Formaciones guardadas</h4>
+							            </div>
+							          </div>
+							          <div class="card-body">
+							              <ul class="list-group list-group-flush">
+							              	<li class="list-group-item">Universidad Centroccidental "Lisandro Alvarado</li>
+							              	<li class="list-group-item">Liceo Rafael Villavicencio</li>
+							              	<li class="list-group-item">Escuela "Venezuela"</li>
+							              </ul>
+							          </div>
+							      	</div>
+							  	  </div>
+								</div>
+								
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estudiosModal">
+								  Añadir
+								</button>
+			
+							</div>
+			   
+			          	</div>
+			            
 			          </div>
-			          <div class="tab-pane text-center gallery" id="favorite">
-			            <#include "/vistas/forms/estudio.ftl">
-			          </div>
+			          
 			        </div>
 			        
     			</div>
@@ -127,7 +178,7 @@
   		<div class="col-md-11 ml-auto mr-auto">
  			<div class="card">
   				<div class="card-body text-center">
-  				<a href="postulations"  class="btn btn-danger" role="tab" data-toggle="tab">
+  				<a href="postulaciones"  class="btn btn-danger">
   					Postulaciones realizadas
   				</a>  
 				  
@@ -135,6 +186,9 @@
 				  Mi lista de empresas
 				</button>
     			<#include "/vistas/tests/modal.html">
+    			<#include "/vistas/modals/estudios.ftl">
+    			<#include "/vistas/modals/laboral.ftl">
+    			
     			<#include "/vistas/modals/conocimientos.ftl">
     			<#include "/vistas/modals/areas.ftl">
     			<#include "/vistas/modals/dedicacion.ftl">
