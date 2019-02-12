@@ -1,7 +1,4 @@
- <form>
-
-
-
+ <form id="formDatosPersonalesEmpresa" method="POST" action="#">
 
 	      	<h2 class="title">Datos de la persona de contacto</h2>
 
@@ -16,7 +13,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="nameContact" class="bmd-label-floating">Nombres</label>
-			                <input type="text" class="form-control" id="nombreContactoPC">
+			                <input type="text" class="form-control" name="nombreContactoPC" id="nombreContactoPC">
 			            </div>
 				    </div>
 	            </div>
@@ -30,7 +27,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="apellidos" class="bmd-label-floating">Apellidos</label>
-			                <input type="text" class="form-control" id="apellidosPC">
+			                <input type="text" class="form-control" name="apellidosPC" id="apellidosPC">
 			            </div>
 				    </div>
 	            </div>
@@ -46,7 +43,7 @@
 			                <div class="form-group row">
 							    <label for="cargo" class="col-sm-2 col-form-label">Cargo</label>
 							    <div class="col-sm-10">
-								      <select id="cargo" class="form-control" data-val-required="El sector es obligatorio">
+								      <select name="cargo" id="cargo" class="form-control" data-val-required="El sector es obligatorio">
 								        <option selected>Selecciona tu cargo</option>
 								        <option value="1">Presidente</option>
 										<option value="2">Director</option>
@@ -70,9 +67,12 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="telefono" class="bmd-label-floating">Tel&eacute;fono</label>
-			                <input type="text" class="form-control" id="telefonoPC">
+			                <input type="text" class="form-control" name="telefonoPC" id="telefonoPC">
 			            </div>
 				    </div>
 	            </div>
 
 	        </div>
+	        <input name="operacion" type="hidden" value="guardarDatosPersonalesEmpresa">
+	      				  <button type="submit" class="btn btn-danger" onclick="guardarDatosPersonalesEmpresa(event)">Guardar</button>
+	      				  </form>

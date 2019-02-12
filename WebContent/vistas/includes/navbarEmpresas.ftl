@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
 		  <li class="nav-item">
-            <a href="ControladorSearchEmpresa" class="nav-link">
+            <a href="buscar_profesional" class="nav-link">
              	Busqueda de Profesionales
   				<i class="material-icons">search</i>
 			</a>
@@ -53,7 +53,7 @@
               Usuario
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="ControladorPerfilEmpresa" class="dropdown-item">
+              <a href="perfil_empresa" class="dropdown-item">
                 <i class="material-icons">account_circle</i> Perfil
               </a>
               

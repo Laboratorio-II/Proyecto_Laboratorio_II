@@ -19,7 +19,7 @@ public class ControladorSearchPro extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/searchPro.ftl").forward(request, response);		
+		request.getRequestDispatcher("vistas/searchEmpresa.ftl").forward(request, response);		
 	}
 	
 	@Override

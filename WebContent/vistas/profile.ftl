@@ -200,6 +200,10 @@
   <#include "/vistas/includes/footer.html">
   
   <#include "/vistas/includes/scripts.html">
+  <script src="assets/js/datosPersonales.js" type="text/javascript"></script>
+  <script src="assets/js/datosLaborales.js" type="text/javascript"></script>
+  <script src="assets/js/datosEstudios.js" type="text/javascript"></script>
+  
 </body>
 
 </html>

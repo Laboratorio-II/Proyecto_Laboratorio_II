@@ -107,7 +107,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>controlador_search_empresa</servlet-name>
-    <url-pattern>/buscar_empresa</url-pattern>
+    <url-pattern>/buscar_oferta</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>controlador_candidateRegister</servlet-name>

@@ -1,7 +1,7 @@
 <div class="row">
 				  <div class="col-lg-12">	
 	
-	<form>
+	<form id="formDatosLaborales" method="POST" action="#">
 
 				  	<div class="form-group bmd-form-group">
 
@@ -15,7 +15,7 @@
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
 					                <label for="nombreEmpresa" class="bmd-label-floating">Empresa</label>
-					                <input type="text" class="form-control" id="nombreEmpresa">
+					                <input type="text" class="form-control" id="nombreEmpresa" name="nombreEmpresa">
 					            </div>
 						    </div>
 			            </div>
@@ -31,7 +31,7 @@
 					                <div class="form-group row">
 									    <label for="estado" class="col-sm-2 col-form-label">Estado</label>
 									    <div class="col-sm-10">
-										      <select id="Estado" class="form-control" data-val-required="El estado es obligatorio">
+										      <select name="estado" id="estado" class="form-control" data-val-required="El estado es obligatorio">
 										        <option selected>Selecciona el estado</option>
 										        <option value="2">Amazonas</option>
 												<option value="3">Anzoátegui</option>
@@ -76,7 +76,7 @@
 					                <div class="form-group row">
 									    <label for="giroEmpresa" class="col-sm-2 col-form-label">Giro de la empresa</label>
 									    <div class="col-sm-10">
-										      <select id="giroEmpresa" class="form-control" data-val-required="El giro de la empresa es obligatorio">
+										      <select name="giroEmpresa" id="giroEmpresa" class="form-control" data-val-required="El giro de la empresa es obligatorio">
 										        <option selected>Selecciona</option>
 										        <option value="1">Agricultura / Pesca / Ganader&iacute;a</option>
 										        <option value="2">Construcci&oacute;n / obras</option>
@@ -105,7 +105,7 @@
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
 					                <label for="cargo" class="bmd-label-floating">Cargo</label>
-					                <input type="text" class="form-control" id="cargo">
+					                <input type="text" class="form-control" name="cargo" id="cargo">
 					            </div>
 						    </div>
 			            </div>
@@ -121,7 +121,7 @@
 					                <div class="form-group row">
 									    <label for="giroEmpresa" class="col-sm-2 col-form-label">&Aacute;rea</label>
 									    <div class="col-sm-10">
-										      <select id="area" class="form-control" data-val-required="El area es obligatoria">
+										      <select name="area" id="area" class="form-control" data-val-required="El area es obligatoria">
 										        <option selected>Selecciona</option>
 										        <option value="1">Administraci&oacute;n / Oficina</option>
 										        <option value="2">Almac&eacute;n / Log&iacute;stica / Transporte</option>
@@ -185,13 +185,14 @@
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
 					                <label for="periodo" class="bmd-label-floating">Periodo</label>
-					                <input type="text" class="form-control" id="periodo">
+					                <input type="text" class="form-control" name="periodo" id="periodo">
 					            </div>
 						    </div>
 			            </div>
 
 				</div>
-				<button type="submit" class="btn btn-primary">A&ntilde;adir</button>
+				<input name="operacion" type="hidden" value="guardarDatosLaborales">
+				<button type="submit" class="btn btn-primary" onclick="guardarDatosLaborales(event)">A&ntilde;adir</button>
 				</form>
 				
 				</div>

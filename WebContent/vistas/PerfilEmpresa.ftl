@@ -72,14 +72,14 @@
 					               
 					                
 				                <li class="nav-item">
-					                  <a class="nav-link " href="#works" role="tab" data-toggle="tab">
+					                  <a class="nav-link active " href="#works" role="tab" data-toggle="tab">
 					                    <i class="material-icons">work</i> Laboral
 					                  </a>
 				                </li>
 				                
 				                 <li class="nav-item">
 					                <!-- #################################studio le mandamos el link --> 
-						                  <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+						                  <a class="nav-link" href="#studio" role="tab" data-toggle="tab">
 						                    <i class="material-icons">face</i> Persona a Cargo
 						                  </a>
 					                </li>
@@ -87,12 +87,12 @@
 		   
 		            <div class="tab-content tab-space">
 		            
-			          <div class="tab-pane text-center gallery" id="works">
+			          <div class="tab-pane active text-center gallery" id="works">
 			            <#include "/vistas/forms/personalEmpresa.ftl">
 			          </div>
 			          
 			   <!-- #################################studio definimos  el link --> 
-			           <div class="tab-pane active text-center gallery" id="studio">
+			           <div class="tab-pane text-center" id="studio">
 			            <#include "/vistas/forms/personacargo.ftl">
 			          </div>
 			          
@@ -111,6 +111,8 @@
   <#include "/vistas/includes/footer.html">
   
   <#include "/vistas/includes/scripts.html">
+  <script src="assets/js/empresaLaboral.js" type="text/javascript"></script>
+  <script src="assets/js/empresaPersonal.js" type="text/javascript"></script>
 </body>
 
 </html>

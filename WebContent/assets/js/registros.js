@@ -2,6 +2,7 @@ function registrarEmpresa(e){
 	console.log("Funcion: registrarEmpresa");
 	e.preventDefault();
 	var datos = $("#form.createEmpresa").serialize();
+	console.log($("#form.createEmpresa").serialize());
 	
 	if(validarPassEmpresa()){
 		console.log("Las contraseñas son iguales");
@@ -15,9 +16,27 @@ function registrarEmpresa(e){
 			  confirmButtonText: 'Si, estoy seguro!'
 			}).then((result) => {
 			  if (result.value) {
-				    $.post('home',{param: datos},function(req,resp){
+				    /*$.post('home',datos,function(req,resp){
 						console.log("Entro al post");
-					});
+					},'json');*/
+				  jQuery.ajax({
+	                    type:"POST",
+	                    url : "home",
+	                    data : datos,
+	                    beforeSend : function() {
+
+	                    },
+	                    complete : function() {
+	                    	console.log("Entro al complete");
+	                    },
+	                    success : function(data) {
+
+	                    },
+	                    error : function(xmlHttpRequest, textStatus, errorThrown) {
+	                        alert("Error occured. Unable to open editor");
+	                    }
+
+	                });
 			    Swal.fire(
 			      'Exitoso!',
 			      'Usuario registrado',

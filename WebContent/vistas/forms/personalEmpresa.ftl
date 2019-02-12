@@ -1,4 +1,4 @@
- <form>
+ <form id="formDatosLaboralesEmpresa" method="POST" action="#">
 
 
 
@@ -15,7 +15,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="name" class="bmd-label-floating">Nombre o raz&oacute;n social</label>
-			                <input type="text" class="form-control" id="nombreempresa">
+			                <input type="text" class="form-control" name="nombreempresa" id="nombreempresa">
 			            </div>
 				    </div>
 	            </div>
@@ -29,7 +29,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="rif" class="bmd-label-floating">RIF de la empresa</label>
-			                <input type="text" class="form-control" id="rif">
+			                <input type="text" class="form-control" name="rif" id="rif">
 			            </div>
 				    </div>
 	            </div>
@@ -45,7 +45,7 @@
 			                <div class="form-group row">
 							    <label for="pais" class="col-sm-2 col-form-label">Pa&iacute;s</label>
 							    <div class="col-sm-10">
-								      <select id="pais" class="form-control" disabled="disabled">
+								      <select name="pais" id="pais" class="form-control" disabled="disabled">
 								        <option selected>Venezuela</option>
 								      </select>
 						    		</div>
@@ -65,7 +65,7 @@
 			                <div class="form-group row">
 							    <label for="estado" class="col-sm-2 col-form-label">Estado</label>
 							    <div class="col-sm-10">
-								      <select id="Estado" class="form-control" data-val-required="El estado es obligatorio">
+								      <select name="estado" id="estado" class="form-control" data-val-required="El estado es obligatorio">
 								        <option selected>Selecciona el estado</option>
 								        <option value="2">Amazonas</option>
 										<option value="3">Anzo&aacute;tegui</option>
@@ -110,7 +110,7 @@
 			                <div class="form-group row">
 							    <label for="ciudad" class="col-sm-2 col-form-label">Ciudad</label>
 							    <div class="col-sm-10">
-								     <select id="ciudad" class="form-control" data-val-required="La ciudad es obligatoria">
+								     <select name="ciudad" id="ciudad" class="form-control" data-val-required="La ciudad es obligatoria">
 								        <option selected>Seleccione una ciudad</option>
 								     </select>
 						    	</div>
@@ -128,7 +128,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="direccion" class="bmd-label-floating">Direcci&oacute;n</label>
-			                <input type="text" class="form-control" id="direccionempresa">
+			                <input type="text" class="form-control" name="direccionempresa" id="direccionempresa">
 			            </div>
 				    </div>
 	            </div>
@@ -146,7 +146,7 @@
 			                <div class="form-group row">
 							    <label for="sectorEmpresarial" class="col-sm-2 col-form-label">Sector empresarial</label>
 							    <div class="col-sm-10">
-								      <select id="sectorEmpresarial" class="form-control" data-val-required="El sector es obligatorio">
+								      <select name="sectorEmpresarial" id="sectorEmpresarial" class="form-control" data-val-required="El sector es obligatorio">
 								        <option selected>Seleccione el sector</option>
 								        <option value="2">Agricultura / Pesca / Ganadería</option>
 										<option value="5">Construcci&oacute;n / obras</option>
@@ -187,13 +187,14 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="descripcionEmpresa" class="bmd-label-floating">Descripci&oacute;n de la empresa</label>
-			                <textarea class="form-control" id="descripcionEmpresa" rows="1"></textarea>
+			                <textarea class="form-control" name="descripcionEmpresa" id="descripcionEmpresa" rows="1"></textarea>
 			            </div>
 				    </div>
 	            </div>
 			   
 
 	        </div>
-
-	      				  <button type="submit" class="btn btn-danger">Guardar</button>
+				<input name="operacion" type="hidden" value="guardarDatosLaboralesEmpresa">
+	      				  <button type="submit" class="btn btn-danger" onclick="guardarDatosLaboralesEmpresa(event)">Guardar</button>
+	      				  </form>
 	      	

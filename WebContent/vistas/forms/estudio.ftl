@@ -1,7 +1,7 @@
 <div class="row">
 				  <div class="col-lg-12">
 
-				  	<form>
+				  	<form id="formDatosEstudios" method="POST" action="#">
 
 				  	<div class="form-group bmd-form-group">
 
@@ -15,7 +15,7 @@
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
 					                <label for="centroEducativo" class="bmd-label-floating">Centro educativo</label>
-					                <input type="text" class="form-control" id="centroEducativo">
+					                <input type="text" class="form-control" name="centroEducativo" id="centroEducativo">
 					            </div>
 						    </div>
 			            </div>
@@ -31,7 +31,7 @@
 					                <div class="form-group row">
 									    <label for="nivelEstudios" class="col-sm-2 col-form-label">Nivel de estudios</label>
 									    <div class="col-sm-10">
-										    <select id="nivelEstudios" class="form-control" data-val-required="El nivel de estudios es obligatorio">
+										    <select name="nivelEstudios" id="nivelEstudios" class="form-control" data-val-required="El nivel de estudios es obligatorio">
 										        <option selected>Selecciona</option>
 										        <option value="1">Educaci&oacute;n b&aacute;sica primaria</option>
 												<option value="2">Educaci&oacute;n b&aacute;sica secundaria</option>
@@ -90,11 +90,11 @@
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
 					                <label for="periodo" class="bmd-label-floating">Periodo</label>
-					                <input type="text" class="form-control" id="periodo">
+					                <input type="text" class="form-control" name="periodo" id="periodo">
 					            </div>
 						    </div>
 			            </div>
-				<button type="submit" class="btn btn-primary">A&ntilde;adir</button>
+				<button type="submit" class="btn btn-primary" onclick="guardarDatosEstudios(event)">A&ntilde;adir</button>
 				</div>
 				</form>
 			</div>	
