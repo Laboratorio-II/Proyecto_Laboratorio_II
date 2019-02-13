@@ -20,7 +20,10 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-md-4">
-    			<h3>Estadisticas</h3>
+    			<div class="section text-center">
+    			
+    			<h3> Estadisticas </h3>
+    			</div>
     				<div class="card bg-info">
 					    <div class="card-body">
 					        <h5 class="card-category card-category-social">
