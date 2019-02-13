@@ -25,13 +25,13 @@
             <div class="table-responsive">
               <table class="table  table-hover">
                 <thead>
-                    <tr class="d-flex">
-                        <th class="col-1 text-center">#</th>
-                        <th class="col-2">Nombre</th>
-                        <th class="col-4">Apellido</th>
-                        <th class="col-2">Correo</th>
-                        <th class="col-1 text-right">Estatus</th>
-                        <th class="col-2 text-right">Opciones</th>
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th class="text-right">Estatus</th>
+                        <th class="text-right">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>

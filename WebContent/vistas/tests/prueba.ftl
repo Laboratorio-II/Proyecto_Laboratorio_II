@@ -16,7 +16,9 @@
   <#include "/vistas/includes/navbarAdmin.ftl">
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
   <h1>P&aacute;gina de prueba</h1>
-  <h3>EMAAAAAAAAAAAAAAAAAIL: ${email}</h3>
+  <#list usersList as user>
+	<p>${user.ucorreo}</p> 
+	</#list>
     
     
   <#include "/vistas/includes/footer.html">

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelos.servicio.ServicioUsers;
+
 @WebServlet("/ControladorProfesionales")
 public class ControladorProfesionales extends HttpServlet {
 	
@@ -15,10 +17,18 @@ public class ControladorProfesionales extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private ServicioUsers servicioUsers;
+	
+	public ControladorProfesionales() {
+		super();
+		this.servicioUsers = ServicioUsers.getInstancia();
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setAttribute("usersList", this.servicioUsers.getUsers());
 		request.getRequestDispatcher("vistas/admin/candidatos.ftl").forward(request, response);		
 	}
 	
