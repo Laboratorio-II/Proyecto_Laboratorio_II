@@ -17,7 +17,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
 		  <li class="nav-item">
-            <a href="buscar_empresa" class="nav-link">
+            <a href="buscar_oferta" class="nav-link">
              	Busqueda de Ofertas
   				<i class="material-icons">search</i>
 			</a>

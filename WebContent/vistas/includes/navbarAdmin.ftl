@@ -13,13 +13,13 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
 		  <li class="nav-item">
-            <a href="adminCandidato" class="nav-link">
-             	Usuarios
+            <a href="profesionales" class="nav-link">
+             	Profesionales
   				<i class="material-icons">star</i>
 			</a>
           </li>
           <li class="nav-item">
-            <a href="adminEmpresa" class="nav-link">
+            <a href="empresas" class="nav-link">
              	Empresas
   				<i class="material-icons">star</i>
 			</a>

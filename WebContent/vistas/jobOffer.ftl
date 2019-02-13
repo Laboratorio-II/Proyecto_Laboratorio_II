@@ -18,10 +18,6 @@
     <div class="profile-content">
     		<#include "/vistas/jobOffer2.ftl">
     </div>
-  
-	
-  <script src="/WebContent/assets/js/jquery.js" ></script>
-  <script src="/WebContent/assets/js/bootstrap.min.js" ></script>
     
   <#include "/vistas/includes/footer.html">
   

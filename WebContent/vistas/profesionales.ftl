@@ -7,27 +7,29 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Mis postulaciones - Find a Job
+    Listado de profesionales
   </title>
   <#include "/vistas/includes/links.html">
 </head>
 
 <body class="profile-page sidebar-collapse">
-  <#include "/vistas/includes/navbarProfesional.ftl">
+  <#include "/vistas/includes/navbarAdmin.ftl">
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
   <div class="main main-raised">
     <div class="profile-content">
     	<div class="container">
-
-    		<#include "/vistas/forms/postulaciones.html">
-
-
+    		
+    			
+    			<h1>Listado de profesionales</h1>
+    			
+    			
+    				<#include "/vistas/listas/profesionales.ftl">
+    			
+    		
     	</div>
-
     </div>
-
   </div>
-    
+  
   <#include "/vistas/includes/footer.html">
   
   <#include "/vistas/includes/scripts.html">

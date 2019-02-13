@@ -106,6 +106,21 @@
     </div>
   </div>
   
+  <div class="row">
+  		<div class="col-md-11 ml-auto mr-auto">
+ 			<div class="card">
+  				<div class="card-body text-center">
+  				
+				  
+				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+				  Mi lista de ofertas
+				</button>
+    			<#include "/vistas/tests/modal.html">
+  				</div>
+  			</div>
+  		</div>
+	</div>
+  
 	
     
   <#include "/vistas/includes/footer.html">

@@ -413,7 +413,7 @@ pastel.ponerLeyenda("leyenda2");
     			<#include "/vistas/modals/conocimientos.ftl">
     			<#include "/vistas/modals/areas.ftl">
     			<#include "/vistas/modals/dedicacion.ftl">
-    			<#include "/vistas/modals/areasME.ftl">
+    			
     			
   				</div>
   			

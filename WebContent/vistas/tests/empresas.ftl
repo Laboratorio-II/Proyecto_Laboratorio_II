@@ -6,7 +6,7 @@
     <td class="col-1 text-right">Activo</td>
     <td class="col-2 td-actions text-right">
         <form>
-         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+         <a href="perfil_empresa" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
             <i class="fa fa-info"></i>
           </a>
           <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
@@ -25,7 +25,7 @@
     <td class="col-1 text-right">Activo</td>
     <td class="col-2 td-actions text-right">
         <form>
-         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+         <a href="perfil_empresa" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
             <i class="fa fa-info"></i>
           </a>
           <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
@@ -44,7 +44,7 @@
     <td class="col-1 text-right">Activo</td>
     <td class="col-2 td-actions text-right">
         <form>
-         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+         <a href="perfil_empresa" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
             <i class="fa fa-info"></i>
           </a>
           <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
@@ -63,7 +63,7 @@
     <td class="col-1 text-right">Activo</td>
     <td class="col-2 td-actions text-right">
         <form>
-         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+         <a href="perfil_empresa" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
             <i class="fa fa-info"></i>
           </a>
           <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
@@ -82,7 +82,7 @@
     <td class="col-1 text-right">Activo</td>
     <td class="col-2 td-actions text-right">
         <form>
-         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+         <a href="perfil_empresa" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
             <i class="fa fa-info"></i>
           </a>
           <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
@@ -101,7 +101,7 @@
     <td class="col-1 text-right">Activo</td>
     <td class="col-2 td-actions text-right">
         <form>
-         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+         <a href="perfil_empresa" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
             <i class="fa fa-info"></i>
           </a>
           <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
@@ -120,7 +120,7 @@
     <td class="col-1 text-right">Activo</td>
     <td class="col-2 td-actions text-right">
         <form>
-         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+         <a href="perfil_empresa" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
             <i class="fa fa-info"></i>
           </a>
           <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">

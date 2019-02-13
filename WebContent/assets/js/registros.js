@@ -1,8 +1,8 @@
 function registrarEmpresa(e){
 	console.log("Funcion: registrarEmpresa");
 	e.preventDefault();
-	var datos = $("#form.createEmpresa").serialize();
-	console.log($("#form.createEmpresa").serialize());
+	var datos = $("#formCreateEmpresa").serialize();
+	console.log("Datos: "+datos);
 	
 	if(validarPassEmpresa()){
 		console.log("Las contraseñas son iguales");
@@ -30,7 +30,8 @@ function registrarEmpresa(e){
 	                    	console.log("Entro al complete");
 	                    },
 	                    success : function(data) {
-
+	                    	console.log("Entro al success");
+	                    	//window.location="perfil_empresa";
 	                    },
 	                    error : function(xmlHttpRequest, textStatus, errorThrown) {
 	                        alert("Error occured. Unable to open editor");
@@ -62,7 +63,7 @@ function registrarEmpresa(e){
 function registrarProfesional(e){
 	console.log("Funcion: registrarProfesional");
 	e.preventDefault();
-	var datos = $("#form.createProfesional").serialize();
+	var datos = $("#formCreateProfesional").serialize();
 	//Swal.fire('Any fool can use a computer');
 
 	if(validarPassProfesional()){
@@ -82,6 +83,11 @@ function registrarProfesional(e){
 			      'Usuario registrado',
 			      'success'
 			    )
+			    $.post('home',datos,function(data){
+					console.log("Entro al post");
+					//var respuesta = JSON.parse(resp);
+					console.log("Dato: "+data);
+				});
 			  }
 			});
 	}else{

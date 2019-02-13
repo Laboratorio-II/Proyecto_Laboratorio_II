@@ -20,6 +20,8 @@ public class ControladorLogin extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		//String email = request.getParameter("emailProfesional");
+		//request.setAttribute("email", email);
 		request.getRequestDispatcher("vistas/login.ftl").forward(request, response);		
 	}
 	
