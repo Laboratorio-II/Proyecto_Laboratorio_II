@@ -1,5 +1,6 @@
 package controladores;
 
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -8,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ControladorEmpresas")
-public class ControladorEmpresas extends HttpServlet {
+@WebServlet("/ControladorProfile2")
+public class ControladorProfile2 extends HttpServlet {
 	
 	/**
 	 * 
@@ -19,12 +20,15 @@ public class ControladorEmpresas extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/admin/empresas.ftl").forward(request, response);		
+		
+		String user = request.getParameter("user");
+		request.setAttribute("user", user);
+		request.getRequestDispatcher("vistas/PerfilEmpresa.ftl").forward(request, response);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	
+		doGet(request, response);
 	}
 }

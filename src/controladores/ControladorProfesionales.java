@@ -19,7 +19,7 @@ public class ControladorProfesionales extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/profesionales.ftl").forward(request, response);		
+		request.getRequestDispatcher("vistas/admin/candidatos.ftl").forward(request, response);		
 	}
 	
 	@Override

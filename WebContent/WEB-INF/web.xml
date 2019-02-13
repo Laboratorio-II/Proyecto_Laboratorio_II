@@ -86,6 +86,14 @@
     <url-pattern>/perfil_profesional</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>controlador_profile2</servlet-name>
+    <servlet-class>controladores.ControladorProfile2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_profile2</servlet-name>
+    <url-pattern>/perfil_empresa</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>controlador_search_pro</servlet-name>
     <servlet-class>controladores.ControladorSearchPro</servlet-class>
   </servlet>
