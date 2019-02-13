@@ -12,25 +12,27 @@
      </thead>
      
      <tbody>
-     	
-     	<tr class="">
-		    <td>1</td>
-		    <td>99999999</td>
-		    <td>Empresas Polar</td>
-		    <td>polar@gmail.com</td>
-		    <td>Activo</td>
-		    <td class="td-actions text-right">
-		        <form>
-		         <a href="profile" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
-		            <i class="fa fa-info"></i>
-		          </a>
-		          <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
-		            <i class="fa fa-times"></i>
-		          </button>
-		        </form>
-		        
-		    </td>
-		</tr>
+     
+     	<#list usersList as user>
+	     	<tr>
+			    <td>${user.id}</td>
+			    <td>${user.ucorreo}</td>
+			    <td>${user.ucorreo}</td>
+			    <td>${user.ucontrasenna}</td>
+			    <td>Activo</td>
+			    <td class="td-actions text-right">
+			        <form>
+			         <a href="perfil_profesional" rel="tooltip" title="Ver empresa" class="btn btn-info btn-fab btn-fab-mini btn-round">
+			            <i class="fa fa-info"></i>
+			          </a>
+			          <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round">
+			            <i class="fa fa-times"></i>
+			          </button>
+			        </form>
+			        
+			    </td>
+			</tr>
+		</#list>
 		
      	
      </tbody>

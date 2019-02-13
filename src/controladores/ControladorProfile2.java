@@ -21,8 +21,8 @@ public class ControladorProfile2 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String user = request.getParameter("user");
-		request.setAttribute("user", user);
+		//String user = request.getParameter("user");
+		//request.setAttribute("user", user);
 		request.getRequestDispatcher("vistas/PerfilEmpresa.ftl").forward(request, response);
 	}
 	
