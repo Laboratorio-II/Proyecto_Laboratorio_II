@@ -20,7 +20,10 @@ public class ControladorHome extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("vistas/searchPro.ftl").forward(request, response);		
+		//String email = request.getParameter("emailProfesional");
+		//request.setAttribute("email", email);
+		//request.getRequestDispatcher("vistas/tests/prueba.ftl").forward(request, response);
+		request.getRequestDispatcher("vistas/empresas.ftl").forward(request, response);
 	}
 	
 	@Override

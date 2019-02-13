@@ -86,14 +86,6 @@
     <url-pattern>/perfil_profesional</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>controlador_profile2</servlet-name>
-    <servlet-class>controladores.ControladorProfile2</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>controlador_profile2</servlet-name>
-    <url-pattern>/perfil_empresa</url-pattern>
-  </servlet-mapping>
-  <servlet>
     <servlet-name>controlador_search_pro</servlet-name>
     <servlet-class>controladores.ControladorSearchPro</servlet-class>
   </servlet>
@@ -108,38 +100,6 @@
   <servlet-mapping>
     <servlet-name>controlador_search_empresa</servlet-name>
     <url-pattern>/buscar_oferta</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>controlador_candidateRegister</servlet-name>
-    <servlet-class>controladores.ControladorCandidateRegister</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>controlador_candidateRegister</servlet-name>
-    <url-pattern>/candidateRegister</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>controlador_companyRegister</servlet-name>
-    <servlet-class>controladores.ControladorCompanyRegister</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>controlador_companyRegister</servlet-name>
-    <url-pattern>/perfil_empresa22</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>controlador_admin</servlet-name>
-    <servlet-class>controladores.ControladorAdmin</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>controlador_admin</servlet-name>
-    <url-pattern>/admin</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>controlador_administrator</servlet-name>
-    <servlet-class>controladores.ControladorAdministrator</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>controlador_administrator</servlet-name>
-    <url-pattern>/administrator</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>controlador_jobOffer</servlet-name>
@@ -172,6 +132,22 @@
   <servlet-mapping>
     <servlet-name>controlador_ofertas</servlet-name>
     <url-pattern>/ofertas</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_empresas</servlet-name>
+    <servlet-class>controladores.ControladorEmpresas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_empresas</servlet-name>
+    <url-pattern>/empresas</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_profesionales</servlet-name>
+    <servlet-class>controladores.ControladorProfesionales</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_profesionales</servlet-name>
+    <url-pattern>/profesionales</url-pattern>
   </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
