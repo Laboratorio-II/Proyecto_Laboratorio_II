@@ -15,47 +15,71 @@ public class Users implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="ucod")
-	private Integer ucod;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
+	private Integer id;
 
-	@Column(name="ucorreo")
-	private String ucorreo;
+	@Column(name="email")
+	private String email;
 	
-	@Column(name="ucontrasenna")
-	private String ucontrasenna;
+	@Column(name="pass")
+	private String pass;
+	
+	@Column(name="rol")
+	private Integer rol;
+	
+	@Column(name="estatus")
+	private char estatus;
 	
 	public Users() {
 	}
 	
-	public Users(Integer ucod, String ucorreo, String ucontrasenna) {
+	public Users(String email, String pass, Integer rol, char estatus) {
 		super();
-		this.ucod = ucod;
-		this.ucorreo = ucorreo;
-		this.ucontrasenna = ucontrasenna;
+		this.email = email;
+		this.pass = pass;
+		this.rol = rol;
+		this.estatus = estatus;
 	}
 	
-	public Integer getUcod() {
-		return this.ucod;
+	public Integer getId() {
+		return this.id;
 	}
 
-	public void setUcod(Integer ucod) {
-		this.ucod = ucod;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
-	public String getUcorreo() {
-		return this.ucorreo;
+	public String getEmail() {
+		return this.email;
 	}
 
-	public void setUcorreo(String ucorreo) {
-		this.ucorreo = ucorreo;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
-	public String getUcontrasenna() {
-		return this.ucontrasenna;
+	public String getPass() {
+		return this.pass;
 	}
 
-	public void setUcontrasenna(String ucontrasenna) {
-		this.ucontrasenna = ucontrasenna;
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+	
+	public Integer getRol() {
+		return this.rol;
+	}
+
+	public void setRol(Integer rol) {
+		this.rol = rol;
+	}
+	
+	public char getEstatus() {
+		return this.estatus;
+	}
+
+	public void setEstatus(char estatus) {
+		this.estatus = estatus;
 	}
 
 }

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
-import modelo.dao.UsersDAO;
+import modelos.dao.UsersDAO;
 import modelos.dto.Users;
 
 public class ServicioUsers {
@@ -26,6 +26,11 @@ public class ServicioUsers {
 	
 	public List<Users> getUsers() {
 		List<Users> users = this.usersDAO.queryAll(); 
+		return users;
+	}
+	
+	public Users incluirUsers(Users users) {
+		this.usersDAO.save(users);
 		return users;
 	}
 }

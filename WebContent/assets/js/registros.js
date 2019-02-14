@@ -83,10 +83,10 @@ function registrarProfesional(e){
 			      'Usuario registrado',
 			      'success'
 			    )
-			    $.post('home',datos,function(data){
+			    $.post('perfil_profesional',datos,function(data){
 					console.log("Entro al post");
 					//var respuesta = JSON.parse(resp);
-					console.log("Dato: "+data);
+					console.log("Dato: "+datos);
 				});
 			  }
 			});

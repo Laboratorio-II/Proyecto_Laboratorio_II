@@ -25,7 +25,7 @@
 		                <img src="assets/img/faces/christian.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
 		              </div>
 		              <div class="name">
-		                <h3 class="title">${user}</h3>
+		                <h3 class="title">${user.email}</h3>
 		                <h6>Designer</h6>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>

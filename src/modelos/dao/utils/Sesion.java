@@ -3,7 +3,7 @@ package modelos.dao.utils;
 import org.hibernate.*;
 import org.hibernate.cfg.*;
 
-import modelo.dao.UsersDAO;
+import modelos.dao.UsersDAO;
 
 public class Sesion {
 

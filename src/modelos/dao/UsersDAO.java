@@ -1,4 +1,4 @@
-package modelo.dao;
+package modelos.dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -25,6 +25,14 @@ public class UsersDAO extends GenericDAO {
 
 	public List<Users> queryAll() {
 		return super.queryAll(Users.class);
+	}
+	
+	public void saveOrUpdate(Users users) {
+		super.saveOrUpdate(users);
+	}
+	
+	public void save(Users users) {
+		super.save(users);
 	}
 
 }
