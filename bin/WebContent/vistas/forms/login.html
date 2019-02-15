@@ -1,0 +1,39 @@
+<form id="formLogin" class="form" method="POST" action="home">
+  <div class="card-header card-header-danger text-center">
+    <h4 class="card-title">Iniciar sesi&oacute;n</h4>
+    <!-- <div class="social-line">
+      <a href="#pablo" class="btn btn-just-icon btn-link">
+        <i class="fa fa-facebook-square"></i>
+      </a>
+      <a href="#pablo" class="btn btn-just-icon btn-link">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="#pablo" class="btn btn-just-icon btn-link">
+        <i class="fa fa-google-plus"></i>
+      </a>
+    </div>-->
+  </div>
+  <p class="description text-center">Ingrese sus datos</p>
+  <div class="card-body">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="material-icons">mail</i>
+        </span>
+      </div>
+      <input name="email" type="email" class="form-control" placeholder="Correo...">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="material-icons">lock_outline</i>
+        </span>
+      </div>
+      <input name="password" type="password" class="form-control" placeholder="Contrase&ntilde;a...">
+    </div>
+    <input name="operacion" type="hidden" value="login">
+  </div>
+  <div class="footer text-center">
+    <button type="submit" class="btn btn-danger" onclick="">Ingresar</button>
+  </div>
+</form>
