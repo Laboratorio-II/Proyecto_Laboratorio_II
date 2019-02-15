@@ -2,14 +2,14 @@ package modelos.dto;
 
 public class IdiomaConocido {
 	
-	private String idCV;
-	private String idIdioma;
+	private Integer idCV;
+	private Integer idIdioma;
 	private Integer nivel;
 	private char estatus;
 	
 	public IdiomaConocido() {}
 
-	public IdiomaConocido(String idCV, String idIdioma, Integer nivel, char estatus) {
+	public IdiomaConocido(Integer idCV, Integer idIdioma, Integer nivel, char estatus) {
 		super();
 		this.idCV = idCV;
 		this.idIdioma = idIdioma;
@@ -17,19 +17,19 @@ public class IdiomaConocido {
 		this.estatus = estatus;
 	}
 
-	public String getIdCV() {
+	public Integer getIdCV() {
 		return idCV;
 	}
 
-	public void setIdCV(String idCV) {
+	public void setIdCV(Integer idCV) {
 		this.idCV = idCV;
 	}
 
-	public String getIdIdioma() {
+	public Integer getIdIdioma() {
 		return idIdioma;
 	}
 
-	public void setIdIdioma(String idIdioma) {
+	public void setIdIdioma(Integer idIdioma) {
 		this.idIdioma = idIdioma;
 	}
 

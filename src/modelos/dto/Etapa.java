@@ -2,25 +2,25 @@ package modelos.dto;
 
 public class Etapa {
 	
-	private Integer nro;
+	private Integer id;
 	private String descripcion;
 	private char estatus;
 	
 	public Etapa() {}
 
-	public Etapa(Integer nro, String descripcion, char estatus) {
+	public Etapa(Integer id, String descripcion, char estatus) {
 		super();
-		this.nro = nro;
+		this.id = id;
 		this.descripcion = descripcion;
 		this.estatus = estatus;
 	}
 
-	public Integer getNro() {
-		return nro;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setNro(Integer nro) {
-		this.nro = nro;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getDescripcion() {
