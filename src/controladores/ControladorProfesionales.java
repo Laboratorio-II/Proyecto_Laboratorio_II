@@ -29,7 +29,7 @@ public class ControladorProfesionales extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setAttribute("usersList", this.servicioUsers.getUsers());
-		request.getRequestDispatcher("vistas/admin/candidatos.ftl").forward(request, response);		
+		request.getRequestDispatcher("vistas/admin/profesionales.ftl").forward(request, response);		
 	}
 	
 	@Override

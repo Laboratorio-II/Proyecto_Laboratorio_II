@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Perfil
+    Listado de usuarios
   </title>
   <#include "/vistas/includes/links.html">
 </head>
@@ -27,15 +27,14 @@
                 <thead>
                     <tr>
                         <th class="text-center">#</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
                         <th>Correo</th>
-                        <th class="text-right">Estatus</th>
+                        <th>Rol</th>
+                        <th>Estatus</th>
                         <th class="text-right">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                  <#include "/vistas/tests/usuarios.ftl">
+                  <#include "/vistas/listas/profesionales.ftl">
                 </tbody>
               </table>
             </div>
