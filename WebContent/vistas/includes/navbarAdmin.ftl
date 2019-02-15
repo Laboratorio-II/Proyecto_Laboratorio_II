@@ -30,14 +30,14 @@
               Admin
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="profile" class="dropdown-item">
+              <a href="admin" class="dropdown-item">
                 <i class="material-icons">account_circle</i> Perfil
               </a>
               <a href="acceso" class="dropdown-item">
                 <i class="material-icons">account_circle</i> Acceso
               </a>
               <a href="index" class="dropdown-item">
-                <i class="material-icons">settings_power</i> Cerrar sesión
+                <i class="material-icons">settings_power</i> Cerrar sesion
               </a>
             </div>
           </li>
