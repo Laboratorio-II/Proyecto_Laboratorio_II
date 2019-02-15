@@ -33,11 +33,6 @@ public class ControladorProfile extends HttpServlet {
 		
 		String user = request.getParameter("user");
 		request.setAttribute("user", user);
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> 68057c3f2225585119203d700a0d7df1bbee5a88
 		request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		
 	}
