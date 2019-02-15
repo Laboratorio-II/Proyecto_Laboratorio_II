@@ -2,7 +2,7 @@ package modelos.dto;
 
 public class Empresa {
 	
-	private String correo;
+	private Integer id;
 	private String contrasena;
 	private String nombre;
 	private String rif;
@@ -16,10 +16,9 @@ public class Empresa {
 	
 	public Empresa() {}
 	
-	public Empresa(String correo, String contrasena, String nombre, String rif, String pais, String estado, String ciudad, String direccion, String sector, String descripcion, char estatus) {
+	public Empresa(Integer id, String nombre, String rif, String pais, String estado, String ciudad, String direccion, String sector, String descripcion, char estatus) {
 		super();
-		this.correo=correo;
-		this.contrasena=contrasena;
+		this.id=id;
 		this.nombre=nombre;
 		this.rif=rif;
 		this.pais=pais;
@@ -31,12 +30,12 @@ public class Empresa {
 		this.estatus=estatus;
 	}
 
-	public String getCorreo() {
-		return correo;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getContrasena() {

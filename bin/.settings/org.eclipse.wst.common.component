@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="Proyecto_Laboratorio_II">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+=======
+>>>>>>> 4f284902f2db0a479edc3ba0261fff3bdffeb362
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/"/>
         <property name="context-root" value="Proyecto_Laboratorio_II"/>
         <property name="java-output-path" value="/Proyecto_Laboratorio_II/build/classes"/>
