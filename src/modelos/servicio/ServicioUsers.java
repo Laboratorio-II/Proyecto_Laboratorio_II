@@ -1,9 +1,7 @@
 package modelos.servicio;
-
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
-
 import modelos.dao.UsersDAO;
 import modelos.dto.Users;
 
@@ -18,12 +16,14 @@ public class ServicioUsers {
 		}
 		return instancia;
 	}
+
 	
 	private ServicioUsers() {
 		super();
 		this.usersDAO = UsersDAO.getInstancia();
 	}
 	
+
 	public List<Users> getUsers() {
 		List<Users> users = this.usersDAO.queryAll(); 
 		return users;
