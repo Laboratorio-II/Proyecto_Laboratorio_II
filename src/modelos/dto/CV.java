@@ -3,7 +3,7 @@ package modelos.dto;
 public class CV {
 	
 	private Integer id;
-	private String usuario;
+	private Integer usuario;
 	private String titulo;
 	private String descripcion;
 	private char estadoCivil;
@@ -15,7 +15,7 @@ public class CV {
 	
 	public CV() {}
 	
-	public CV(Integer id, String usuario, String titulo, String descripcion, char estadoCivil, String telefono, String pais, String estado, String ciudad, char estatus) {
+	public CV(Integer id, Integer usuario, String titulo, String descripcion, char estadoCivil, String telefono, String pais, String estado, String ciudad, char estatus) {
 		super();
 		this.id=id;
 		this.usuario=usuario;
@@ -54,11 +54,11 @@ public class CV {
 		this.descripcion = descripcion;
 	}
 
-	public String getUsuario() {
+	public Integer getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(String usuario) {
+	public void setUsuario(Integer usuario) {
 		this.usuario = usuario;
 	}
 

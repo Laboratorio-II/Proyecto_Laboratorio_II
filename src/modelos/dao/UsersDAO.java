@@ -27,12 +27,24 @@ public class UsersDAO extends GenericDAO {
 		return super.queryAll(Users.class);
 	}
 	
-	public void saveOrUpdate(Users users) {
-		super.saveOrUpdate(users);
+	public Users get(Serializable id) {
+		return (Users)super.get(Users.class, id);
 	}
 	
 	public void save(Users users) {
 		super.save(users);
+	}
+	
+	public void update(Users user) {
+		super.update(user);
+	}
+	
+	public void saveOrUpdate(Users user) {
+		super.saveOrUpdate(user);
+	}
+	
+	public void delete(Users user) {
+		super.delete(user);
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.Date;
 public class DatoLaboral {
 	
 	private Integer id;
-	private String idCV;
+	private Integer idCV;
 	private String cargo;
 	private String funciones;
 	private Date fechaInicio;
@@ -14,7 +14,7 @@ public class DatoLaboral {
 	
 	public DatoLaboral() {}
 	
-	public DatoLaboral(Integer id, String idCV, String cargo, String funciones, Date fechaInicio, Date fechaFin, char estatus) {
+	public DatoLaboral(Integer id, Integer idCV, String cargo, String funciones, Date fechaInicio, Date fechaFin, char estatus) {
 		super();
 		this.id=id;
 		this.idCV=idCV;
@@ -33,11 +33,11 @@ public class DatoLaboral {
 		this.id = id;
 	}
 
-	public String getIdCV() {
+	public Integer getIdCV() {
 		return idCV;
 	}
 
-	public void setIdCV(String idCV) {
+	public void setIdCV(Integer idCV) {
 		this.idCV = idCV;
 	}
 

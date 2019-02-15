@@ -29,8 +29,36 @@ public class ServicioUsers {
 		return users;
 	}
 	
+	public Users getUserPorId(Serializable id) {
+		if (id != null) {
+			return this.usersDAO.get(id);
+		}
+		return null;
+	}
+	
 	public Users incluirUsers(Users users) {
 		this.usersDAO.save(users);
 		return users;
+	}
+	
+	public Users modificarUser(Integer id, String email,
+			String pass, Integer rol, char estatus) {
+		Users user = this.getUserPorId(id);
+		user.setId(id);
+		user.setEmail(email);
+		user.setPass(pass);
+		user.setRol(rol);
+		user.setEstatus(estatus);
+		this.usersDAO.saveOrUpdate(user);
+		return this.getUserPorId(id);
+	}
+	
+	public String eliminarUser(Integer id) {
+		Users user = this.getUserPorId(id);
+		if (user != null) {
+			this.usersDAO.delete(user);
+			return "ok";
+		}
+		return "No se pudo eliminar el producto";
 	}
 }
