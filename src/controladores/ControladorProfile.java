@@ -31,7 +31,11 @@ public class ControladorProfile extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		String user = request.getParameter("user");
+		request.setAttribute("user", user);
+
 		request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
+		
 	}
 	
 	@Override

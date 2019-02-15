@@ -52,8 +52,8 @@
               Usuario
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="perfil_profesional" class="dropdown-item">
-                <i class="material-icons">account_circle</i> Perfil
+              <a href="perfil_profesional?user=nada" class="dropdown-item">
+                <i class="material-icons"> account_circle</i> Perfil
               </a>
               
               <a href="acceso" class="dropdown-item">
