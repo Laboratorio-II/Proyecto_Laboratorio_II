@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import modelos.servicio.ServicioUsers;
+import modelo.servicio.ServicioUsers;
 
 @WebServlet("/ControladorProfesionales")
 public class ControladorProfesionales extends HttpServlet {

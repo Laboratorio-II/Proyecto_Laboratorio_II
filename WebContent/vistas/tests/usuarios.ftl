@@ -19,10 +19,10 @@
 
 <#list usersList as user>
     	<tr>
-	    <td>${user.ucod}</td>
-	    <td>${user.ucorreo}</td>
-	    <td>${user.ucorreo}</td>
-	    <td>${user.ucontrasenna}</td>
+	    <td>${user.id}</td>
+	    <td>${user.id}</td>
+	    <td>${user.id}</td>
+	    <td>${user.id}</td>
 	    <td>Activo</td>
 	    <td class="td-actions text-right">
 	        <form>

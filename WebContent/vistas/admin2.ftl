@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +25,7 @@
 
 <body class="profile-page sidebar-collapse">
   <#include "/vistas/includes/navbarAdmin.ftl">
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/pexels-photo-1432942.jpeg');"></div>
   <div class="main main-raised">
     <div class="profile-content">
     	<div class="container">
@@ -36,20 +39,24 @@
 		             <h3> Modificar Entidades Basicas</h3>
 		         
 		           
-    					<a href="areasME2" class="btn btn-primary btn-lg active" role="button" onclick="" aria-pressed="true">Paises</a>
+    					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" onclick="" aria-pressed="true">Paises</a>
     					
-    					<a href="#pablo" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cuidades</a>
+    					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cuidades</a>
     					
-    					<a href="#pablo" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Areas Prof.</a>
+    					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Areas Prof.</a>
     					
-    					<a href="#pablo"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Tipos Ded.</a>
+    					<a href="ControladorEntidades"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Tipos Ded.</a>
     					
 				      		              </div>
 				      
 		            </div>
     			    	
-    			    	
-    	<div>
+    			    		</br>
+    	    	</br>
+    	    	</br>
+    	
+    	<div>    			
+    	
     		<div class="col-md-">	
     			<div  id="grafica"></div>
 					    <script>
@@ -78,7 +85,14 @@
     	
     			
     			
+    			
+    			
+    			
+    			
+    			
+    			
     			<div>
+    			<div class="footer text-center">
     			<form class="form">
   				<div class="row">
   				
@@ -270,6 +284,7 @@ pastel.ponerLeyenda("leyenda2");
 				</div>
 				</div>
 				</div>
+								</div>
 				
 				</form>
 				</div>
@@ -409,11 +424,9 @@ pastel.ponerLeyenda("leyenda2");
   					Postulaciones realizadas
   				</a>   -->
   			
-    			<#include "/vistas/tests/modal.ftl">
     			<#include "/vistas/modals/conocimientos.ftl">
     			<#include "/vistas/modals/areas.ftl">
     			<#include "/vistas/modals/dedicacion.ftl">
-    			
     			
   				</div>
   			

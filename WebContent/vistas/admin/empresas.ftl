@@ -20,7 +20,7 @@
       <div class="section text-center">
         <h2 class="title">Listado de empresas</h2>
         <div class="team">
-          <a href="#" class="btn btn-primary btn-round">Nueva empresa</a>
+          <a href="perfil_empresa" class="btn btn-primary btn-round">Nueva empresa</a>
           <div class="row">
             <div class="table-responsive">
               <table class="table  table-hover">

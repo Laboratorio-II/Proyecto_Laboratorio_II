@@ -15,11 +15,11 @@ public class Users implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="ucod")
-	private Integer ucod;
+	@Column(name="id")
+	private Integer id;
 
-	@Column(name="ucorreo")
-	private String ucorreo;
+	@Column(name="email")
+	private String email;
 	
 	@Column(name="ucontrasenna")
 	private String ucontrasenna;
@@ -27,27 +27,27 @@ public class Users implements Serializable {
 	public Users() {
 	}
 	
-	public Users(Integer ucod, String ucorreo, String ucontrasenna) {
+	public Users(Integer id, String email, String email) {
 		super();
-		this.ucod = ucod;
-		this.ucorreo = ucorreo;
-		this.ucontrasenna = ucontrasenna;
+		this.id = id;
+		this.email = email;
+		this.email = email;
 	}
 	
-	public Integer getUcod() {
-		return this.ucod;
+	public Integer getId() {
+		return this.id;
 	}
 
-	public void setUcod(Integer ucod) {
-		this.ucod = ucod;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
-	public String getUcorreo() {
-		return this.ucorreo;
+	public String getEmail() {
+		return this.email;
 	}
 
-	public void setUcorreo(String ucorreo) {
-		this.ucorreo = ucorreo;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	public String getUcontrasenna() {
