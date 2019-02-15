@@ -38,7 +38,7 @@
 							      <small id="fileHelp" class="form-text text-muted">.</small>
 							    </div>
 			    
-					                <h6>${user.email}</h6>
+					                <h6>prueba de usuers</h6>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
