@@ -4,8 +4,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 public abstract class GenericDAO {
 	
@@ -111,6 +113,23 @@ public abstract class GenericDAO {
         finally {  
            session.close();  
         }
+	}
+	
+	public Object getByField(Class class1, String field, Serializable value) {
+		Session session = this.sesion.openSession();  
+        Object object = null;        
+        try{
+            Criteria criteria = session.createCriteria(class1);
+            object = criteria.add(Restrictions.eq(""+field+"", value))
+                                         .uniqueResult();
+        } 
+        catch (Exception e) {  
+        	e.printStackTrace();        
+        }  
+        finally {  
+            session.close();  
+        }             
+	    return object;
 	}
 
 }

@@ -26,12 +26,14 @@
 		              </div>
 		              <div class="name">
 		                <h3 class="title">${user}</h3>
-		                <h6>Designer</h6>
+		                <h6>Designer Prueba: ${users.id}</h6>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
 		              </div>
-		              <h6>Acerca de mi</h6>
+		              <h6>Acerca de mi <#if Session.sessionUser?exists>
+    ${Session.sessionUser.email}
+</#if></h6>
 		              <div class="description text-center">
 				        <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
 				      </div>

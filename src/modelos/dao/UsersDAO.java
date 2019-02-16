@@ -46,5 +46,9 @@ public class UsersDAO extends GenericDAO {
 	public void delete(Users user) {
 		super.delete(user);
 	}
+	
+	public Users getByField(String field, Serializable value) {
+		return (Users)super.getByField(Users.class, field, value);
+	}
 
 }

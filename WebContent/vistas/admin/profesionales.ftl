@@ -18,12 +18,14 @@
   <div class="main main-raised">
   	<div class="container">
       <div class="section text-center">
-        <h2 class="title">Listado de usuarios</h2>
+        <h2 class="title">Listado de usuarios<#if Session.sessionUser?exists>
+    ${Session.sessionUser.email}
+</#if></h2>
         <div class="team">
           <a href="#" class="btn btn-primary btn-round">Nuevo usuario</a>
           <div class="row">
-            <div class="table-responsive">
-              <table class="table  table-hover">
+            
+              <table id="tablaProfesionales" class="table table-striped table-bordered table-hover table-responsive">
                 <thead>
                     <tr>
                         <th class="text-center">#</th>
@@ -37,11 +39,8 @@
                   <#include "/vistas/listas/profesionales.ftl">
                 </tbody>
               </table>
-            </div>
           </div>
-          <div class="d-flex justify-content-center">
-           
-          </div>
+          
         </div>
       </div>
     </div>
@@ -51,6 +50,7 @@
   <#include "/vistas/includes/footer.html">
   
   <#include "/vistas/includes/scripts.html">
+  <script src="assets/js/profesionales.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -3,8 +3,6 @@ package modelos.dao.utils;
 import org.hibernate.*;
 import org.hibernate.cfg.*;
 
-import modelos.dao.UsersDAO;
-
 public class Sesion {
 
 	private SessionFactory sessionFactory;

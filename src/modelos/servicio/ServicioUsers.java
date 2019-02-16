@@ -61,4 +61,11 @@ public class ServicioUsers {
 		}
 		return "No se pudo eliminar el producto";
 	}
+	
+	public Users getUserPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.usersDAO.getByField(field,value);
+		}
+		return null;
+	}
 }
