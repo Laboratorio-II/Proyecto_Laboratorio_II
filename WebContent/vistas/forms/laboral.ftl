@@ -14,7 +14,7 @@
 			                </div>
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
-					                <label for="nombreEmpresa" class="bmd-label-floating">Empresa</label>
+					                <label for="nombreEmpresa" class="bmd-label-floating">EmpresaaaA</label>
 					                <input type="text" class="form-control" id="nombreEmpresa" name="nombreEmpresa">
 					            </div>
 						    </div>
@@ -122,7 +122,7 @@
 									    <label for="giroEmpresa" class="col-sm-2 col-form-label">&Aacute;rea</label>
 									    <div class="col-sm-10">
 										      <select name="area" id="area" class="form-control" data-val-required="El area es obligatoria">
-										        <option selected>Selecciona</option>
+										        <option value="0" selected>Selecciona</option>
 										        <option value="1">Administraci&oacute;n / Oficina</option>
 										        <option value="2">Almac&eacute;n / Log&iacute;stica / Transporte</option>
 												<option value="3">Atenci&oacute;n a clientes</option>
@@ -155,7 +155,7 @@
 										    <div class="form-check form-check-radio form-check-inline">
 
 											  <label class="form-check-label">
-											    <input class="form-check-input" type="radio" name="estadoEstudio" id="estado1" value="Actualmente"> Actualmente
+											    <input class="form-check-input" type="radio" name="estado" id="estado1" value="Actualmente"> Actualmente
 											    <span class="circle">
 											        <span class="check"></span>
 											    </span>
@@ -163,7 +163,7 @@
 											</div>
 											<div class="form-check form-check-radio form-check-inline">
 											  <label class="form-check-label">
-											    <input class="form-check-input" type="radio" name="estadoEstudio" id="estado2" value="Finalizado"> Finalizado
+											    <input class="form-check-input" type="radio" name="estado" id="estado2" value="Finalizado"> Finalizado
 											    <span class="circle">
 											        <span class="check"></span>
 											    </span>
@@ -192,6 +192,7 @@
 
 				</div>
 				<input name="operacion" type="hidden" value="guardarDatosLaborales">
+				<input name="user" type="hidden" value="33">
 				<button type="submit" class="btn btn-primary" onclick="guardarDatosLaborales(event)">A&ntilde;adir</button>
 				</form>
 				

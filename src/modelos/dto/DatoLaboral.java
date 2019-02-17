@@ -36,10 +36,9 @@ public class DatoLaboral {
 	
 	public DatoLaboral() {}
 	
-	public DatoLaboral(Integer id, Integer usuario, String empresa, String cargo, 
+	public DatoLaboral(Integer usuario, String empresa, String cargo, 
 			Integer area, char estado, String periodo) {
 		super();
-		this.id=id;
 		this.usuario=usuario;
 		this.empresa=empresa;
 		this.cargo=cargo;

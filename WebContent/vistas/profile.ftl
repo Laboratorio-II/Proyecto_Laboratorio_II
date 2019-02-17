@@ -124,7 +124,7 @@
 						              
 						              
 						              
-						              <table id="tablaProfesionales" class="table table-striped table-bordered table-hover table-responsive">
+						              <table id="tablaDatosLaborales" class="table table-striped table-bordered table-hover table-responsive">
 						                <thead>
 						                    <tr>
 						                        <th class="text-center">#</th>

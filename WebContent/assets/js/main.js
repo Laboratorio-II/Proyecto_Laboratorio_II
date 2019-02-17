@@ -26,17 +26,19 @@ function enviarDatos(url, metodo, datos){
 		  confirmButtonText: 'Si, estoy seguro!'
 		}).then((result) => {
 		  if (result.value) {
-			    $.ajax({
+			    var r = $.ajax({
 					url: url,
 					type: metodo,
 					data: datos,
 					success: function(response) {
 						if (response.indexOf("error:") != 0) {
-							//var producto = JSON.parse(response);
+							var respuesta = JSON.parse(response);
+							console.log(respuesta.id);
 							//eliminarFila(producto.id);
 							//agregarFila(producto);
 							//mostrarMensajeExito("Item modificado satisfactoriamente!!!");
-							console.log("Entro al ");
+							console.log("Entro al "+metodo);
+							return respuesta;
 						}
 						else {
 							//mostrarMensajeError(response.substring(6));
@@ -49,7 +51,7 @@ function enviarDatos(url, metodo, datos){
 						//$('#ventana').modal('hide');
 					},
 					timeout: 10000
-				});
+				}).responseJSON;
 		    Swal.fire(
 		      'Exitoso!',
 		      'Datos personales guardados',

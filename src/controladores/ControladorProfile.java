@@ -86,9 +86,23 @@ public class ControladorProfile extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}else if(request.getParameter("operacion").equals("guardarDatosLaborales")){
+			try {
+				agregarDatosLaborales(request,response);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		
+	}
+	
+	@Override
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Map<String, String> parametros = Utils.getParameterMap(request);
+		Integer id = Integer.parseInt(parametros.get("id"));
+		response.getWriter().print(this.servicioDatoLaboral.eliminarDatoLaboral(id));
 	}
 	
 	protected void registrarProfesional(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -119,6 +133,35 @@ public class ControladorProfile extends HttpServlet {
 	
 	}
 	
+	protected void agregarDatosLaborales(HttpServletRequest request, HttpServletResponse response) throws IOException, ParseException{
+		/*if (parametros.get("nombre").equals("")||
+				parametros.get("descripcion").equals("")||
+				parametros.get("idCategoria").equals("")||
+				parametros.get("cantidad").equals("")||
+				parametros.get("medida").equals("")||
+				parametros.get("precio").equals("")) {
+				response.getWriter().print("error:Debe indicar los valores requeridos");
+			}			
+			else {*/
+				Integer id = Integer.parseInt(request.getParameter("user"));
+				String empresa = request.getParameter("nombreEmpresa");
+				String cargo = request.getParameter("cargo");
+				Integer area = Integer.parseInt(request.getParameter("area"));
+				char estado = request.getParameter("estado").charAt(0);
+				String periodo = request.getParameter("periodo");
+				
+				DatoLaboral datoLaboral = new DatoLaboral(id, empresa, cargo, area, estado, periodo);
+				this.servicioDatoLaboral.incluirDatoLaboral(datoLaboral);
+				try {
+					ObjectMapper objectMapper = new ObjectMapper();				
+					response.getWriter().print(objectMapper.writeValueAsString(datoLaboral));
+				} 
+				catch (Exception e) {
+					response.getWriter().print("error:"+e.getMessage());
+				}
+			//}
+	}
+	
 	protected void modificarDatosPersonales(HttpServletRequest request, HttpServletResponse response) throws IOException, ParseException{
 		/*if (parametros.get("nombre").equals("")||
 				parametros.get("descripcion").equals("")||
@@ -135,7 +178,6 @@ public class ControladorProfile extends HttpServlet {
 				DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 				Date fechaNac = dateFormat.parse(request.getParameter("fechaNac"));
 				char estadoCivil = request.getParameter("estadoCivil").charAt(0);
-				//char estadoCivil = 'S';
 				String telefono = request.getParameter("telefono");
 				Integer pais = Integer.parseInt(request.getParameter("pais"));
 				Integer estado = Integer.parseInt(request.getParameter("estado"));
