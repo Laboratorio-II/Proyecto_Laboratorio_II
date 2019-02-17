@@ -41,19 +41,24 @@ public class ServicioDatoPersonal {
 		return datoPersonal;
 	}
 	
-	public DatoPersonal modificarDatoPersonal(String nombre, String apellido,
-			Integer id, Date fechaNacimiento, String nacionalidad, char genero, char estatus) {
+	public DatoPersonal modificarDatoPersonal(Integer usuario, String nombre, String apellido,
+			Date fechaNacimiento, char estadoCivil, String telefono, 
+			Integer pais, Integer estado, Integer ciudad, char genero,
+			String descripcion) {
 		
-		DatoPersonal datoPersonal = this.getDatoPersonalPorId(id);
+		DatoPersonal datoPersonal = this.getDatoPersonalPorField("usuario", usuario);
 		datoPersonal.setNombre(nombre);
 		datoPersonal.setApellido(apellido);
-		datoPersonal.setId(id);//Usuariop
 		datoPersonal.setFechaNacimiento(fechaNacimiento);
-		datoPersonal.setNacionalidad(nacionalidad);
+		datoPersonal.setEstadoCivil(estadoCivil);
+		datoPersonal.setTelefono(telefono);
+		datoPersonal.setPais(pais);
+		datoPersonal.setEstado(estado);
+		datoPersonal.setCiudad(ciudad);
 		datoPersonal.setGenero(genero);
-		datoPersonal.setEstatus(estatus);
+		datoPersonal.setDescripcion(descripcion);
 		this.datoPersonalDAO.saveOrUpdate(datoPersonal);
-		return this.getDatoPersonalPorId(id);
+		return this.getDatoPersonalPorField("usuario", usuario);
 	}
 	
 	public String eliminarDatoPersonal(Integer id) {
@@ -63,6 +68,13 @@ public class ServicioDatoPersonal {
 			return "ok";
 		}
 		return "No se pudo eliminar el producto";
+	}
+	
+	public DatoPersonal getDatoPersonalPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.datoPersonalDAO.getByField(field,value);
+		}
+		return null;
 	}
 
 }

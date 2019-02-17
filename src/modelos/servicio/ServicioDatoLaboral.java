@@ -6,6 +6,7 @@ import java.util.List;
 
 import modelos.dao.DatoLaboralDAO;
 import modelos.dto.DatoLaboral;
+import modelos.dto.DatoPersonal;
 
 public class ServicioDatoLaboral {
 	
@@ -41,10 +42,10 @@ public class ServicioDatoLaboral {
 		return datoLaboral;
 	}
 	
-	public DatoLaboral modificarDatoLaboral(Integer id, Integer idCV,
-			String cargo, String funciones, Date fechaInicio, Date fechaFin, char estatus) {
-		DatoLaboral datoLaboral = this.getDatoLaboralPorId(id);
-		datoLaboral.setId(id);
+	/*public DatoLaboral modificarDatoLaboral(Integer usuario,
+			String empresa, String cargo, Integer area, char estado, String periodo) {
+		DatoLaboral datoLaboral = this.getDatoLaboralPorField("usuario", usuario);
+		datoLaboral.setEmpresa(id);
 		datoLaboral.setIdCV(idCV);
 		datoLaboral.setFunciones(cargo);
 		datoLaboral.setFunciones(funciones);
@@ -53,7 +54,7 @@ public class ServicioDatoLaboral {
 		datoLaboral.setEstatus(estatus);
 		this.datoLaboralDAO.saveOrUpdate(datoLaboral);
 		return this.getDatoLaboralPorId(id);
-	}
+	}*/
 	
 	public String eliminarDatoLaboral(Integer id) {
 		DatoLaboral datoLaboral = this.getDatoLaboralPorId(id);
@@ -62,6 +63,20 @@ public class ServicioDatoLaboral {
 			return "ok";
 		}
 		return "No se pudo eliminar el producto";
+	}
+	
+	public DatoLaboral getDatoLaboralPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.datoLaboralDAO.getByField(field,value);
+		}
+		return null;
+	}
+	
+	public List<DatoLaboral> getDatosLaboralesPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.datoLaboralDAO.queryAllByField(field,value);
+		}
+		return null;
 	}
 
 }

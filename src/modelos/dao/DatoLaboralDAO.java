@@ -46,5 +46,13 @@ public class DatoLaboralDAO extends GenericDAO {
 	public void delete(DatoLaboral datoLaboral) {
 		super.delete(datoLaboral);
 	}
+	
+	public DatoLaboral getByField(String field, Serializable value) {
+		return (DatoLaboral)super.getByField(DatoLaboral.class, field, value);
+	}
+	
+	public List<DatoLaboral> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(DatoLaboral.class, field, value);
+	}
 
 }

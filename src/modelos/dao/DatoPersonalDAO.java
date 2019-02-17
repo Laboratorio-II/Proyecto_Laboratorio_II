@@ -46,5 +46,9 @@ public class DatoPersonalDAO extends GenericDAO {
 	public void delete(DatoPersonal dp) {
 		super.delete(dp);
 	}
+	
+	public DatoPersonal getByField(String field, Serializable value) {
+		return (DatoPersonal)super.getByField(DatoPersonal.class, field, value);
+	}
 
 }

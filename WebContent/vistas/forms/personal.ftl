@@ -12,7 +12,7 @@
 	       <div class="col-sm-10">
 	      	<div class="form-group bmd-form-group">
                 <label for="nombre" class="bmd-label-floating">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<#if datospersonales.nombre??>${datospersonales.nombre}</#if>">
             </div>
 		    </div>
 	          </div>
@@ -25,7 +25,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="apellido" class="bmd-label-floating">Apellido</label>
-	                <input type="text" class="form-control" id="apellido" name="apellido">
+	                <input type="text" class="form-control" id="apellido" name="apellido" value="${datospersonales.apellido}">
 	            </div>
 		    </div>
 	          </div>
@@ -79,11 +79,11 @@
 					    <div class="col-sm-10">
 						    <select name="estadoCivil" id="estadoCivil" class="form-control" data-val-required="El estado civil es obligatorio">
 						        <option selected>Selecciona</option>
-						        <option value="1">Soltere</option>
-								<option value="2">Casade</option>
-								<option value="3">Separade/Divorciade</option>
-								<option value="4">Viude</option>
-								<option value="5">Uni&oacute;n libre</option>
+						        <option value="S">Soltere</option>
+								<option value="C">Casade</option>
+								<option value="D">Separade/Divorciade</option>
+								<option value="V">Viude</option>
+								<option value="U">Uni&oacute;n libre</option>
 							</select>
 				    	</div>
 					</div>
@@ -116,8 +116,8 @@
 	                <div class="form-group row">
 					    <label for="pais" class="col-sm-2 col-form-label">Pa&iacute;s</label>
 					    <div class="col-sm-10">
-						      <select name="pais" id="pais" class="form-control" disabled="disabled">
-						        <option selected>Venezuela</option>
+						      <select name="pais" id="pais" class="form-control">
+						        <option selected value="1">Venezuela</option>
 						      </select>
 				    		</div>
 					 </div>
@@ -137,7 +137,7 @@
 					    <label for="estado" class="col-sm-2 col-form-label">Estado</label>
 					    <div class="col-sm-10">
 						      <select name="estado" id="Estado" class="form-control" data-val-required="El estado es obligatorio">
-						        <option selected>Selecciona el estado</option>
+						        <option value="0" selected>Selecciona el estado</option>
 						        <option value="2">Amazonas</option>
 								<option value="3">Anzoátegui</option>
 								<option value="4">Apure</option>
@@ -182,7 +182,7 @@
 					    <label for="ciudad" class="col-sm-2 col-form-label">Ciudad</label>
 					    <div class="col-sm-10">
 						     <select name="ciudad" id="ciudad" class="form-control" data-val-required="La ciudad es obligatoria">
-						        <option selected>Seleccione una ciudad</option>
+						        <option value="0" selected>Seleccione una ciudad</option>
 						     </select>
 				    	</div>
 					 </div>
@@ -201,8 +201,8 @@
 	                <div class="form-group row">
 					    <label for="nacionalidad" class="col-sm-2 col-form-label">Nacionalidad</label>
 					    <div class="col-sm-10">
-						      <select name="pais" id="pais" class="form-control" disabled="disabled">
-						        <option selected>Venezuela</option>
+						      <select name="nacionalidad" id="nacionalidad" class="form-control" disabled="disabled">
+						        <option value="0" selected>Venezuela</option>
 						      </select>
 				    		</div>
 					 </div>
@@ -224,7 +224,7 @@
 						    <div class="form-check form-check-radio form-check-inline">
 	
 							  <label class="form-check-label">
-							    <input class="form-check-input" type="radio" name="genero" id="genero1" value="Masculino"> Masculino
+							    <input class="form-check-input" type="radio" name="genero" id="genero1" value="M"> Masculino
 							    <span class="circle">
 							        <span class="check"></span>
 							    </span>
@@ -232,7 +232,7 @@
 							</div>
 							<div class="form-check form-check-radio form-check-inline">
 							  <label class="form-check-label">
-							    <input class="form-check-input" type="radio" name="genero" id="genero2" value="Femenino"> Femenino
+							    <input class="form-check-input" type="radio" name="genero" id="genero2" value="F"> Femenino
 							    <span class="circle">
 							        <span class="check"></span>
 							    </span>
@@ -309,7 +309,7 @@
 
 	</div>
 	<input name="operacion" type="hidden" value="guardarDatosPersonales">
-
+	<input name="user" type="hidden" value="33">
 	<button type="submit" class="btn btn-danger" onclick="guardarDatosPersonales(event)">Guardar</button>
 
 </form>

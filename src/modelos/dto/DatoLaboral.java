@@ -1,28 +1,51 @@
 package modelos.dto;
 
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity(name="DatoLaboral")
+@Table(name="datos_laborales")
 public class DatoLaboral {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
-	private Integer idCV;
+	
+	@Column(name="usuario")
+	private Integer usuario;
+	
+	@Column(name="empresa")
+	private String empresa;
+	
+	@Column(name="cargo")
 	private String cargo;
-	private String funciones;
-	private Date fechaInicio;
-	private Date fechaFin;
-	private char estatus;
+	
+	@Column(name="area")
+	private Integer area;
+	
+	@Column(name="estado")
+	private char estado;
+	
+	@Column(name="periodo")
+	private String periodo;
 	
 	public DatoLaboral() {}
 	
-	public DatoLaboral(Integer id, Integer idCV, String cargo, String funciones, Date fechaInicio, Date fechaFin, char estatus) {
+	public DatoLaboral(Integer id, Integer usuario, String empresa, String cargo, 
+			Integer area, char estado, String periodo) {
 		super();
 		this.id=id;
-		this.idCV=idCV;
+		this.usuario=usuario;
+		this.empresa=empresa;
 		this.cargo=cargo;
-		this.funciones=funciones;
-		this.fechaInicio=fechaInicio;
-		this.fechaFin=fechaFin;
-		this.estatus=estatus;
+		this.area=area;
+		this.estado=estado;
+		this.periodo=periodo;
 	}
 
 	public Integer getId() {
@@ -33,12 +56,20 @@ public class DatoLaboral {
 		this.id = id;
 	}
 
-	public Integer getIdCV() {
-		return idCV;
+	public Integer getUsuario() {
+		return usuario;
 	}
 
-	public void setIdCV(Integer idCV) {
-		this.idCV = idCV;
+	public void setUsuario(Integer usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(String empresa) {
+		this.empresa = empresa;
 	}
 
 	public String getCargo() {
@@ -49,36 +80,29 @@ public class DatoLaboral {
 		this.cargo = cargo;
 	}
 
-	public String getFunciones() {
-		return funciones;
+	public Integer getArea() {
+		return area;
 	}
 
-	public void setFunciones(String funciones) {
-		this.funciones = funciones;
+	public void setArea(Integer area) {
+		this.area = area;
 	}
 
-	public Date getFechaInicio() {
-		return fechaInicio;
+	public char getEstado() {
+		return estado;
 	}
 
-	public void setFechaInicio(Date fechaInicio) {
-		this.fechaInicio = fechaInicio;
+	public void setEstado(char estado) {
+		this.estado = estado;
 	}
 
-	public Date getFechaFin() {
-		return fechaFin;
+	public String getPeriodo() {
+		return periodo;
 	}
 
-	public void setFechaFin(Date fechaFin) {
-		this.fechaFin = fechaFin;
+	public void setPeriodo(String periodo) {
+		this.periodo = periodo;
 	}
 
-	public char getEstatus() {
-		return estatus;
-	}
-
-	public void setEstatus(char estatus) {
-		this.estatus = estatus;
-	}
-
+	
 }

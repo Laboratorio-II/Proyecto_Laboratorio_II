@@ -14,3 +14,47 @@ function register(event){
 	});
 	event.preventDefault();
 }
+
+function enviarDatos(url, metodo, datos){
+	Swal.fire({
+		  title: 'Esta seguro?',
+		  text: "Verifique bien sus datos!",
+		  type: 'warning',
+		  showCancelButton: true,
+		  confirmButtonColor: '#3085d6',
+		  cancelButtonColor: '#d33',
+		  confirmButtonText: 'Si, estoy seguro!'
+		}).then((result) => {
+		  if (result.value) {
+			    $.ajax({
+					url: url,
+					type: metodo,
+					data: datos,
+					success: function(response) {
+						if (response.indexOf("error:") != 0) {
+							//var producto = JSON.parse(response);
+							//eliminarFila(producto.id);
+							//agregarFila(producto);
+							//mostrarMensajeExito("Item modificado satisfactoriamente!!!");
+							console.log("Entro al ");
+						}
+						else {
+							//mostrarMensajeError(response.substring(6));
+			 			}
+					},
+					error: function(jqXHR, estado, error) {
+						//mostrarMensajeError(error);
+					},
+					complete: function(jqXHR, estado) {
+						//$('#ventana').modal('hide');
+					},
+					timeout: 10000
+				});
+		    Swal.fire(
+		      'Exitoso!',
+		      'Datos personales guardados',
+		      'success'
+		    );
+		  }
+		});
+}

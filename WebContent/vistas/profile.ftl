@@ -25,8 +25,7 @@
 		                <img src="assets/img/faces/christian.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
 		              </div>
 		              <div class="name">
-		                <h3 class="title">${user}</h3>
-		                <h6>Designer Prueba: ${users.id}</h6>
+		                <h3 class="title">${user.email}</h3>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
@@ -122,11 +121,29 @@
 						            </div>
 						          </div>
 						          <div class="card-body">
-						              <ul class="list-group list-group-flush">
-						              	<li class="list-group-item">Alcald&iacute;a de Palavecino</li>
-						              	<li class="list-group-item">---------------</li>
-						              	<li class="list-group-item">---------------</li>
-						              </ul>
+						              
+						              
+						              
+						              <table id="tablaProfesionales" class="table table-striped table-bordered table-hover table-responsive">
+						                <thead>
+						                    <tr>
+						                        <th class="text-center">#</th>
+						                        <th>Correo</th>
+						                        <th>Rol</th>
+						                        <th>Estatus</th>
+						                        <th class="text-right">Opciones</th>
+						                    </tr>
+						                </thead>
+						                <tbody>
+						                  <#include "/vistas/listas/datosLaborales.ftl">
+						                </tbody>
+						              </table>
+						              
+						              
+						              
+						              
+						              
+						              
 						          </div>
 						      	</div>
 						  	  </div>

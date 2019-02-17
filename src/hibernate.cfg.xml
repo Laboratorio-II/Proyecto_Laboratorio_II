@@ -19,6 +19,8 @@
 		<property name="hibernate.format_sql">true</property>
 		        
       <mapping class="modelos.dto.Users" />
+      <mapping class="modelos.dto.DatoPersonal" />
+      <mapping class="modelos.dto.DatoLaboral" />
        
     </session-factory>
 

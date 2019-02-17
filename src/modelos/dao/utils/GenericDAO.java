@@ -131,5 +131,21 @@ public abstract class GenericDAO {
         }             
 	    return object;
 	}
+	
+	public List queryAllByField(Class class1, String field, Serializable value) {
+		Session session = this.sesion.openSession();
+		List<Object> data = new ArrayList<Object>();
+        try {  	
+        	Criteria criteria = session.createCriteria(class1);
+        	data = criteria.add(Restrictions.eq(""+field+"", value)).list();             
+        } 
+        catch (Exception e) {                    
+        	e.printStackTrace();
+        } 
+        finally {  
+          session.close();  
+        }        
+        return data;
+	}
 
 }
