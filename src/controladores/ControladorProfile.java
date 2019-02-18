@@ -135,8 +135,16 @@ public class ControladorProfile extends HttpServlet {
 			Users myuser = this.servicioUsers.getUserPorField("email", email);
 			
 			DatoPersonal datoPersonal = new DatoPersonal(myuser.getId(),
-					null,null,null,' ',null,null,null,null,' ',null,'A');
+					null,null,null,'U',null,null,null,null,'U',null,'A');
 			this.servicioDatoPersonal.incluirDatoPersonal(datoPersonal);
+			
+			DatoLaboral datoLaboral = new DatoLaboral(myuser.getId(),
+					null,null,null,'U',null);
+			this.servicioDatoLaboral.incluirDatoLaboral(datoLaboral);
+			
+			EstudioF estudioF = new EstudioF(myuser.getId(),
+					null,null,'U',null);
+			this.servicioEstudioF.incluirEstudioF(estudioF);
 			
 			
 			HttpSession misession= request.getSession(true);

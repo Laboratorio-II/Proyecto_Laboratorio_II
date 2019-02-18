@@ -135,13 +135,7 @@ function agregarFilaLaborales(datos) {
         '<td>'+datos.usuario+'</td>',
         '<td>'+datos.empresa+'</td>',
         '<td>'+datos.cargo+'</td>',
-        '<td class="td-actions text-right">',
-        //'<form>',
-        '<button type="button" id="btnEliminar'+datos.id+'" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round" onclick="eliminarDatosLaborales('+datos.id+')">',
-          '<i class="fa fa-times"></i>',
-        '</button>',
-        //'</form>',
-        '</td>'
+        '<td class="td-actions text-right"><button type="button" id="btnEliminar'+datos.id+'" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round" onclick="eliminarDatosLaborales('+datos.id+')"><i class="fa fa-times"></i></button></td>'
     ] ).draw();
 	//$('[data-toggle="confirmation"]').confirmation('hide');
 }

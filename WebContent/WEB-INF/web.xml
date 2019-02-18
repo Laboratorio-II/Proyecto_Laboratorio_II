@@ -157,6 +157,14 @@
     <servlet-name>controlador_profesionales</servlet-name>
     <url-pattern>/profesionales</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_admin</servlet-name>
+    <servlet-class>controladores.ControladorAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_admin</servlet-name>
+    <url-pattern>/perfil_admin</url-pattern>
+  </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

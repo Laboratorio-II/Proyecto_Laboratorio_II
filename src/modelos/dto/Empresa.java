@@ -1,14 +1,18 @@
 package modelos.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity(name="Empresa")
+@Table(name="empresas")
 public class Empresa {
 	
 	private Integer id;
-	private String contrasena;
 	private String nombre;
 	private String rif;
-	private String pais;
-	private String estado;
-	private String ciudad;
+	private Integer pais;
+	private Integer estado;
+	private Integer ciudad;
 	private String direccion;
 	private String sector;
 	private String descripcion;
@@ -16,7 +20,9 @@ public class Empresa {
 	
 	public Empresa() {}
 	
-	public Empresa(Integer id, String nombre, String rif, String pais, String estado, String ciudad, String direccion, String sector, String descripcion, char estatus) {
+	public Empresa(Integer id, String nombre, String rif, Integer pais, 
+			Integer estado, Integer ciudad, String direccion, String sector, 
+			String descripcion, char estatus) {
 		super();
 		this.id=id;
 		this.nombre=nombre;
@@ -38,14 +44,6 @@ public class Empresa {
 		this.id = id;
 	}
 
-	public String getContrasena() {
-		return contrasena;
-	}
-
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
-	}
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -62,27 +60,27 @@ public class Empresa {
 		this.rif = rif;
 	}
 
-	public String getPais() {
+	public Integer getPais() {
 		return pais;
 	}
 
-	public void setPais(String pais) {
+	public void setPais(Integer pais) {
 		this.pais = pais;
 	}
 
-	public String getEstado() {
+	public Integer getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(Integer estado) {
 		this.estado = estado;
 	}
 
-	public String getCiudad() {
+	public Integer getCiudad() {
 		return ciudad;
 	}
 
-	public void setCiudad(String ciudad) {
+	public void setCiudad(Integer ciudad) {
 		this.ciudad = ciudad;
 	}
 
