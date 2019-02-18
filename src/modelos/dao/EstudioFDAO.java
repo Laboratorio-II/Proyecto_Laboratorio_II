@@ -46,5 +46,13 @@ public class EstudioFDAO extends GenericDAO {
 	public void delete(EstudioF ef) {
 		super.delete(ef);
 	}
+	
+	public EstudioF getByField(String field, Serializable value) {
+		return (EstudioF)super.getByField(EstudioF.class, field, value);
+	}
+	
+	public List<EstudioF> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(EstudioF.class, field, value);
+	}
 
 }

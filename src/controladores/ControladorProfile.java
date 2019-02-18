@@ -21,8 +21,10 @@ import controladores.utils.Utils;
 import modelos.dto.Users;
 import modelos.dto.DatoLaboral;
 import modelos.dto.DatoPersonal;
+import modelos.dto.EstudioF;
 import modelos.servicio.ServicioDatoLaboral;
 import modelos.servicio.ServicioDatoPersonal;
+import modelos.servicio.ServicioEstudioF;
 import modelos.servicio.ServicioUsers;
 
 @WebServlet("/ControladorProfile")
@@ -36,12 +38,14 @@ public class ControladorProfile extends HttpServlet {
 	private ServicioUsers servicioUsers;
 	private ServicioDatoPersonal servicioDatoPersonal;
 	private ServicioDatoLaboral servicioDatoLaboral;
+	private ServicioEstudioF servicioEstudioF;
 	
 	public ControladorProfile() {
 		super();
 		this.servicioUsers = ServicioUsers.getInstancia();
 		this.servicioDatoPersonal = ServicioDatoPersonal.getInstancia();
 		this.servicioDatoLaboral = ServicioDatoLaboral.getInstancia();
+		this.servicioEstudioF = ServicioEstudioF.getInstancia();
 	}
 
 	@Override
@@ -68,6 +72,7 @@ public class ControladorProfile extends HttpServlet {
 		request.setAttribute("user", myuser);
 		request.setAttribute("datospersonales", this.servicioDatoPersonal.getDatoPersonalPorField("usuario", myuser.getId()));
 		request.setAttribute("datoslaborales", this.servicioDatoLaboral.getDatosLaboralesPorField("usuario", myuser.getId()));
+		request.setAttribute("estudiosFormales", this.servicioEstudioF.getEstudiosFPorField("usuario", myuser.getId()));
 		
 		request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		
@@ -93,6 +98,13 @@ public class ControladorProfile extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}else if(request.getParameter("operacion").equals("guardarEstudiosFormales")){
+			try {
+				agregarEstudiosFormales(request,response);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		
@@ -101,8 +113,13 @@ public class ControladorProfile extends HttpServlet {
 	@Override
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Map<String, String> parametros = Utils.getParameterMap(request);
-		Integer id = Integer.parseInt(parametros.get("id"));
-		response.getWriter().print(this.servicioDatoLaboral.eliminarDatoLaboral(id));
+		if(parametros.get("op").equals("eliminarDatosLaborales")){
+			Integer id = Integer.parseInt(parametros.get("id"));
+			response.getWriter().print(this.servicioDatoLaboral.eliminarDatoLaboral(id));
+		}else if(parametros.get("op").equals("eliminarEstudios")){
+			Integer id = Integer.parseInt(parametros.get("id"));
+			response.getWriter().print(this.servicioEstudioF.eliminarEstudioF(id));
+		}
 	}
 	
 	protected void registrarProfesional(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -155,6 +172,34 @@ public class ControladorProfile extends HttpServlet {
 				try {
 					ObjectMapper objectMapper = new ObjectMapper();				
 					response.getWriter().print(objectMapper.writeValueAsString(datoLaboral));
+				} 
+				catch (Exception e) {
+					response.getWriter().print("error:"+e.getMessage());
+				}
+			//}
+	}
+	
+	protected void agregarEstudiosFormales(HttpServletRequest request, HttpServletResponse response) throws IOException, ParseException{
+		/*if (parametros.get("nombre").equals("")||
+				parametros.get("descripcion").equals("")||
+				parametros.get("idCategoria").equals("")||
+				parametros.get("cantidad").equals("")||
+				parametros.get("medida").equals("")||
+				parametros.get("precio").equals("")) {
+				response.getWriter().print("error:Debe indicar los valores requeridos");
+			}			
+			else {*/
+				Integer id = Integer.parseInt(request.getParameter("user"));
+				String centro = request.getParameter("centroEducativo");
+				Integer nivel = Integer.parseInt(request.getParameter("nivelEstudios"));
+				char estado = request.getParameter("estadoEstudio").charAt(0);
+				String periodo = request.getParameter("periodo");
+				
+				EstudioF estudioF = new EstudioF(id, centro, nivel, estado, periodo);
+				this.servicioEstudioF.incluirEstudioF(estudioF);
+				try {
+					ObjectMapper objectMapper = new ObjectMapper();				
+					response.getWriter().print(objectMapper.writeValueAsString(estudioF));
 				} 
 				catch (Exception e) {
 					response.getWriter().print("error:"+e.getMessage());

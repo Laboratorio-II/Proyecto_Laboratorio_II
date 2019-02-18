@@ -165,11 +165,20 @@
 							            </div>
 							          </div>
 							          <div class="card-body">
-							              <ul class="list-group list-group-flush">
-							              	<li class="list-group-item">Universidad Centroccidental "Lisandro Alvarado</li>
-							              	<li class="list-group-item">Liceo Rafael Villavicencio</li>
-							              	<li class="list-group-item">Escuela "Venezuela"</li>
-							              </ul>
+							              <table id="tablaEstudiosFormales" class="table table-striped table-bordered table-hover table-responsive">
+						                <thead>
+						                    <tr>
+						                        <th class="text-center">#</th>
+						                        <th>Correo</th>
+						                        <th>Rol</th>
+						                        <th>Estatus</th>
+						                        <th class="text-right">Opciones</th>
+						                    </tr>
+						                </thead>
+						                <tbody>
+						                  <#include "/vistas/listas/estudiosFormales.ftl">
+						                </tbody>
+						              </table>
 							          </div>
 							      	</div>
 							  	  </div>

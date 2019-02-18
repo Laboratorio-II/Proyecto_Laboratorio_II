@@ -14,7 +14,7 @@
 			                </div>
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
-					                <label for="centroEducativo" class="bmd-label-floating">Centro educativo</label>
+					                <label for="centroEducativo" class="bmd-label-floating">Centro educativoOOO</label>
 					                <input type="text" class="form-control" name="centroEducativo" id="centroEducativo">
 					            </div>
 						    </div>
@@ -94,7 +94,9 @@
 					            </div>
 						    </div>
 			            </div>
-				<button type="submit" class="btn btn-primary" onclick="guardarDatosEstudios(event)">A&ntilde;adir</button>
+			            <input name="operacion" type="hidden" value="guardarEstudiosFormales">
+				<input name="user" type="hidden" value="33">
+				<button type="submit" class="btn btn-primary" onclick="guardarEstudiosFormales(event)">A&ntilde;adir</button>
 				</div>
 				</form>
 			</div>	

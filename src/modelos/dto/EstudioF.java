@@ -1,30 +1,46 @@
 package modelos.dto;
 
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity(name="EstudioF")
+@Table(name="estudios_formales")
 public class EstudioF {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
-	private String idCV;
-	private String nombre;
-	private String descripcion;
-	private Date fechaInicio;
-	private Date fechaFin;
-	private String institucion;
-	private char estatus;
+	
+	@Column(name="usuario")
+	private Integer usuario;
+	
+	@Column(name="centro")
+	private String centro;
+	
+	@Column(name="nivel")
+	private Integer nivel;
+	
+	@Column(name="estado")
+	private char estado;
+	
+	@Column(name="periodo")
+	private String periodo;
 	
 	public EstudioF() {}
 	
-	public EstudioF(Integer id, String idCV, String nombre, String descripcion, Date fechaInicio, Date fechaFin, String institucion, char estatus) {
+	public EstudioF(Integer usuario, String centro, 
+			Integer nivel, char estado, String periodo) {
 		super();
-		this.id=id;
-		this.idCV=idCV;
-		this.nombre=nombre;
-		this.descripcion=descripcion;
-		this.fechaInicio=fechaInicio;
-		this.fechaFin=fechaFin;
-		this.institucion=institucion;
-		this.estatus=estatus;
+		this.usuario=usuario;
+		this.centro=centro;
+		this.nivel=nivel;
+		this.estado=estado;
+		this.periodo=periodo;
 	}
 
 	public Integer getId() {
@@ -35,60 +51,45 @@ public class EstudioF {
 		this.id = id;
 	}
 
-	public String getIdCV() {
-		return idCV;
+	public Integer getUsuario() {
+		return usuario;
 	}
 
-	public void setIdCV(String idCV) {
-		this.idCV = idCV;
+	public void setUsuario(Integer usuario) {
+		this.usuario = usuario;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getCentro() {
+		return centro;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setCentro(String centro) {
+		this.centro = centro;
 	}
 
-	public String getDescripcion() {
-		return descripcion;
+	public Integer getNivel() {
+		return nivel;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setNivel(Integer nivel) {
+		this.nivel = nivel;
 	}
 
-	public Date getFechaInicio() {
-		return fechaInicio;
+	public char getEstado() {
+		return estado;
 	}
 
-	public void setFechaInicio(Date fechaInicio) {
-		this.fechaInicio = fechaInicio;
+	public void setEstado(char estado) {
+		this.estado = estado;
 	}
 
-	public Date getFechaFin() {
-		return fechaFin;
+	public String getPeriodo() {
+		return periodo;
 	}
 
-	public void setFechaFin(Date fechaFin) {
-		this.fechaFin = fechaFin;
+	public void setPeriodo(String periodo) {
+		this.periodo = periodo;
 	}
 
-	public String getInstitucion() {
-		return institucion;
-	}
-
-	public void setInstitucion(String institucion) {
-		this.institucion = institucion;
-	}
-
-	public char getEstatus() {
-		return estatus;
-	}
-
-	public void setEstatus(char estatus) {
-		this.estatus = estatus;
-	}
-
+	
 }

@@ -85,6 +85,7 @@ function guardarDatosLaborales(e){
 function eliminarDatosLaborales(id){
 	console.log("Funcion: eliminarDatosLaborales");
 	var metodo = "DELETE";
+	var op = "eliminarDatosLaborales";
 	
 	Swal.fire({
 		  title: 'Esta seguro?',
@@ -99,11 +100,11 @@ function eliminarDatosLaborales(id){
 			    $.ajax({
 					url: url,
 					type: metodo,
-					data: {"id": id},
+					data: {"id": id, "op": op},
 					success: function(response) {
 						if (response == "ok") {
 							console.log("okkkkkk");
-							eliminarFila(id);
+							eliminarFilaLaborales(id);
 						}
 						else {
 							//mostrarMensajeError(response.substring(6));
@@ -130,22 +131,22 @@ function eliminarDatosLaborales(id){
 function agregarFilaLaborales(datos) {
 	//console.log(datos);
 	tablaDatosLaborales.row.add( [
-        '<td id="nombre'+datos.id+'">'+datos.id+'</td>',
+        '<td id="idDL'+datos.id+'">'+datos.id+'</td>',
         '<td>'+datos.usuario+'</td>',
         '<td>'+datos.empresa+'</td>',
         '<td>'+datos.cargo+'</td>',
         '<td class="td-actions text-right">',
-        '<form>',
-        '<button type="button" id="btnEliminar'+datos.id+'" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round" onclick="onEliminar('+datos.id+')">',
+        //'<form>',
+        '<button type="button" id="btnEliminar'+datos.id+'" rel="tooltip" title="Eliminar" class="btn btn-danger btn-fab btn-fab-mini btn-round" onclick="eliminarDatosLaborales('+datos.id+')">',
           '<i class="fa fa-times"></i>',
         '</button>',
-        '</form>',
+        //'</form>',
         '</td>'
     ] ).draw();
 	//$('[data-toggle="confirmation"]').confirmation('hide');
 }
 
-function eliminarFila(id) {
+function eliminarFilaLaborales(id) {
 	fila = $('#btnEliminar'+id).closest("tr")[0];
 	$(fila).addClass('selected');
 	tablaDatosLaborales.row('.selected').remove().draw( false );

@@ -21,6 +21,7 @@
       <mapping class="modelos.dto.Users" />
       <mapping class="modelos.dto.DatoPersonal" />
       <mapping class="modelos.dto.DatoLaboral" />
+      <mapping class="modelos.dto.EstudioF" />
        
     </session-factory>
 

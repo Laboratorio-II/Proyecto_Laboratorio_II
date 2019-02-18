@@ -12,20 +12,20 @@ import modelos.dto.Cargo;
 
 
 
-public class ServicioCargoDAO {
+public class ServicioCargo {
 private CargoDAO servCargoDAO;
 
 			
-private static ServicioCargoDAO instancia;
-public static ServicioCargoDAO getInstancia() {
+private static ServicioCargo instancia;
+public static ServicioCargo getInstancia() {
 	if (instancia == null) {
-		instancia = new ServicioCargoDAO();
+		instancia = new ServicioCargo();
 	}
 	return instancia;
 }
 
 
-private ServicioCargoDAO(){
+private ServicioCargo(){
 	super();
 	this.servCargoDAO= CargoDAO.getInstancia();
 			
