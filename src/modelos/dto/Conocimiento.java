@@ -1,18 +1,36 @@
 package modelos.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="Conocimiento")
+@Table(name="conocimientos")
 public class Conocimiento {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
-	private String idCV;
+	
+	@Column(name="usuario")
+	private Integer usuario;
+	
+	@Column(name="nombre")
 	private String nombre;
+	
+	@Column(name="estatus")
 	private char estatus;
 	
 	public Conocimiento() {}
 	
-	public Conocimiento(Integer id, String idCV, String nombre, char estatus) {
+	public Conocimiento(Integer id, Integer usuario, String nombre, char estatus) {
 		super();
 		this.id=id;
-		this.idCV=idCV;
+		this.usuario=usuario;
 		this.nombre=nombre;
 		this.estatus=estatus;
 	}
@@ -25,12 +43,12 @@ public class Conocimiento {
 		this.id = id;
 	}
 
-	public String getIdCV() {
-		return idCV;
+	public Integer getUsuario() {
+		return usuario;
 	}
 
-	public void setIdCV(String idCV) {
-		this.idCV = idCV;
+	public void setUsuario(Integer usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getNombre() {

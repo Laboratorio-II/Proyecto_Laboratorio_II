@@ -1,19 +1,37 @@
 package modelos.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="Ciudad")
+@Table(name="ciudades")
 public class Ciudad {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
+	
+	@Column(name="estado")
+	private Integer estado;
+	
+	@Column(name="nombre")
 	private String nombre;
-	private String idEstado;
+	
+	@Column(name="estatus")
 	private char estatus;
 	
 	public Ciudad() {}
 
-	public Ciudad(Integer id, String nombre, String idEstado, char estatus) {
+	public Ciudad(Integer id, Integer estado, String nombre, char estatus) {
 		super();
 		this.id = id;
+		this.estado = estado;
 		this.nombre = nombre;
-		this.idEstado = idEstado;
 		this.estatus = estatus;
 	}
 
@@ -33,12 +51,12 @@ public class Ciudad {
 		this.nombre = nombre;
 	}
 
-	public String getIdEstado() {
-		return idEstado;
+	public Integer getEstado() {
+		return estado;
 	}
 
-	public void setIdEstado(String idEstado) {
-		this.idEstado = idEstado;
+	public void setEstado(Integer estado) {
+		this.estado = estado;
 	}
 
 	public char getEstatus() {

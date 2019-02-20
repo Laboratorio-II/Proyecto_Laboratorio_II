@@ -39,12 +39,12 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="fechaNac" class="bmd-label-floating">Fecha de nacimiento</label>
-	                <input type="date" class="form-control" id="fechaNac" name="fechaNac">
+	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="${datospersonales.fechaNacimiento}">
 	            </div>
 		    </div>
 	          </div>
 	
-	          <div class="input-group">
+	          <!-- <div class="input-group">
 	              <div class="input-group-prepend">
 	                  <span class="input-group-text">
 	                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -56,7 +56,7 @@
 	                <input type="text" class="form-control" id="identificacion" name="identificacion">
 	            </div>
 		    </div>
-	       </div>
+	       </div>-->
 	
 		<!--<select id="identificacion1" class="form-control">
 			<option selected>Selecciona</option>
@@ -78,12 +78,11 @@
 					    <label for="estadoCivil" class="col-sm-2 col-form-label">Estado civil</label>
 					    <div class="col-sm-10">
 						    <select name="estadoCivil" id="estadoCivil" class="form-control" data-val-required="El estado civil es obligatorio">
-						        <option selected>Selecciona</option>
-						        <option value="S">Soltere</option>
-								<option value="C">Casade</option>
-								<option value="D">Separade/Divorciade</option>
-								<option value="V">Viude</option>
-								<option value="U">Uni&oacute;n libre</option>
+						        <!--  <option selected>Selecciona</option>-->
+						        <option value="S">Soltero(a)</option>
+								<option value="C">Casado(a)</option>
+								<option value="D">Separado(a)/Divorciado(a)</option>
+								<option value="V">Viudo(a)</option>
 							</select>
 				    	</div>
 					</div>
@@ -100,7 +99,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="telefono" class="bmd-label-floating">Tel&eacute;fono</label>
-	                <input type="text" class="form-control" id="telefono" name="telefono">
+	                <input type="text" class="form-control" id="telefono" name="telefono" value="${datospersonales.telefono}">
 	            </div>
 		    </div>
 	          </div>
@@ -190,7 +189,7 @@
 		    </div>
 	          </div>
 	
-	          <div class="input-group">
+	          <!--  <div class="input-group">
 	              <div class="input-group-prepend">
 	                  <span class="input-group-text">
 	                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -208,7 +207,7 @@
 					 </div>
 	            </div>
 		    </div>
-	          </div>
+	          </div>-->
 	
 	          <div class="input-group">
 	              <div class="input-group-prepend">
@@ -224,7 +223,7 @@
 						    <div class="form-check form-check-radio form-check-inline">
 	
 							  <label class="form-check-label">
-							    <input class="form-check-input" type="radio" name="genero" id="genero1" value="M"> Masculino
+							    <input class="form-check-input" checked type="radio" name="genero" id="genero1" value="M"> Masculino
 							    <span class="circle">
 							        <span class="check"></span>
 							    </span>
@@ -245,7 +244,7 @@
 		    </div>
 	          </div>
 	
-	          <div class="input-group">
+	          <!-- <div class="input-group">
 	              <div class="input-group-prepend">
 	                  <span class="input-group-text">
 	                    <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -257,7 +256,7 @@
 	                <input type="text" class="form-control" id="tituloCV" name=""tituloCV"">
 	            </div>
 		    </div>
-	          </div>
+	          </div>-->
 	
 	          <div class="input-group">
 	              <div class="input-group-prepend">
@@ -273,7 +272,7 @@
 		    </div>
 	          </div>
 	
-	          <div class="input-group">
+	         <!--   <div class="input-group">
 	              <div class="input-group-prepend">
 	                  <span class="input-group-text">
 	                    <i class="fa fa-language" aria-hidden="true"></i>
@@ -305,7 +304,7 @@
 					 </div>
 	            </div>
 		    </div>
-	          </div>
+	          </div>-->
 
 	</div>
 	<input name="operacion" type="hidden" value="guardarDatosPersonales">

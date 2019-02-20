@@ -42,11 +42,11 @@ public class ServicioEstado {
 		return estado;
 	}
 	
-	public Estado modificarEstado(Integer id, String nombre, String idPais, char estatus) {
+	public Estado modificarEstado(Integer id, Integer pais, String nombre, char estatus) {
 		Estado estado = this.getEstadoPorId(id);
 		estado.setId(id);
+		estado.setPais(pais);
 		estado.setNombre(nombre);
-		estado.setIdPais(idPais);
 		estado.setEstatus(estatus);
 		this.estadoDAO.saveOrUpdate(estado);
 		return this.getEstadoPorId(id);

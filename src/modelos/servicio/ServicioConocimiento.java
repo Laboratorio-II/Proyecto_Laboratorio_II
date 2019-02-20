@@ -34,6 +34,11 @@ public class ServicioConocimiento {
 		
 	}
 	
+	public Conocimiento incluirConocimiento(Conocimiento conocimiento) {
+		this.conoDAO.save(conocimiento);
+		return conocimiento;
+	}
+	
 	
 	
 	

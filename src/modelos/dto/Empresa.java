@@ -1,37 +1,61 @@
 package modelos.dto;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity(name="Empresa")
 @Table(name="empresas")
 public class Empresa {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
+	
+	@Column(name="usuario")
+	private Integer usuario;
+	
+	@Column(name="nombre")
 	private String nombre;
+	
+	@Column(name="rif")
 	private String rif;
+	
+	@Column(name="pais")
 	private Integer pais;
+	
+	@Column(name="estado")
 	private Integer estado;
+	
+	@Column(name="ciudad")
 	private Integer ciudad;
+	
+	@Column(name="direccion")
 	private String direccion;
-	private String sector;
+	
+	@Column(name="descripcion")
 	private String descripcion;
+	
+	@Column(name="estatus")
 	private char estatus;
 	
 	public Empresa() {}
 	
-	public Empresa(Integer id, String nombre, String rif, Integer pais, 
-			Integer estado, Integer ciudad, String direccion, String sector, 
+	public Empresa(Integer usuario, String nombre, String rif, Integer pais, 
+			Integer estado, Integer ciudad, String direccion, 
 			String descripcion, char estatus) {
 		super();
-		this.id=id;
+		this.usuario=usuario;
 		this.nombre=nombre;
 		this.rif=rif;
 		this.pais=pais;
 		this.estado=estado;
 		this.ciudad=ciudad;
 		this.direccion=direccion;
-		this.sector=sector;
 		this.descripcion=descripcion;
 		this.estatus=estatus;
 	}
@@ -92,16 +116,16 @@ public class Empresa {
 		this.direccion = direccion;
 	}
 
-	public String getSector() {
-		return sector;
-	}
-
-	public void setSector(String sector) {
-		this.sector = sector;
-	}
-
 	public String getDescripcion() {
 		return descripcion;
+	}
+
+	public Integer getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Integer usuario) {
+		this.usuario = usuario;
 	}
 
 	public void setDescripcion(String descripcion) {

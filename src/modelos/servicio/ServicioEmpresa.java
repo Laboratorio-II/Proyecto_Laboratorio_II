@@ -40,7 +40,7 @@ public class ServicioEmpresa {
 		return empresa;
 	}
 	
-	public Empresa modificarEmpresa(Integer id, String nombre, String rif,
+	/*public Empresa modificarEmpresa(Integer id, String nombre, String rif,
 			String pais, String estado, String ciudad, String sector, String descripcion, char estatus) {
 		
 		Empresa empresa = this.getEmpresaPorId(id);
@@ -55,7 +55,7 @@ public class ServicioEmpresa {
 		empresa.setEstatus(estatus);
 		this.empresaDAO.saveOrUpdate(empresa);
 		return this.getEmpresaPorId(id);
-	}
+	}*/
 	
 	public String eliminarEmpresa(Integer id) {
 		Empresa empresa = this.getEmpresaPorId(id);
