@@ -46,5 +46,13 @@ public class ConocimientoDAO extends GenericDAO {
 	public void delete(Conocimiento conocimiento) {
 		super.delete(conocimiento);
 	}
+	
+	public Conocimiento getByField(String field, Serializable value) {
+		return (Conocimiento)super.getByField(Conocimiento.class, field, value);
+	}
+	
+	public List<Conocimiento> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Conocimiento.class, field, value);
+	}
 
 }

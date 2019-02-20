@@ -267,7 +267,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="descripcionPerfil" class="bmd-label-floating">Descripci&oacute;n de tu perfil profesional</label>
-	                <textarea class="form-control" id="descripcionPerfil" name="descripcionPerfil" rows="3"></textarea>
+	                <textarea class="form-control" id="descripcionPerfil" name="descripcionPerfil" rows="3">${datospersonales.descripcion}</textarea>
 	            </div>
 		    </div>
 	          </div>

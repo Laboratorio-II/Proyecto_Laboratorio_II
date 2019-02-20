@@ -27,9 +27,8 @@ public class Conocimiento {
 	
 	public Conocimiento() {}
 	
-	public Conocimiento(Integer id, Integer usuario, String nombre, char estatus) {
+	public Conocimiento(Integer usuario, String nombre, char estatus) {
 		super();
-		this.id=id;
 		this.usuario=usuario;
 		this.nombre=nombre;
 		this.estatus=estatus;
