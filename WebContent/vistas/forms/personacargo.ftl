@@ -13,7 +13,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="nameContact" class="bmd-label-floating">Nombres</label>
-			                <input type="text" class="form-control" name="nombreContactoPC" id="nombreContactoPC">
+			                <input type="text" class="form-control" name="nombreContactoPC" id="nombreContactoPC" value="${personaacargo.nombre}">
 			            </div>
 				    </div>
 	            </div>
@@ -74,5 +74,6 @@
 
 	        </div>
 	        <input name="operacion" type="hidden" value="guardarDatosPersonalesEmpresa">
+	        <input name="user" type="hidden" value="34">
 	      				  <button type="submit" class="btn btn-danger" onclick="guardarDatosPersonalesEmpresa(event)">Guardar</button>
 	      				  </form>

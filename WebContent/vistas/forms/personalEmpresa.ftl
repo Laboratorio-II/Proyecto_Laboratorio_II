@@ -15,7 +15,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="name" class="bmd-label-floating">Nombre o raz&oacute;n social</label>
-			                <input type="text" class="form-control" name="nombreempresa" id="nombreempresa">
+			                <input type="text" class="form-control" name="nombreempresa" id="nombreempresa" value="${datosempresa.nombre}">
 			            </div>
 				    </div>
 	            </div>
@@ -45,8 +45,8 @@
 			                <div class="form-group row">
 							    <label for="pais" class="col-sm-2 col-form-label">Pa&iacute;s</label>
 							    <div class="col-sm-10">
-								      <select name="pais" id="pais" class="form-control" disabled="disabled">
-								        <option selected>Venezuela</option>
+								      <select name="pais" id="pais" class="form-control">
+								        <option selected value="1">Venezuela</option>
 								      </select>
 						    		</div>
 							 </div>
@@ -66,7 +66,7 @@
 							    <label for="estado" class="col-sm-2 col-form-label">Estado</label>
 							    <div class="col-sm-10">
 								      <select name="estado" id="estado" class="form-control" data-val-required="El estado es obligatorio">
-								        <option selected>Selecciona el estado</option>
+								        <option value="0" selected>Selecciona el estado</option>
 								        <option value="2">Amazonas</option>
 										<option value="3">Anzo&aacute;tegui</option>
 										<option value="4">Apure</option>
@@ -111,7 +111,7 @@
 							    <label for="ciudad" class="col-sm-2 col-form-label">Ciudad</label>
 							    <div class="col-sm-10">
 								     <select name="ciudad" id="ciudad" class="form-control" data-val-required="La ciudad es obligatoria">
-								        <option selected>Seleccione una ciudad</option>
+								        <option value="0" selected>Seleccione una ciudad</option>
 								     </select>
 						    	</div>
 							 </div>
@@ -135,7 +135,7 @@
 
 
 
-	            <div class="input-group">
+	            <!--  <div class="input-group">
 	                <div class="input-group-prepend">
 	                    <span class="input-group-text">
 	                      <i class="fa fa-building" aria-hidden="true"></i>
@@ -176,7 +176,7 @@
 							</div>
 			            </div>
 				    </div>
-	            </div>
+	            </div>-->
 
 				<div class="input-group">
 	                <div class="input-group-prepend">
@@ -195,6 +195,7 @@
 
 	        </div>
 				<input name="operacion" type="hidden" value="guardarDatosLaboralesEmpresa">
+				<input name="user" type="hidden" value="34">
 	      				  <button type="submit" class="btn btn-danger" onclick="guardarDatosLaboralesEmpresa(event)">Guardar</button>
 	      				  </form>
 	      	

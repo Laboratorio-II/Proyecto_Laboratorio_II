@@ -46,5 +46,9 @@ public class EmpresaDAO extends GenericDAO {
 	public void delete(Empresa e) {
 		super.delete(e);
 	}
+	
+	public Empresa getByField(String field, Serializable value) {
+		return (Empresa)super.getByField(Empresa.class, field, value);
+	}
 
 }

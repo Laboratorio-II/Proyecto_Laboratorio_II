@@ -12,7 +12,7 @@
 	       <div class="col-sm-10">
 	      	<div class="form-group bmd-form-group">
                 <label for="nombre" class="bmd-label-floating">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" value="<#if datospersonales.nombre??>${datospersonales.nombre}</#if>">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<#if datospersonales?has_content>${datospersonales.nombre}</#if>">
             </div>
 		    </div>
 	          </div>
@@ -25,7 +25,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="apellido" class="bmd-label-floating">Apellido</label>
-	                <input type="text" class="form-control" id="apellido" name="apellido" value="${datospersonales.apellido}">
+	                <input type="text" class="form-control" id="apellido" name="apellido" value="<#if datospersonales?has_content>${datospersonales.apellido}</#if>">
 	            </div>
 		    </div>
 	          </div>
@@ -39,7 +39,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="fechaNac" class="bmd-label-floating">Fecha de nacimiento</label>
-	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="${datospersonales.fechaNacimiento}">
+	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="">
 	            </div>
 		    </div>
 	          </div>
@@ -99,7 +99,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="telefono" class="bmd-label-floating">Tel&eacute;fono</label>
-	                <input type="text" class="form-control" id="telefono" name="telefono" value="${datospersonales.telefono}">
+	                <input type="text" class="form-control" id="telefono" name="telefono" value="<#if datospersonales?has_content>${datospersonales.telefono}</#if>">
 	            </div>
 		    </div>
 	          </div>

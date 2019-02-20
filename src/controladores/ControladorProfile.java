@@ -135,15 +135,15 @@ public class ControladorProfile extends HttpServlet {
 			Users myuser = this.servicioUsers.getUserPorField("email", email);
 			
 			DatoPersonal datoPersonal = new DatoPersonal(myuser.getId(),
-					null,null,null,'U',null,null,null,null,'U',null,'A');
+					" "," ",null,'U'," ",0,0,0,'U'," ",'A');
 			this.servicioDatoPersonal.incluirDatoPersonal(datoPersonal);
 			
 			DatoLaboral datoLaboral = new DatoLaboral(myuser.getId(),
-					null,null,null,'U',null);
+					" "," ",0,'U'," ");
 			this.servicioDatoLaboral.incluirDatoLaboral(datoLaboral);
 			
 			EstudioF estudioF = new EstudioF(myuser.getId(),
-					null,null,'U',null);
+					" ",0,'U'," ");
 			this.servicioEstudioF.incluirEstudioF(estudioF);
 			
 			
@@ -152,6 +152,10 @@ public class ControladorProfile extends HttpServlet {
 			misession.setAttribute("sessionUser",sessionUser);
 			
 			request.setAttribute("user", myuser);
+			
+			request.setAttribute("datospersonales", this.servicioDatoPersonal.getDatoPersonalPorField("usuario", myuser.getId()));
+			request.setAttribute("datoslaborales", this.servicioDatoLaboral.getDatosLaboralesPorField("usuario", myuser.getId()));
+			request.setAttribute("estudiosFormales", this.servicioEstudioF.getEstudiosFPorField("usuario", myuser.getId()));
 			
 			request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		//}

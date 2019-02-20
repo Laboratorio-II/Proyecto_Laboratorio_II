@@ -30,6 +30,9 @@ $(document).ready(function() {
 	//$('#formProducto').validate();
 	//$('#cantidad').numeric();
 	//$('#precio').numeric('.');
+	
+	var row = $('#tablaDatosLaborales').children('tbody').children('tr:first');
+	row.hide();
 });
 
 function guardarDatosLaborales(e){

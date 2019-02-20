@@ -40,22 +40,21 @@ public class ServicioEmpresa {
 		return empresa;
 	}
 	
-	/*public Empresa modificarEmpresa(Integer id, String nombre, String rif,
-			String pais, String estado, String ciudad, String sector, String descripcion, char estatus) {
+	public Empresa modificarEmpresa(Integer usuario, String nombre, String rif,
+			Integer pais, Integer estado, Integer ciudad, String direccion, String descripcion) {
 		
-		Empresa empresa = this.getEmpresaPorId(id);
-		empresa.setId(id);
+		Empresa empresa = this.getEmpresaPorField("usuario", usuario);
+		//empresa.setId(id);
 		empresa.setNombre(nombre);
 		empresa.setRif(rif);
 		empresa.setPais(pais);
 		empresa.setEstado(estado);
 		empresa.setCiudad(ciudad);
-		empresa.setSector(sector);
+		empresa.setDireccion(direccion);
 		empresa.setDescripcion(descripcion);
-		empresa.setEstatus(estatus);
 		this.empresaDAO.saveOrUpdate(empresa);
-		return this.getEmpresaPorId(id);
-	}*/
+		return this.getEmpresaPorField("usuario", usuario);
+	}
 	
 	public String eliminarEmpresa(Integer id) {
 		Empresa empresa = this.getEmpresaPorId(id);
@@ -64,6 +63,13 @@ public class ServicioEmpresa {
 			return "ok";
 		}
 		return "No se pudo eliminar el producto";
+	}
+	
+	public Empresa getEmpresaPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.empresaDAO.getByField(field,value);
+		}
+		return null;
 	}
 
 }
