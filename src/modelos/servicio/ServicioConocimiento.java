@@ -4,10 +4,6 @@
  import java.util.List;
  import modelos.dao.ConocimientoDAO;
  import modelos.dto.Conocimiento;
-import modelos.dto.DatoLaboral;
- 
- 
- 
  
 public class ServicioConocimiento {
 

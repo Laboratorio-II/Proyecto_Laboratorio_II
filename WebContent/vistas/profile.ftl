@@ -78,7 +78,7 @@
 		            
 		            
 		            
-		            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+		            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#cv_empresasModal">
 					  Mi lista de empresas
 					</button>
 		            
@@ -225,7 +225,7 @@
 	<#include "/vistas/modals/dedicacion.ftl">
 	
 		
-	<#include "/vistas/tests/modal.html">
+	<#include "/vistas/modals/cv_empresas.ftl">
 	<#include "/vistas/modals/estudios.ftl">
 	<#include "/vistas/modals/laboral.ftl">
     

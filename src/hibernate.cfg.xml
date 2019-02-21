@@ -25,6 +25,7 @@
       <mapping class="modelos.dto.Empresa" />
       <mapping class="modelos.dto.PersonaEmpresa" />
       <mapping class="modelos.dto.Conocimiento" />
+      <mapping class="modelos.dto.CV_Empresa" />
        
     </session-factory>
 

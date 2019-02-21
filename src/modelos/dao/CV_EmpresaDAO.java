@@ -46,5 +46,13 @@ public class CV_EmpresaDAO extends GenericDAO {
 	public void delete(CV_Empresa cv_empresa) {
 		super.delete(cv_empresa);
 	}
+	
+	public CV_Empresa getByField(String field, Serializable value) {
+		return (CV_Empresa)super.getByField(CV_Empresa.class, field, value);
+	}
+	
+	public List<CV_Empresa> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(CV_Empresa.class, field, value);
+	}
 
 }

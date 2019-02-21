@@ -2,21 +2,51 @@ package modelos.dto;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="CV_Empresa")
+@Table(name="cv_empresas")
 public class CV_Empresa {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
-	private String empresa;
-	private String cv;
+	
+	@Column(name="usuario")
+	private Integer usuario;
+	
+	@Column(name="empresa")
+	private Integer empresa;
+	
+	@Column(name="nombreUsuario")
+	private String nombreUsuario;
+	
+	@Column(name="nombreEmpresa")
+	private String nombreEmpresa;
+	
+	@Column(name="fecha_agregado")
 	private Date fechaAgregado;
+	
+	@Column(name="estatus")
 	private char estatus;
 	
 	public CV_Empresa() {}
 	
-	public CV_Empresa(Integer id, String empresa, String cv, Date fechaAgregado, char estatus) {
+	public CV_Empresa(Integer id, Integer usuario, Integer empresa,
+			String nombreUsuario, String nombreEmpresa, 
+			Date fechaAgregado, char estatus) {
 		super();
 		this.id=id;
+		this.usuario=usuario;
 		this.empresa=empresa;
-		this.cv=cv;
+		this.nombreUsuario=nombreUsuario;
+		this.nombreEmpresa=nombreEmpresa;
 		this.fechaAgregado=fechaAgregado;
 		this.estatus=estatus;
 	}
@@ -29,20 +59,36 @@ public class CV_Empresa {
 		this.id = id;
 	}
 
-	public String getEmpresa() {
+	public Integer getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Integer usuario) {
+		this.usuario = usuario;
+	}
+
+	public Integer getEmpresa() {
 		return empresa;
 	}
 
-	public void setEmpresa(String empresa) {
+	public void setEmpresa(Integer empresa) {
 		this.empresa = empresa;
 	}
 
-	public String getCv() {
-		return cv;
+	public String getNombreUsuario() {
+		return nombreUsuario;
 	}
 
-	public void setCv(String cv) {
-		this.cv = cv;
+	public void setNombreUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
+	}
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
 	}
 
 	public Date getFechaAgregado() {

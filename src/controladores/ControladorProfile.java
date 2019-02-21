@@ -23,6 +23,7 @@ import modelos.dto.Conocimiento;
 import modelos.dto.DatoLaboral;
 import modelos.dto.DatoPersonal;
 import modelos.dto.EstudioF;
+import modelos.servicio.ServicioCV_Empresa;
 import modelos.servicio.ServicioConocimiento;
 import modelos.servicio.ServicioDatoLaboral;
 import modelos.servicio.ServicioDatoPersonal;
@@ -42,6 +43,7 @@ public class ControladorProfile extends HttpServlet {
 	private ServicioDatoLaboral servicioDatoLaboral;
 	private ServicioEstudioF servicioEstudioF;
 	private ServicioConocimiento servicioConocimiento;
+	private ServicioCV_Empresa servicioCV_Empresa;
 	
 	public ControladorProfile() {
 		super();
@@ -50,6 +52,7 @@ public class ControladorProfile extends HttpServlet {
 		this.servicioDatoLaboral = ServicioDatoLaboral.getInstancia();
 		this.servicioEstudioF = ServicioEstudioF.getInstancia();
 		this.servicioConocimiento = ServicioConocimiento.getInstancia();
+		this.servicioCV_Empresa = ServicioCV_Empresa.getInstancia();
 	}
 
 	@Override
@@ -78,6 +81,7 @@ public class ControladorProfile extends HttpServlet {
 		request.setAttribute("datoslaborales", this.servicioDatoLaboral.getDatosLaboralesPorField("usuario", myuser.getId()));
 		request.setAttribute("estudiosFormales", this.servicioEstudioF.getEstudiosFPorField("usuario", myuser.getId()));
 		request.setAttribute("conocimientos", this.servicioConocimiento.getConocimientosPorField("usuario", myuser.getId()));
+		request.setAttribute("cvs", this.servicioCV_Empresa.getCV_EmpresasPorField("usuario", myuser.getId()));
 		
 		request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		
