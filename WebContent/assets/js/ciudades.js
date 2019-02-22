@@ -120,7 +120,7 @@ function eliminarCiudad(id){
 	
 }
 
-function agregarFilaCiudad(datos) {
+function agregarFilaCiudades(datos) {
 	//console.log(datos);
 	tablaCiudades.row.add( [
         '<td id="idCiudad'+datos.id+'</td>',

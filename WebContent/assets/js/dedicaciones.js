@@ -120,7 +120,7 @@ function eliminarDedicacion(id){
 	
 }
 
-function agregarFilaDedicacion(datos) {
+function agregarFilaDedicaciones(datos) {
 	//console.log(datos);
 	tablaDedicaciones.row.add( [
         '<td id="idDedicacion'+datos.id+'</td>',

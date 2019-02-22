@@ -120,7 +120,7 @@ function eliminarCargo(id){
 	
 }
 
-function agregarFilaCargo(datos) {
+function agregarFilaCargos(datos) {
 	//console.log(datos);
 	tablaCargos.row.add( [
         '<td id="idCargo'+datos.id+'</td>',

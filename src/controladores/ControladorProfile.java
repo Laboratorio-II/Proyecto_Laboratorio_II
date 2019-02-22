@@ -24,10 +24,13 @@ import modelos.dto.DatoLaboral;
 import modelos.dto.DatoPersonal;
 import modelos.dto.EstudioF;
 import modelos.servicio.ServicioCV_Empresa;
+import modelos.servicio.ServicioCiudad;
 import modelos.servicio.ServicioConocimiento;
 import modelos.servicio.ServicioDatoLaboral;
 import modelos.servicio.ServicioDatoPersonal;
+import modelos.servicio.ServicioEstado;
 import modelos.servicio.ServicioEstudioF;
+import modelos.servicio.ServicioPais;
 import modelos.servicio.ServicioUsers;
 
 @WebServlet("/ControladorProfile")
@@ -44,6 +47,9 @@ public class ControladorProfile extends HttpServlet {
 	private ServicioEstudioF servicioEstudioF;
 	private ServicioConocimiento servicioConocimiento;
 	private ServicioCV_Empresa servicioCV_Empresa;
+	private ServicioCiudad servicioCiudad;
+	private ServicioEstado servicioEstado;
+	private ServicioPais servicioPais;
 	
 	public ControladorProfile() {
 		super();
@@ -53,6 +59,9 @@ public class ControladorProfile extends HttpServlet {
 		this.servicioEstudioF = ServicioEstudioF.getInstancia();
 		this.servicioConocimiento = ServicioConocimiento.getInstancia();
 		this.servicioCV_Empresa = ServicioCV_Empresa.getInstancia();
+		this.servicioCiudad = ServicioCiudad.getInstancia();
+		this.servicioEstado=ServicioEstado.getInstancia();
+		this.servicioPais=ServicioPais.getInstancia();
 	}
 
 	@Override
@@ -82,6 +91,10 @@ public class ControladorProfile extends HttpServlet {
 		request.setAttribute("estudiosFormales", this.servicioEstudioF.getEstudiosFPorField("usuario", myuser.getId()));
 		request.setAttribute("conocimientos", this.servicioConocimiento.getConocimientosPorField("usuario", myuser.getId()));
 		request.setAttribute("cvs", this.servicioCV_Empresa.getCV_EmpresasPorField("usuario", myuser.getId()));
+		
+		request.setAttribute("ciudades", this.servicioCiudad.getCiudades());
+		request.setAttribute("estados", this.servicioEstado.getEstados());
+		request.setAttribute("paises", this.servicioPais.getPaises());
 		
 		request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		

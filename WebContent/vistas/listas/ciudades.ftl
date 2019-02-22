@@ -1,3 +1,4 @@
+${Mensaje}
 <#list ciudades as c>
     <tr>
 	    <td id="${c.id}">${c.id}</td>

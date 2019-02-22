@@ -120,7 +120,7 @@ function eliminarEstado(id){
 	
 }
 
-function agregarFilaEstado(datos) {
+function agregarFilaEstados(datos) {
 	//console.log(datos);
 	tablaEstados.row.add( [
         '<td id="idEstado'+datos.id+'</td>',

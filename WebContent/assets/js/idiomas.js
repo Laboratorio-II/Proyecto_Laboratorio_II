@@ -120,7 +120,7 @@ function eliminarIdioma(id){
 	
 }
 
-function agregarFilaIdioma(datos) {
+function agregarFilaIdiomas(datos) {
 	//console.log(datos);
 	tablaIdiomas.row.add( [
         '<td id="idIdioma'+datos.id+'</td>',

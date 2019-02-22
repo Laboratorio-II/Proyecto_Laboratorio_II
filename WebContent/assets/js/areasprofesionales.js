@@ -120,7 +120,7 @@ function eliminarAreaProfesional(id){
 	
 }
 
-function agregarFilaAreaProfesional(datos) {
+function agregarFilaAreaProfesionales(datos) {
 	//console.log(datos);
 	tablaAreaProfesionales.row.add( [
         '<td id="idAreaProfesional'+datos.id+'</td>',

@@ -120,7 +120,7 @@ function eliminarPais(id){
 	
 }
 
-function agregarFilaPais(datos) {
+function agregarFilaPaises(datos) {
 	//console.log(datos);
 	tablaPaises.row.add( [
         '<td id="idPais'+datos.id+'</td>',

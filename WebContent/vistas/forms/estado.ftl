@@ -33,7 +33,7 @@
 										        <option selected>Selecciona el estado</option>
 										        <#list paises>
 												    <#items as pais>
-												      <li>${user}</li>
+												      <li>${pais.id}</li>
 												      <option value="${pais.id}">${pais.nombre}</option>
 												    </#items>
 												<#else>
