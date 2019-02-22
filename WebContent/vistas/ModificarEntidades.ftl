@@ -22,7 +22,6 @@
   
   <#include "/vistas/modals/areaprofesional.ftl">
   <#include "/vistas/modals/cargo.ftl">
-  <#include "/vistas/modals/carrera.ftl">
   <#include "/vistas/modals/ciudad.ftl">
   <#include "/vistas/modals/dedicacion1.ftl">
   <#include "/vistas/modals/estado.ftl">
@@ -180,7 +179,7 @@
     	
     <br>	
     	
-    <div class="col-md-6">
+    <!--<div class="col-md-6">
     	<div class="card">
     
         	<div class="card-header card-header-danger">
@@ -212,7 +211,7 @@
 			</div>
 		
      	</div>
-   	</div>
+   	</div>-->
    	
    	<div class="col-md-6">
     	<div class="card">

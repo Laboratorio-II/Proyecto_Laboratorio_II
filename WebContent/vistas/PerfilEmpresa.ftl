@@ -63,7 +63,7 @@
 		            <br>
 		            <hr>
 		            
-		            <a href="ofertas_creadas?user='39'" class="btn btn-danger">
+		            <a href="ofertas_creadas?user=39" class="btn btn-danger">
 				  Mi lista de ofertas
 				</a>
 		            

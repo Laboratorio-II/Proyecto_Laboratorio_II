@@ -84,6 +84,9 @@ public class ControladorEntidades extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		
+		request.setAttribute("Mensaje","HOLAAAAAAAAAAA");
+		
 		request.setAttribute("users",this.servicioUsers.getUsers());
 		request.setAttribute("empresas",this.servicioEmpresa.getEmpresas());
 		request.setAttribute("ciudades", this.servicioCiudad.getCiudades());

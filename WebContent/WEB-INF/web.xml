@@ -181,6 +181,14 @@
     <servlet-name>controlador_ofertas_creadas</servlet-name>
     <url-pattern>/ofertas_creadas</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_entidades</servlet-name>
+    <servlet-class>controladores.ControladorEntidades</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_entidades</servlet-name>
+    <url-pattern>/entidades</url-pattern>
+  </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

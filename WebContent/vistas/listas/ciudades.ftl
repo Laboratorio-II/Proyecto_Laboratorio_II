@@ -9,7 +9,6 @@
 	          </button>
 	    </td>
 	</tr>
-	
-<#else>
+
 
 </#list>

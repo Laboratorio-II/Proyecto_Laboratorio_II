@@ -26,6 +26,13 @@
       <mapping class="modelos.dto.Conocimiento" />
       <mapping class="modelos.dto.CV_Empresa" />
       <mapping class="modelos.dto.Oferta" />
+      <mapping class="modelos.dto.Cargo" />
+      <mapping class="modelos.dto.Estado" />
+      <mapping class="modelos.dto.Etapa" />
+      <mapping class="modelos.dto.Idioma" />
+      <mapping class="modelos.dto.IdiomaConocido" />
+      <mapping class="modelos.dto.Pais" />
+      <mapping class="modelos.dto.Postulacion" />
        
     </session-factory>
 

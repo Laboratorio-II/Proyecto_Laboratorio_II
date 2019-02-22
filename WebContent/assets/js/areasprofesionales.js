@@ -3,7 +3,7 @@ var url = "ControladorEntidades";
 var tablaAreaProfesionales;
 $(document).ready(function() {
 	tablaAreaProfesionales = 
-	$('#tablaAreaProfesionales').DataTable({
+	$('#tablaAreasProfesionales').DataTable({
 		"bAutoWidth": 'false',
 
 		"language": {

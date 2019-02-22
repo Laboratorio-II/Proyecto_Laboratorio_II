@@ -1,4 +1,5 @@
-<#list areasprofesionales as ap>
+<#if areasProfesionales??>
+<#list areasProfesionales as ap>
     <tr>
 	    <td id="${ap.id}">${ap.id}</td>
 	    <td>${ap.nombre}</td>
@@ -9,5 +10,5 @@
 	    </td>
 	</tr>
 <#else>
-
 </#list>
+</#if>>
