@@ -39,9 +39,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="fechaNac" class="bmd-label-floating">Fecha de nacimiento</label>
-	                <#setting date_format="yyyy-MM-dd">
-					<#setting locale="en_US">
-	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="${datospersonales.fechaNacimiento?datetime("yyyy-MM-dd")?date}">
+	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="${datospersonales.fechaNacimiento?datetime?string('yyyy-MM-dd')}">
 	            </div>
 		    </div>
 	          </div>

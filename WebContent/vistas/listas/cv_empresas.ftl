@@ -13,7 +13,7 @@
 		<tr>
 			<td>${cv.nombreEmpresa}</td>
 			<td>${cv.nombreEmpresa}</td>
-			<td>${cv.fechaAgregado}</td>
+			<td>${cv.fechaAgregado?datetime?string('yyyy-MM-dd')}</td>
 			<td>x</td>
 		</tr>
 	
