@@ -82,7 +82,7 @@
 					  Mi lista de empresas
 					</button>
 		            
-		            
+		       
 		            
     			</div>
     			
@@ -151,7 +151,7 @@
 						  	  </div>
 							</div>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#laboralModal">
-							  Añadir
+							  Aï¿½adir
 							</button>
 						</div>
 						<div class="tab-pane text-center gallery" id="favorite">
@@ -187,7 +187,7 @@
 								</div>
 								
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estudiosModal">
-								  Añadir
+								  Aï¿½adir
 								</button>
 			
 							</div>
@@ -237,6 +237,16 @@
   <script src="assets/js/datosEstudios.js" type="text/javascript"></script>
   <script src="assets/js/conocimientos.js" type="text/javascript"></script>
   <script src="assets/js/cv_empresas.js" type="text/javascript"></script>
+  
+   <script src="assets/js/ciudades.js" type="text/javascript"></script>
+  <script src="assets/js/estados.js" type="text/javascript"></script>
+  <script src="assets/js/paises.js" type="text/javascript"></script>
+  <script src="assets/js/areasprofesionales.js" type="text/javascript"></script>
+  <script src="assets/js/cargos.js" type="text/javascript"></script>
+  <script src="assets/js/carreras.js" type="text/javascript"></script>
+  <script src="assets/js/dedicaciones.js" type="text/javascript"></script>
+  <script src="assets/js/etapas.js" type="text/javascript"></script>
+  <script src="assets/js/idiomas.js" type="text/javascript"></script>
   
 </body>
 

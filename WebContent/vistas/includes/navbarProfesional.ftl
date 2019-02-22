@@ -47,12 +47,15 @@
           
           
           <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <a href= "perfil_profesional?user=<#if Session.sessionUser?exists>
+    			${Session.sessionUser.id}
+			</#if>" 
+		class="dropdown-toggle nav-link" data-toggle="dropdown">
               <img src="assets/img/faces/christian.jpg" width="30px" class="img-raised rounded-circle img-fluid"/>
-              HOLAAA
+              PROFESIONAL
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="perfil_profesional?user=nada" class="dropdown-item">
+              <a href="perfil_profesional?user=33" class="dropdown-item">
                 <i class="material-icons">account_circle</i> Perfil
               </a>
               

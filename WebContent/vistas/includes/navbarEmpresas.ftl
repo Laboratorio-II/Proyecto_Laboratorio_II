@@ -48,9 +48,11 @@
           
           
           <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <a href=   "perfil_empresa?user=39" >
+            
+            
               <img src="assets/img/faces/agenda.jpg" width="30px" class="img-raised rounded-circle img-fluid"/>
-              Usuario
+              EMPRESA
             </a>
             <div class="dropdown-menu dropdown-with-icons">
               <a href="perfil_empresa" class="dropdown-item">

@@ -83,3 +83,14 @@ function eliminarFilaCV_Empresa(id) {
 	$(fila).addClass('selected');
 	tablaCV_Empresas.row('.selected').remove().draw( false );
 }
+
+function guardarCV(e){
+	
+	console.log("Funcion: guardarCV");
+	e.preventDefault();
+	var metodo = "POST";
+	var datos = $("#formDatosCV").serialize();
+	
+	enviarDatos("perfil_empresa", metodo, datos);
+	
+}

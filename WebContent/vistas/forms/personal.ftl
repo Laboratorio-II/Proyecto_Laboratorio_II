@@ -132,7 +132,13 @@
 					    <label for="pais" class="col-sm-2 col-form-label">Pa&iacute;s</label>
 					    <div class="col-sm-10">
 						      <select name="pais" id="pais" class="form-control">
-						        <option selected value="1">Venezuela</option>
+						      	<#list paises as p>
+						      		<#if datospersonales.pais == p.id>
+						      		<option selected value="${p.id}">${p.nombre}</option>
+						      		<#else>
+						      		<option value="${p.id}">${p.nombre}</option>
+						      		</#if>
+						      	</#list>
 						      </select>
 				    		</div>
 					 </div>

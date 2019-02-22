@@ -135,3 +135,42 @@ function eliminarFilaPais(id) {
 	$(fila).addClass('selected');
 	tablaPaises.row('.selected').remove().draw( false );
 }
+
+397
+
+$('#pais').on('change', function (e) {
+	var idpais = $("option:selected", this);
+    var id = this.value;
+	console.log("Funcion: buscarCiudades");
+	var metodo = "POST";
+	var operacion = "buscarCiudades";
+			    $.ajax({
+					url: url,
+					type: metodo,
+					data: {"id": id, "operacion": operacion},
+					success: function(data) {
+						
+							console.log("okkkkkk");
+							//if(!jQuery.isEmptyObject(data) && $.isArray(data)){
+							
+					            $.each(data, function(index, valor){
+					                console.log("zdfdsf each");
+					                    id=valor.id;
+
+					                        $("#Estado").append("<option value='"+valor.id+"'>"+valor.nombre+"</option>");
+					            
+					            });       
+					        //}
+						},
+						
+					
+					error: function(jqXHR, estado, error) {
+						//mostrarMensajeError(error);
+					},
+					complete: function(jqXHR, estado) {
+						//$('#ventana').modal('hide');
+					},
+					timeout: 10000
+				});
+	
+});

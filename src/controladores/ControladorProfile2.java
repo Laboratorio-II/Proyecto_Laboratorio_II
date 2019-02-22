@@ -15,9 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
+import modelos.dto.CV_Empresa;
+import modelos.dto.DatoPersonal;
 import modelos.dto.Empresa;
 import modelos.dto.PersonaEmpresa;
 import modelos.dto.Users;
+import modelos.servicio.ServicioCV_Empresa;
+import modelos.servicio.ServicioDatoLaboral;
+import modelos.servicio.ServicioDatoPersonal;
 import modelos.servicio.ServicioEmpresa;
 import modelos.servicio.ServicioPersonaEmpresa;
 import modelos.servicio.ServicioUsers;
@@ -33,12 +38,16 @@ public class ControladorProfile2 extends HttpServlet {
 	private ServicioUsers servicioUsers;
 	private ServicioEmpresa servicioEmpresa;
 	private ServicioPersonaEmpresa servicioPersonaEmpresa;
+	private ServicioDatoPersonal servicioDatoPersonal;
+	private ServicioCV_Empresa servicioCV_Empresa;
 	
 	public ControladorProfile2() {
 		super();
 		this.servicioUsers = ServicioUsers.getInstancia();
 		this.servicioEmpresa = ServicioEmpresa.getInstancia();
 		this.servicioPersonaEmpresa = ServicioPersonaEmpresa.getInstancia();
+		this.servicioDatoPersonal = ServicioDatoPersonal.getInstancia();
+		this.servicioCV_Empresa = ServicioCV_Empresa.getInstancia();
 	}
 
 	@Override
@@ -76,6 +85,8 @@ public class ControladorProfile2 extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}else if(request.getParameter("operacion").equals("empresas_cv")){
+			guardarCV(request, response);
 		}
 		
 			
@@ -161,4 +172,25 @@ public class ControladorProfile2 extends HttpServlet {
 				}
 			//}
 	}
+	
+	protected void guardarCV(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		String usuario = request.getParameter("usuario");
+		String empresa = request.getParameter("empresa");
+		
+		Users myuser = this.servicioUsers.getUserPorId(usuario);
+		myuser.getId();
+		DatoPersonal datosp = this.servicioDatoPersonal.getDatoPersonalPorField("usuario", usuario);
+		String nombreP = datosp.getNombre();
+		
+		Empresa emp = this.servicioEmpresa.getEmpresaPorField("usuario", empresa);
+		String nombreE = emp.getNombre();
+		
+		
+		CV_Empresa CV_Empresa = new CV_Empresa(Integer.parseInt(usuario), Integer.parseInt(empresa), nombreP, nombreE, new Date(), 'A');
+		this.servicioCV_Empresa.incluirCV_Empresa(CV_Empresa);
+		
+		request.getRequestDispatcher("vistas/PerfilEmpresa.ftl").forward(request, response);
+	}
+	
+	
 }

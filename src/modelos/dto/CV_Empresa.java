@@ -38,11 +38,10 @@ public class CV_Empresa {
 	
 	public CV_Empresa() {}
 	
-	public CV_Empresa(Integer id, Integer usuario, Integer empresa,
+	public CV_Empresa(Integer usuario, Integer empresa,
 			String nombreUsuario, String nombreEmpresa, 
 			Date fechaAgregado, char estatus) {
 		super();
-		this.id=id;
 		this.usuario=usuario;
 		this.empresa=empresa;
 		this.nombreUsuario=nombreUsuario;

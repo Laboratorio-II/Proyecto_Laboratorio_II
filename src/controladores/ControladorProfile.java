@@ -6,6 +6,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -22,6 +23,7 @@ import modelos.dto.Users;
 import modelos.dto.Conocimiento;
 import modelos.dto.DatoLaboral;
 import modelos.dto.DatoPersonal;
+import modelos.dto.Estado;
 import modelos.dto.EstudioF;
 import modelos.servicio.ServicioCV_Empresa;
 import modelos.servicio.ServicioCiudad;
@@ -130,6 +132,20 @@ public class ControladorProfile extends HttpServlet {
 		}else if(request.getParameter("operacion").equals("guardarConocimiento")){
 			try {
 				agregarConocimiento(request,response);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else if(request.getParameter("operacion").equals("buscarCiudades")){
+			try {
+				buscarEstados(request,response);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else if(request.getParameter("operacion").equals("login")){
+			try {
+				login(request,response);
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -314,6 +330,58 @@ public class ControladorProfile extends HttpServlet {
 				catch (Exception e) {
 					response.getWriter().print("error:"+e.getMessage());
 				}
+			//}
+	}
+	
+	protected void buscarEstados(HttpServletRequest request, HttpServletResponse response) throws IOException, ParseException{
+		/*if (parametros.get("nombre").equals("")||
+				parametros.get("descripcion").equals("")||
+				parametros.get("idCategoria").equals("")||
+				parametros.get("cantidad").equals("")||
+				parametros.get("medida").equals("")||
+				parametros.get("precio").equals("")) {
+				response.getWriter().print("error:Debe indicar los valores requeridos");
+			}			
+			else {*/
+				Integer id = Integer.parseInt(request.getParameter("id"));
+				List<Estado> lista = this.servicioEstado.getEstadosPorField("pais",id);
+				request.setAttribute("estados", this.servicioEstado.getEstadosPorField("pais",id));
+				
+				try {
+					ObjectMapper objectMapper = new ObjectMapper();				
+					response.getWriter().print(objectMapper.writeValueAsString(lista));
+				} 
+				catch (Exception e) {
+					response.getWriter().print("error:"+e.getMessage());
+				}
+			//}
+	}
+	
+	protected void login(HttpServletRequest request, HttpServletResponse response) throws IOException, ParseException, ServletException{
+		/*if (parametros.get("nombre").equals("")||
+				parametros.get("descripcion").equals("")||
+				parametros.get("idCategoria").equals("")||
+				parametros.get("cantidad").equals("")||
+				parametros.get("medida").equals("")||
+				parametros.get("precio").equals("")) {
+				response.getWriter().print("error:Debe indicar los valores requeridos");
+			}			
+			else {*/
+				String email = request.getParameter("email");
+				String pass = request.getParameter("password");
+				
+				Users myuser = this.servicioUsers.getUserPorField("email", email);
+				
+				if(myuser.getPass() == pass){
+					request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
+					
+					HttpSession misession= request.getSession(true);
+					Users sessionUser= new Users(email, pass, 2, 'A');
+					misession.setAttribute("sessionUser",sessionUser);
+				}else{
+					request.getRequestDispatcher("vistas/index.ftl").forward(request, response);
+				}
+				
 			//}
 	}
 	

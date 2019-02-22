@@ -63,9 +63,18 @@
 		            <br>
 		            <hr>
 		            
-		            <a href="ofertas_creadas?user=39" class="btn btn-danger">
+		            <a href="ofertas_creadas?user=${user.id}" class="btn btn-danger">
 				  Mi lista de ofertas
 				</a>
+		            <form id="formDatosCV" action="POST" method="#">
+		            <input type="hidden" name="usuario" value="33">
+		            <input type="hidden" name="empresa" value="${user.id}">
+		            <input type="hidden" name="operacion" value="${user.id}">
+		            <button type="submit" class="btn btn-danger" onclick="guardarCV(event)">
+	  					Guardar Curriculum
+	  				</button> 
+		            </form>
+		               
 		            
     			</div>
     			
@@ -122,6 +131,9 @@
 				  Mi lista de ofertas
 				</button>
     			<#include "/vistas/tests/modal.html">
+    			
+    			
+    			  
   				</div>
   			</div>
   		</div>
