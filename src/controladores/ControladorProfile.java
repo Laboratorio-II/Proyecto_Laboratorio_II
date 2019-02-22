@@ -138,6 +138,9 @@ public class ControladorProfile extends HttpServlet {
 		}else if(parametros.get("op").equals("eliminarConocimiento")){
 			Integer id = Integer.parseInt(parametros.get("id"));
 			response.getWriter().print(this.servicioConocimiento.eliminarConocimiento(id));
+		}else if(parametros.get("op").equals("eliminarCV_Empresa")){
+			Integer id = Integer.parseInt(parametros.get("id"));
+			response.getWriter().print(this.servicioCV_Empresa.eliminarCV_Empresa(id));
 		}
 	}
 	

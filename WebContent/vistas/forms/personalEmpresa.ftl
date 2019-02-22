@@ -29,7 +29,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="rif" class="bmd-label-floating">RIF de la empresa</label>
-			                <input type="text" class="form-control" name="rif" id="rif">
+			                <input type="text" class="form-control" name="rif" id="rif" value="${datosempresa.rif}">
 			            </div>
 				    </div>
 	            </div>
@@ -128,7 +128,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="direccion" class="bmd-label-floating">Direcci&oacute;n</label>
-			                <input type="text" class="form-control" name="direccionempresa" id="direccionempresa">
+			                <input type="text" class="form-control" name="direccionempresa" id="direccionempresa" value="${datosempresa.direccion}">
 			            </div>
 				    </div>
 	            </div>
@@ -187,7 +187,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="descripcionEmpresa" class="bmd-label-floating">Descripci&oacute;n de la empresa</label>
-			                <textarea class="form-control" name="descripcionEmpresa" id="descripcionEmpresa" rows="1"></textarea>
+			                <textarea class="form-control" name="descripcionEmpresa" id="descripcionEmpresa" rows="1">${datosempresa.descripcion}</textarea>
 			            </div>
 				    </div>
 	            </div>

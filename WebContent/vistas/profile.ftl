@@ -236,6 +236,7 @@
   <script src="assets/js/datosLaborales.js" type="text/javascript"></script>
   <script src="assets/js/datosEstudios.js" type="text/javascript"></script>
   <script src="assets/js/conocimientos.js" type="text/javascript"></script>
+  <script src="assets/js/cv_empresas.js" type="text/javascript"></script>
   
 </body>
 

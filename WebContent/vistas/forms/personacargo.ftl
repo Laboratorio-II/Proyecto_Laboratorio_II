@@ -27,7 +27,7 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="apellidos" class="bmd-label-floating">Apellidos</label>
-			                <input type="text" class="form-control" name="apellidosPC" id="apellidosPC">
+			                <input type="text" class="form-control" name="apellidosPC" id="apellidosPC" value="${personaacargo.apellido}">
 			            </div>
 				    </div>
 	            </div>
@@ -67,13 +67,13 @@
 	                <div class="col-sm-10">
 				      	<div class="form-group bmd-form-group">
 			                <label for="telefono" class="bmd-label-floating">Tel&eacute;fono</label>
-			                <input type="text" class="form-control" name="telefonoPC" id="telefonoPC">
+			                <input type="text" class="form-control" name="telefonoPC" id="telefonoPC" value="${personaacargo.telefono}">
 			            </div>
 				    </div>
 	            </div>
 
 	        </div>
 	        <input name="operacion" type="hidden" value="guardarDatosPersonalesEmpresa">
-	        <input name="user" type="hidden" value="34">
+	        <input name="user" type="hidden" value="39">
 	      				  <button type="submit" class="btn btn-danger" onclick="guardarDatosPersonalesEmpresa(event)">Guardar</button>
 	      				  </form>
