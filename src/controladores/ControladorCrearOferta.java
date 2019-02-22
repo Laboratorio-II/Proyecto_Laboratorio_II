@@ -98,7 +98,7 @@ public class ControladorCrearOferta extends HttpServlet {
 		Oferta oferta = new Oferta(id,descripcion,2,2,2,1000);
 		this.servicioOferta.incluirOferta(oferta);
 		
-		Oferta myoferta= 	this.servicioOferta.getUserPorField("id", id);
+		Oferta myoferta= 	this.servicioOferta.getOfertaPorField("id", id);
 		
 		Oferta datooferta= new Oferta(myoferta.getIdempresa(),null,null,null,null,0);
 		

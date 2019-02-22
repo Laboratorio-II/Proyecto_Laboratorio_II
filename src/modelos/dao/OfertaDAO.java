@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
+import modelos.dto.CV_Empresa;
 import modelos.dto.Oferta;
 import modelos.dto.Users;
 
@@ -51,6 +52,10 @@ public class OfertaDAO extends GenericDAO {
 	
 	public Oferta getByField(String field, Serializable value) {
 		return (Oferta)super.getByField(Oferta.class, field, value);
+	}
+	
+	public List<Oferta> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Oferta.class, field, value);
 	}
 
 }

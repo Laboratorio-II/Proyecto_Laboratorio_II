@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import modelos.dao.OfertaDAO;
+import modelos.dto.CV_Empresa;
 import modelos.dto.Carrera_Oferta;
 import modelos.dto.Oferta;
 import modelos.dto.Users;
@@ -66,22 +67,21 @@ public class ServicioOferta {
 	}
 	
 	
-	public Oferta getUserPorField(String field, Serializable value) {
+	public Oferta getOfertaPorField(String field, Serializable value) {
 		if (field != null) {
 			return this.ofertaDAO.getByField(field,value);
 		}
 		return null;
-			
+	
+	}
 	
 	
-	
-	
-	
-	
-	
-
-	
-}
+	public List<Oferta> getOfertasPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.ofertaDAO.queryAllByField(field,value);
+		}
+		return null;
+	}
 
 
 

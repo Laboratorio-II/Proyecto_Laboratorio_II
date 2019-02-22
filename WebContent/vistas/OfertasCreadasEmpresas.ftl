@@ -18,7 +18,7 @@
   <div class="main main-raised">
     <div class="profile-content">
     	<div class="container">
-    		<#include "/vistas/forms/OfertasCreadasEmpresas2.ftl">
+    		<#include "/vistas/listas/OfertasCreadasEmpresas2.ftl">
     	</div>
     </div>
   </div>
