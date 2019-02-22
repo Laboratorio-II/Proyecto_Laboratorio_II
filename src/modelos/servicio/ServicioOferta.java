@@ -4,8 +4,10 @@ import java.io.Serializable;
 import java.util.List;
 
 import modelos.dao.OfertaDAO;
+import modelos.dto.CV_Empresa;
 import modelos.dto.Carrera_Oferta;
 import modelos.dto.Oferta;
+import modelos.dto.Users;
 
 public class ServicioOferta {
 	
@@ -38,19 +40,19 @@ public class ServicioOferta {
 		return null;
 	}
 	
-	public Oferta incluirdioma(Oferta oferta) {
+	public Oferta incluirOferta(Oferta oferta) {
 		this.ofertaDAO.save(oferta);
 		return oferta;
 	}
 	
-	public Oferta modificarOferta(Integer id, String ciudad, String rangoSalario, String cargo, String dedicacion,
-			Carrera_Oferta[] carreras) {
+	public Oferta modificarOferta(Integer id, Integer idempresa,String descripcion, Integer estado, Integer area, Integer dedicacion, float salario) {
 		Oferta oferta = this.getOfertaPorId(id);
-		oferta.setId(id);
-		oferta.setCiudad(ciudad);
-		oferta.setRangoSalario(rangoSalario);
-		oferta.setCargo(cargo);
+		oferta.setIdempresa(idempresa);
+		oferta.setDescripcion(descripcion);
+		oferta.setEstado(estado);
+		oferta.setArea(area);
 		oferta.setDedicacion(dedicacion);
+		oferta.setSalario(salario);
 		this.ofertaDAO.saveOrUpdate(oferta);
 		return this.getOfertaPorId(id);
 	}
@@ -61,8 +63,32 @@ public class ServicioOferta {
 			this.ofertaDAO.delete(oferta);
 			return "ok";
 		}
-		return "No se pudo eliminar el producto";
+		return "No se pudo eliminar la Oferta";
+	}
+	
+	
+	public Oferta getOfertaPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.ofertaDAO.getByField(field,value);
+		}
+		return null;
+	
+	}
+	
+	
+	public List<Oferta> getOfertasPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.ofertaDAO.queryAllByField(field,value);
+		}
+		return null;
 	}
 
-	
+
+
+
+
+
 }
+
+
+

@@ -7,9 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity(name="Conocimiento")
-@Table(name="conocimientos")
-public class Conocimiento {
+@Entity(name="PersonaEmpresa")
+@Table(name="personas_a_cargo")
+public class PersonaEmpresa {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,15 +22,27 @@ public class Conocimiento {
 	@Column(name="nombre")
 	private String nombre;
 	
+	@Column(name="apellido")
+	private String apellido;
+	
+	@Column(name="cargo")
+	private String cargo;
+	
+	@Column(name="telefono")
+	private String telefono;
+	
 	@Column(name="estatus")
 	private char estatus;
 	
-	public Conocimiento() {}
+	public PersonaEmpresa(){}
 	
-	public Conocimiento(Integer usuario, String nombre, char estatus) {
-		super();
+	public PersonaEmpresa(Integer usuario, String nombre, String apellido,
+			String cargo, String telefono, char estatus){
 		this.usuario=usuario;
 		this.nombre=nombre;
+		this.apellido=apellido;
+		this.cargo=cargo;
+		this.telefono=telefono;
 		this.estatus=estatus;
 	}
 
@@ -58,6 +70,30 @@ public class Conocimiento {
 		this.nombre = nombre;
 	}
 
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
 	public char getEstatus() {
 		return estatus;
 	}
@@ -65,5 +101,6 @@ public class Conocimiento {
 	public void setEstatus(char estatus) {
 		this.estatus = estatus;
 	}
-	
+
+
 }

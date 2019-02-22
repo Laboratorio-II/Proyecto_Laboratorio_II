@@ -60,7 +60,7 @@
 										    <div class="form-check form-check-radio form-check-inline">
 
 											  <label class="form-check-label">
-											    <input class="form-check-input" type="radio" name="estadoEstudio" id="estado1" value="Cursando"> Cursando
+											    <input class="form-check-input" type="radio" name="estadoEstudio" id="estado1" value="A"> Cursando
 											    <span class="circle">
 											        <span class="check"></span>
 											    </span>
@@ -68,7 +68,7 @@
 											</div>
 											<div class="form-check form-check-radio form-check-inline">
 											  <label class="form-check-label">
-											    <input class="form-check-input" type="radio" name="estadoEstudio" id="estado2" value="Completado"> Completado
+											    <input class="form-check-input" type="radio" name="estadoEstudio" id="estado2" value="F"> Completado
 											    <span class="circle">
 											        <span class="check"></span>
 											    </span>

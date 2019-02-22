@@ -12,7 +12,7 @@
 	       <div class="col-sm-10">
 	      	<div class="form-group bmd-form-group">
                 <label for="nombre" class="bmd-label-floating">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" value="<#if datospersonales.nombre??>${datospersonales.nombre}</#if>">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<#if datospersonales?has_content>${datospersonales.nombre}</#if>">
             </div>
 		    </div>
 	          </div>
@@ -25,7 +25,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="apellido" class="bmd-label-floating">Apellido</label>
-	                <input type="text" class="form-control" id="apellido" name="apellido" value="${datospersonales.apellido}">
+	                <input type="text" class="form-control" id="apellido" name="apellido" value="<#if datospersonales?has_content>${datospersonales.apellido}</#if>">
 	            </div>
 		    </div>
 	          </div>
@@ -39,7 +39,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="fechaNac" class="bmd-label-floating">Fecha de nacimiento</label>
-	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="${datospersonales.fechaNacimiento}">
+	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="<#if datospersonales?has_content>${datospersonales.fechaNacimiento?datetime?string('yyyy-MM-dd')}</#if>">
 	            </div>
 		    </div>
 	          </div>
@@ -79,10 +79,26 @@
 					    <div class="col-sm-10">
 						    <select name="estadoCivil" id="estadoCivil" class="form-control" data-val-required="El estado civil es obligatorio">
 						        <!--  <option selected>Selecciona</option>-->
-						        <option value="S">Soltero(a)</option>
+						        <#if datospersonales.estadoCivil == 'S'>
+						        	<option selected value="S">Soltero(a)</option>
+						        <#else>
+						        	<option value="S">Soltero(a)</option>
+						        </#if>
+						        <#if datospersonales.estadoCivil == 'C'>
+									<option selected value="C">Casado(a)</option>
+								<#else>
 								<option value="C">Casado(a)</option>
-								<option value="D">Separado(a)/Divorciado(a)</option>
-								<option value="V">Viudo(a)</option>
+								</#if>
+								<#if datospersonales.estadoCivil == 'D'>
+									<option selected value="D">Separado(a)/Divorciado(a)</option>
+								<#else>
+									<option value="D">Separado(a)/Divorciado(a)</option>
+								</#if>
+								<#if  datospersonales.estadoCivil == 'V'>
+									<option selected value="V">Viudo(a)</option>
+								<#else>
+									<option value="V">Viudo(a)</option>
+								</#if>
 							</select>
 				    	</div>
 					</div>
@@ -99,7 +115,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="telefono" class="bmd-label-floating">Tel&eacute;fono</label>
-	                <input type="text" class="form-control" id="telefono" name="telefono" value="${datospersonales.telefono}">
+	                <input type="text" class="form-control" id="telefono" name="telefono" value="<#if datospersonales?has_content>${datospersonales.telefono}</#if>">
 	            </div>
 		    </div>
 	          </div>
@@ -223,7 +239,12 @@
 						    <div class="form-check form-check-radio form-check-inline">
 	
 							  <label class="form-check-label">
-							    <input class="form-check-input" checked type="radio" name="genero" id="genero1" value="M"> Masculino
+							  	<#if datospersonales.genero == 'M'>
+							    	<input class="form-check-input" checked type="radio" name="genero" id="genero1" value="M"> 
+							    <#else>
+							    	<input class="form-check-input" type="radio" name="genero" id="genero1" value="M">
+							    </#if>
+							    Masculino
 							    <span class="circle">
 							        <span class="check"></span>
 							    </span>
@@ -231,7 +252,12 @@
 							</div>
 							<div class="form-check form-check-radio form-check-inline">
 							  <label class="form-check-label">
-							    <input class="form-check-input" type="radio" name="genero" id="genero2" value="F"> Femenino
+							  <#if datospersonales.genero == 'F'>
+							    <input class="form-check-input" checked type="radio" name="genero" id="genero2" value="F">
+							  <#else>
+							    <input class="form-check-input" type="radio" name="genero" id="genero2" value="F"> 
+							  </#if>
+							    Femenino
 							    <span class="circle">
 							        <span class="check"></span>
 							    </span>
@@ -267,7 +293,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="descripcionPerfil" class="bmd-label-floating">Descripci&oacute;n de tu perfil profesional</label>
-	                <textarea class="form-control" id="descripcionPerfil" name="descripcionPerfil" rows="3"></textarea>
+	                <textarea class="form-control" id="descripcionPerfil" name="descripcionPerfil" rows="3">${datospersonales.descripcion}</textarea>
 	            </div>
 		    </div>
 	          </div>

@@ -10,7 +10,7 @@
       </div>
       
       <div class="modal-body">
-        <ul type="none" class="float-left">
+        <ul class="float-left">
         	<li>
         		<span class="badge badge-success">Full-time</span>
         		<span data-toggle="modal" data-target="#conocimientos">

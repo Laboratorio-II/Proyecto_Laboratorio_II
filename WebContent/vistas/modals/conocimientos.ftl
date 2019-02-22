@@ -10,65 +10,26 @@
       </div>
       
       <div class="modal-body">
-        <ul type="none" class="float-left">
-        	<li>
-        		<span class="badge badge-info">Ingl&eacute;s</span>
-        		<span data-toggle="modal" data-target="#conocimientos">
-			      <button class="btn btn-danger btn-fab btn-fab-mini btn-round" 
-			      data-toggle="tooltip" data-placement="top" title="Eliminar">
-					<i class="material-icons">delete</i>
-				  </button>
-				</span>
-        	</li>
-        	<li>
-        		<span class="badge badge-info">PHP</span>
-        		<span data-toggle="modal" data-target="#conocimientos">
-			      <button class="btn btn-danger btn-fab btn-fab-mini btn-round" 
-			      data-toggle="tooltip" data-placement="top" title="Eliminar">
-					<i class="material-icons">delete</i>
-				  </button>
-				</span>
-        	</li>
-        	<li>
-        		<span class="badge badge-info">Java</span>
-        		<span data-toggle="modal" data-target="#conocimientos">
-			      <button class="btn btn-danger btn-fab btn-fab-mini btn-round" 
-			      data-toggle="tooltip" data-placement="top" title="Eliminar">
-					<i class="material-icons">delete</i>
-				  </button>
-				</span>
-        	</li>
-        	<li>
-        		<span class="badge badge-info">Mercadeo</span>
-        		<span data-toggle="modal" data-target="#conocimientos">
-			      <button class="btn btn-danger btn-fab btn-fab-mini btn-round" 
-			      data-toggle="tooltip" data-placement="top" title="Eliminar">
-					<i class="material-icons">delete</i>
-				  </button>
-				</span>
-        	</li>
-        	<li>
-        		<span class="badge badge-info">SQL</span>
-        		<span data-toggle="modal" data-target="#conocimientos">
-			      <button class="btn btn-danger btn-fab btn-fab-mini btn-round" 
-			      data-toggle="tooltip" data-placement="top" title="Eliminar">
-					<i class="material-icons">delete</i>
-				  </button>
-				</span>
-        	</li>
-        	<li>
-        		<span class="badge badge-info">Redes</span>
-        		<span data-toggle="modal" data-target="#conocimientos">
-			      <button class="btn btn-danger btn-fab btn-fab-mini btn-round" 
-			      data-toggle="tooltip" data-placement="top" title="Eliminar">
-					<i class="material-icons">delete</i>
-				  </button>
-				</span>
-        	</li>
+        <ul type="none" id="listadoConocimientos">
+        
+        	<#list conocimientos as conocimiento>
+				<li id="${conocimiento.id}">
+	        		<span class="badge badge-info">${conocimiento.nombre}</span>
+	        		<span data-toggle="modal" data-target="#conocimientos">
+				      <button id="btnEliminarC${conocimiento.id}" class="btn btn-danger btn-fab btn-fab-mini btn-round" 
+				      data-toggle="tooltip" data-placement="top" title="Eliminar" onclick="eliminarConocimiento(${conocimiento.id})">
+						<i class="material-icons">delete</i>
+					  </button>
+					</span>
+	        	</li>
+			</#list>
         </ul>
-        <form>
-        	<input type="text" id="nuevo"/>
-        	<button type="submit" class="btn btn-danger">Agregar</button>
+     
+        <form id="formConocimientos" method="POST" action="#">
+        	<input type="text" name="conocimiento"/>
+        	<input type="hidden" name="operacion" value="guardarConocimiento"/>
+        	<input type="hidden" name="user" value="33"/>
+        	<button type="submit" class="btn btn-danger" onclick="agregarConocimiento(event)">Agregar</button>
         </form>
       </div>
       <div class="modal-footer">
