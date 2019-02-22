@@ -92,12 +92,10 @@ public class ControladorProfile2 extends HttpServlet {
 		
 		Users myuser = this.servicioUsers.getUserPorField("email", email);
 		
-		Empresa empresa = new Empresa(myuser.getId(), " ", " ", 0, 
-				0, 0, " ", " ", 'A');
+		Empresa empresa = new Empresa(myuser.getId(), " ", " ", 0, 0, 0, " ", " ", 'A');
 		this.servicioEmpresa.incluirEmpresa(empresa);
 		
-		PersonaEmpresa personaEmpresa = new PersonaEmpresa(myuser.getId(), " ", " ", " ",
-				" ", 'A');
+		PersonaEmpresa personaEmpresa = new PersonaEmpresa(myuser.getId(), " ", " ", " ", " ", 'A');
 		this.servicioPersonaEmpresa.incluirPersonaEmpresa(personaEmpresa);
 		
 		request.setAttribute("user", myuser);

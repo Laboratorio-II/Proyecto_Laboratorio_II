@@ -39,7 +39,7 @@
 	              <div class="col-sm-10">
 		      	<div class="form-group bmd-form-group">
 	                <label for="fechaNac" class="bmd-label-floating">Fecha de nacimiento</label>
-	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="${datospersonales.fechaNacimiento?datetime?string('yyyy-MM-dd')}">
+	                <input type="date" class="form-control" id="fechaNac" name="fechaNac" value="<#if datospersonales?has_content>${datospersonales.fechaNacimiento?datetime?string('yyyy-MM-dd')}</#if>">
 	            </div>
 		    </div>
 	          </div>

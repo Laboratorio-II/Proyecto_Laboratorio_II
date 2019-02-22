@@ -157,7 +157,7 @@ public class ControladorProfile extends HttpServlet {
 			Users myuser = this.servicioUsers.getUserPorField("email", email);
 			
 			DatoPersonal datoPersonal = new DatoPersonal(myuser.getId(),
-					" "," ",null,'S'," ",0,0,0,'M'," ",'A');
+					" "," ",new Date(),'S'," ",0,0,0,'M'," ",'A');
 			this.servicioDatoPersonal.incluirDatoPersonal(datoPersonal);
 			
 			DatoLaboral datoLaboral = new DatoLaboral(myuser.getId(),
@@ -178,6 +178,9 @@ public class ControladorProfile extends HttpServlet {
 			request.setAttribute("datospersonales", this.servicioDatoPersonal.getDatoPersonalPorField("usuario", myuser.getId()));
 			request.setAttribute("datoslaborales", this.servicioDatoLaboral.getDatosLaboralesPorField("usuario", myuser.getId()));
 			request.setAttribute("estudiosFormales", this.servicioEstudioF.getEstudiosFPorField("usuario", myuser.getId()));
+			
+			request.setAttribute("conocimientos", this.servicioConocimiento.getConocimientosPorField("usuario", myuser.getId()));
+			request.setAttribute("cvs", this.servicioCV_Empresa.getCV_EmpresasPorField("usuario", myuser.getId()));
 			
 			request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		//}

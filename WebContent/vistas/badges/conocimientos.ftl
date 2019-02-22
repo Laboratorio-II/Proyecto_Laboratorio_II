@@ -11,6 +11,8 @@
   <#if conocimientos??>
 <#list conocimientos as conocimiento>
 	<span id="spanCono${conocimiento.id}" class="badge badge-info">${conocimiento.nombre}</span>
+	<#else>
+	No hay nada mamaguevo
 </#list>
 </#if>
 </div>
