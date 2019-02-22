@@ -195,7 +195,7 @@
 
 	        </div>
 				<input name="operacion" type="hidden" value="guardarDatosLaboralesEmpresa">
-				<input name="user" type="hidden" value="34">
+				<input name="user" type="hidden" value="39">
 	      				  <button type="submit" class="btn btn-danger" onclick="guardarDatosLaboralesEmpresa(event)">Guardar</button>
 	      				  </form>
 	      	
