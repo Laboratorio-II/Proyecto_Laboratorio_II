@@ -8,8 +8,10 @@
   </h6>
   <div>
   <div id="badgesConocimientos">
+  <#if conocimientos??>
 <#list conocimientos as conocimiento>
 	<span id="spanCono${conocimiento.id}" class="badge badge-info">${conocimiento.nombre}</span>
 </#list>
+</#if>
 </div>
 </div>

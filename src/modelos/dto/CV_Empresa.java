@@ -18,10 +18,10 @@ public class CV_Empresa {
 	@Column(name="id")
 	private Integer id;
 	
-	@Column(name="usuario")
+	@Column(name="usuarioP")
 	private Integer usuario;
 	
-	@Column(name="empresa")
+	@Column(name="usuarioE")
 	private Integer empresa;
 	
 	@Column(name="nombreUsuario")

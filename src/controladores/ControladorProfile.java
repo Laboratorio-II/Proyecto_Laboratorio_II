@@ -154,15 +154,15 @@ public class ControladorProfile extends HttpServlet {
 			Users myuser = this.servicioUsers.getUserPorField("email", email);
 			
 			DatoPersonal datoPersonal = new DatoPersonal(myuser.getId(),
-					" "," ",null,'U'," ",0,0,0,'U'," ",'A');
+					" "," ",null,'S'," ",0,0,0,'M'," ",'A');
 			this.servicioDatoPersonal.incluirDatoPersonal(datoPersonal);
 			
 			DatoLaboral datoLaboral = new DatoLaboral(myuser.getId(),
-					" "," ",0,'U'," ");
+					" "," ",0,'A'," ");
 			this.servicioDatoLaboral.incluirDatoLaboral(datoLaboral);
 			
 			EstudioF estudioF = new EstudioF(myuser.getId(),
-					" ",0,'U'," ");
+					" ",0,'A'," ");
 			this.servicioEstudioF.incluirEstudioF(estudioF);
 			
 			
@@ -252,7 +252,7 @@ public class ControladorProfile extends HttpServlet {
 				String nombre = request.getParameter("nombre");
 				String apellido = request.getParameter("apellido");
 				DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-				Date fechaNac = dateFormat.parse(request.getParameter("fechaNac"));
+				Date fechaNac = dateFormat.parse(request.getParameter("fechaNac"));				
 				char estadoCivil = request.getParameter("estadoCivil").charAt(0);
 				String telefono = request.getParameter("telefono");
 				Integer pais = Integer.parseInt(request.getParameter("pais"));
