@@ -31,22 +31,22 @@
 		              </div>
 		              <div class="name">
 		                <h3 class="title">Find Jobs</h3>
-								<div class="form-group">
+								<!--  <div class="form-group">
 							      <label for="exampleInputFile">Cliack aqui para subir una imagen </label>
 							      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
 							      
 							      <small id="fileHelp" class="form-text text-muted">.</small>
-							    </div>
+							    </div>-->
 			    
 					                <h6>${user.email}</h6>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
 		                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
 		              </div>
-		              <h6>Acerca de mi</h6>
+		              <!-- <h6>Acerca de mi</h6>
 		              <div class="description text-center">
 				        <p>Empresa dedicada a los busqueda de prosefionales  &#x2014; segun su area, conocimientos y ubucacion  &#x2014;  </p>
-				      </div>
+				      </div>-->
 				      
 				      
 				  
@@ -60,6 +60,12 @@
 				      
 				      
 		            </div>
+		            <br>
+		            <hr>
+		            
+		            <a href="ofertas_creadas?user='39'" class="btn btn-danger">
+				  Mi lista de ofertas
+				</a>
 		            
     			</div>
     			
@@ -106,7 +112,7 @@
     </div>
   </div>
   
-  <div class="row">
+  <!-- <div class="row">
   		<div class="col-md-11 ml-auto mr-auto">
  			<div class="card">
   				<div class="card-body text-center">
@@ -119,7 +125,7 @@
   				</div>
   			</div>
   		</div>
-	</div>
+	</div>-->
   
 	
     

@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.Oferta;
+import modelos.dto.Users;
 
 public class OfertaDAO extends GenericDAO {
 	
@@ -45,6 +46,11 @@ public class OfertaDAO extends GenericDAO {
 
 	public void delete(Oferta oferta) {
 		super.delete(oferta);
+	}
+	
+	
+	public Oferta getByField(String field, Serializable value) {
+		return (Oferta)super.getByField(Oferta.class, field, value);
 	}
 
 }

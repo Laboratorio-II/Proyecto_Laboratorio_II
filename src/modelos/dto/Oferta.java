@@ -1,73 +1,125 @@
 package modelos.dto;
+import java.io.Serializable;
+import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder.In;
 
-public class Oferta {
+
+@Entity(name="CrearOferta")
+@Table(name="crear_oferta")
+//@NamedQuery(name="Users.findAll"), query="SELECT u FROM usuarios u")
+
+public class Oferta implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
-	private String ciudad;
-	private String rangoSalario;
-	private String cargo;
-	private String dedicacion;
-	private Carrera_Oferta carreras[];
+
+	@Column(name="idempresa")
+	private Integer idempresa;
 	
+	@Column(name="descripcion")
+	private String descripcion;
+	
+	@Column(name="estado")
+	private Integer estado;
+	
+	@Column(name="area")
+	private Integer area;
+	
+	@Column(name="dedicacion")
+	private Integer dedicacion;
+	
+	@Column(name="salario")
+	private float salario;
+	
+	
+
+
 	public Oferta() {}
 
-	public Oferta(Integer id, String ciudad, String rangoSalario, String cargo, String dedicacion,
-			Carrera_Oferta[] carreras) {
+	public Oferta(Integer idempresa,String descripcion, Integer estado, Integer area, Integer dedicacion, float salario) {
 		super();
-		this.id = id;
-		this.ciudad = ciudad;
-		this.rangoSalario = rangoSalario;
-		this.cargo = cargo;
-		this.dedicacion = dedicacion;
-		this.carreras = carreras;
+	
+		this.idempresa=idempresa;
+		this.descripcion=descripcion;
+		this.estado = estado;
+		this.area= area;
+		this.dedicacion= dedicacion;
+		this.salario = salario;
 	}
 
-	public Integer getId() {
-		return id;
+
+
+	public Integer getEstado() {
+		return estado;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setEstado(Integer estado) {
+		this.estado = estado;
 	}
 
-	public String getCiudad() {
-		return ciudad;
+	public Integer getArea() {
+		return area;
 	}
 
-	public void setCiudad(String ciudad) {
-		this.ciudad = ciudad;
+	public void setArea(Integer area) {
+		this.area = area;
 	}
 
-	public String getRangoSalario() {
-		return rangoSalario;
+
+	public float getSalario() {
+		return salario;
 	}
 
-	public void setRangoSalario(String rangoSalario) {
-		this.rangoSalario = rangoSalario;
+	public void setSalario(float salario) {
+		this.salario = salario;
 	}
 
-	public String getCargo() {
-		return cargo;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+
+	public Integer getIdempresa() {
+		return idempresa;
 	}
 
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
+	public void setIdempresa(Integer idempresa) {
+		this.idempresa = idempresa;
 	}
 
-	public String getDedicacion() {
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Integer getDedicacion() {
 		return dedicacion;
 	}
 
-	public void setDedicacion(String dedicacion) {
+	public void setDedicacion(Integer dedicacion) {
 		this.dedicacion = dedicacion;
 	}
-
-	public Carrera_Oferta[] getCarreras() {
-		return carreras;
-	}
-
-	public void setCarreras(Carrera_Oferta[] carreras) {
-		this.carreras = carreras;
-	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+

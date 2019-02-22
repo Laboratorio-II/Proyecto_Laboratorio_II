@@ -165,6 +165,22 @@
     <servlet-name>controlador_admin</servlet-name>
     <url-pattern>/perfil_admin</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_crear_oferta</servlet-name>
+    <servlet-class>controladores.ControladorCrearOferta</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_crear_oferta</servlet-name>
+    <url-pattern>/crear_oferta</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>controlador_ofertas_creadas</servlet-name>
+    <servlet-class>controladores.ControladorOfertasCreadas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controlador_ofertas_creadas</servlet-name>
+    <url-pattern>/ofertas_creadas</url-pattern>
+  </servlet-mapping>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

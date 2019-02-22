@@ -7,28 +7,29 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Crear Oferta
+   Postularse Oferta
   </title>
   <#include "/vistas/includes/links.html">
 </head>
 
 <body class="profile-page sidebar-collapse">
-  <#include "/vistas/includes/navbarEmpresas.html">
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/1512148994695.png');"></div>
+  <#include "/vistas/includes/navbarProfesional.ftl">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/pexels-photo-905873.jpeg');"></div>
   <div class="main main-raised">
     <div class="profile-content">
     	<div class="container">
-    		<#include "/vistas/forms/CrearOferta2.ftl">
+    		<#include "/vistas/forms/OfertasCreadasEmpresas2.ftl">
     	</div>
     </div>
   </div>
   
 	
+  <script src="/WebContent/assets/js/jquery.js" ></script>
+  <script src="/WebContent/assets/js/bootstrap.min.js" ></script>
     
   <#include "/vistas/includes/footer.html">
   
   <#include "/vistas/includes/scripts.html">
-  <script src="assets/js/CrearOferta.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -1,38 +1,30 @@
-<form class="form">
+<form  class="form" method="post" action="#" id="crearOferta">
 <div class="row">
 		<div class="col-md-18 ml-auto mr-auto">
 			<div class="card">
 				<div class="card-body">
 		<div>
 				<div class="footer text-center">
-		        <h2 class="title">Crear Oferta de Empleo</h2>
+		        <h2 class="title">Crear Oferta de Empleo????</h2>
 				</div>
-			 			
-			 			
-			 			
-			 			
-			 			
+	
 			 			<div class="input-group">
-	                <div class="input-group-prepend">
-	                    <span class="input-group-text">
-	                      <i class="fa fa-building" aria-hidden="true"></i>
-	                    </span>
-	                </div>
-	                <div class="col-sm-10">
-				      	<div class="form-group bmd-form-group">
-				      	
-			                <label for="descripcionEmpresa" class="bmd-label-floating">Descripci&oacute;n del solicitado</label>
-			                <textarea class="form-control" id="descripcionEmpresa" rows="1"></textarea>
-			            </div>
-				    </div>
-	            </div>
-	            
-	            
-	            
-	            
-		
-  			                
-  			                
+			                <div class="input-group-prepend">
+			                    <span class="input-group-text">
+			                      <i class="fa fa-building" aria-hidden="true"></i>
+			                    </span>
+			                </div>
+			                <div class="col-sm-10">
+						      	<div class="form-group bmd-form-group">
+						      	
+					                <label for="descripcionEmpresa" class="bmd-label-floating">Descripci&oacute;n del solicitado</label>
+					            	<input type="text" class="form-control" id="descripcionsolicitado" name="descripcionsolicitado1">
+					                
+					            </div>
+						    </div>
+	           			 </div>
+
+
   			                <div class="input-group">
 			                <div class="input-group-prepend">
 			                    <span class="input-group-text">
@@ -44,28 +36,28 @@
 					                <div class="form-group row">
 									    <label for="estado" class="col-sm-2 col-form-label">Estado</label>
 									    <div class="col-sm-10">
-										      <select id="Estado" class="form-control" data-val-required="El estado es obligatorio">
+										      <select name="estadoOferta" id="Estado" class="form-control" data-val-required="El estado es obligatorio">
 										        <option selected>Seleccionar</option>
 										        <option value="2">Amazonas</option>
-												<option value="3">Anzo√°tegui</option>
+												<option value="3">Anzo·tegui</option>
 												<option value="4">Apure</option>
 												<option value="5">Aragua</option>
 												<option value="6">Barinas</option>
-												<option value="7">Bol√≠var</option>
+												<option value="7">BolÌvar</option>
 												<option value="8">Carabobo</option>
 												<option value="9">Cojedes</option>
 												<option value="10">Delta Amacuro</option>
 												<option value="11">Distrito Capital</option>
-												<option value="12">Falc√≥n</option>
-												<option value="13">Gu√°rico</option>
+												<option value="12">FalcÛn</option>
+												<option value="13">Gu·rico</option>
 												<option value="14">Lara</option>
-												<option value="15">M√©rida</option>
+												<option value="15">MÈrida</option>
 												<option value="16">Miranda</option>
 												<option value="17">Monagas</option>
 												<option value="18">Nueva Esparta</option>
 												<option value="19">Portuguesa</option>
 												<option value="20">Sucre</option>
-												<option value="21">T√°chira</option>
+												<option value="21">T·chira</option>
 												<option value="22">Trujillo</option>
 												<option value="23">Vargas</option>
 												<option value="24">Yaracuy</option>
@@ -93,7 +85,7 @@
 					                <div class="form-group row">
 									    <label for="giroEmpresa" class="col-sm-2 col-form-label">Area de Trabajo </label>
 									    <div class="col-sm-10">
-										      <select id="giroEmpresa" class="form-control" data-val-required="El giro de la empresa es obligatorio">
+										      <select name="areaOferta" id="giroEmpresa" class="form-control" data-val-required="El giro de la empresa es obligatorio">
 										        <option selected>Seleccionar</option>
 										        <option value="1">Agricultura / Pesca / Ganader&iacute;a</option>
 										        <option value="2">Construcci&oacute;n / obras</option>
@@ -127,7 +119,7 @@
 								                <div class="form-group row">
 												    <label for="tipodedicacion" class="col-sm-2 col-form-label">Tipo de Dedicacion </label>
 												    <div class="col-sm-10">
-													      <select id="tipoDedicacion" class="form-control" data-val-required="Tipo de dedicacion obligatorio">
+													      <select name="dedicacionOferta" id="tipoDedicacion" class="form-control" data-val-required="Tipo de dedicacion obligatorio">
 													        <option selected>Seleccionar</option>
 													        <option value="1">Freelancer</option>
 													        <option value="2">Part-Time</option>
@@ -155,7 +147,7 @@
 																		     	 <div class="input-group-prepend">
 																		      	  	<span class="input-group-text">$</span>
 																		     	 	</div>
-																	     	 			<input type="text" class="form-control" aria-label="Rango en Dollar ($)">
+																	     	 			<input  name="salarioOferta" type="text" class="form-control" aria-label="Rango en Dollar ($)">
 																		     	 	<div class="input-group-append">
 																		     	 	
 																		      	  		<span class="input-group-text">.00</span>
@@ -173,13 +165,12 @@
 			 											
  
 				</div>	
-				
-									<div class="footer text-center">
-													
-		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-				  Crear Oferta
-				</button>			 		
-  						</div>
+					<div class="footer text-center">
+						<input name="operacion1" type="hidden" value="agregarOferta">
+						<input name="ambar" type="hidden" value="23">
+						<button type="submit" class="btn btn-danger" onclick="agregarOferta(event)">Crear Oferta </button>
+					
+  					</div>
   		
   				
 						<div>
