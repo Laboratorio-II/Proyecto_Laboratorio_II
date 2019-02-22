@@ -24,9 +24,8 @@ public class Pais {
 	
 	public Pais() {}
 
-	public Pais(Integer id, String nombre, char estatus) {
+	public Pais(String nombre, char estatus) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.estatus = estatus;
 	}

@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.Carrera;
+import modelos.dto.Carrera;
 
 public class CarreraDAO extends GenericDAO {
 	
@@ -45,6 +46,14 @@ public class CarreraDAO extends GenericDAO {
 
 	public void delete(Carrera carrera) {
 		super.delete(carrera);
+	}
+	
+	public Carrera getByField(String field, Serializable value) {
+		return (Carrera)super.getByField(Carrera.class, field, value);
+	}
+	
+	public List<Carrera> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Carrera.class, field, value);
 	}
 
 }

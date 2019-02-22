@@ -27,9 +27,8 @@ public class Ciudad {
 	
 	public Ciudad() {}
 
-	public Ciudad(Integer id, Integer estado, String nombre, char estatus) {
+	public Ciudad(Integer estado, String nombre, char estatus) {
 		super();
-		this.id = id;
 		this.estado = estado;
 		this.nombre = nombre;
 		this.estatus = estatus;

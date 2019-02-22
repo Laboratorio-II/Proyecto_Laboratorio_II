@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.Idioma;
+import modelos.dto.Idioma;
 
 public class IdiomaDAO extends GenericDAO {
 	
@@ -45,6 +46,14 @@ public class IdiomaDAO extends GenericDAO {
 
 	public void delete(Idioma idioma) {
 		super.delete(idioma);
+	}
+	
+	public Idioma getByField(String field, Serializable value) {
+		return (Idioma)super.getByField(Idioma.class, field, value);
+	}
+	
+	public List<Idioma> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Idioma.class, field, value);
 	}
 
 }

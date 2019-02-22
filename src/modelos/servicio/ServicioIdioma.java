@@ -5,10 +5,11 @@ import java.util.List;
 
 import modelos.dao.IdiomaDAO;
 import modelos.dto.Idioma;
+import modelos.dto.Idioma;
 
 public class ServicioIdioma {
 	
-	private IdiomaDAO idiomaDAO;
+	private IdiomaDAO servicioIdiomaDAO;
 	
 	private static ServicioIdioma instancia;	
 	public static ServicioIdioma getInstancia() {
@@ -18,27 +19,26 @@ public class ServicioIdioma {
 		return instancia;
 	}
 
-	
 	private ServicioIdioma() {
 		super();
-		this.idiomaDAO = IdiomaDAO.getInstancia();
+		this.servicioIdiomaDAO = IdiomaDAO.getInstancia();
 	}
 	
 
 	public List<Idioma> getIdiomas() {
-		List<Idioma> idiomas = this.idiomaDAO.queryAll(); 
+		List<Idioma> idiomas = this.servicioIdiomaDAO.queryAll(); 
 		return idiomas;
 	}
 	
 	public Idioma getIdiomaPorId(Serializable id) {
 		if (id != null) {
-			return this.idiomaDAO.get(id);
+			return this.servicioIdiomaDAO.get(id);
 		}
 		return null;
 	}
 	
 	public Idioma incluirIdioma(Idioma idioma) {
-		this.idiomaDAO.save(idioma);
+		this.servicioIdiomaDAO.save(idioma);
 		return idioma;
 	}
 	
@@ -47,17 +47,31 @@ public class ServicioIdioma {
 		idioma.setId(id);
 		idioma.setNombre(nombre);
 		idioma.setEstatus(estatus);
-		this.idiomaDAO.saveOrUpdate(idioma);
+		this.servicioIdiomaDAO.saveOrUpdate(idioma);
 		return this.getIdiomaPorId(id);
 	}
 	
 	public String eliminarIdioma(Integer id) {
 		Idioma idioma = this.getIdiomaPorId(id);
 		if (idioma != null) {
-			this.idiomaDAO.delete(idioma);
+			this.servicioIdiomaDAO.delete(idioma);
 			return "ok";
 		}
 		return "No se pudo eliminar el producto";
+	}
+	
+	public Idioma getIdiomaPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.servicioIdiomaDAO.getByField(field,value);
+		}
+		return null;
+	}
+
+	public List<Idioma> getIdiomasPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.servicioIdiomaDAO.queryAllByField(field,value);
+		}
+		return null;
 	}
 
 

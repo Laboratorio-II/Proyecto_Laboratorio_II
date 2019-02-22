@@ -14,7 +14,7 @@
 			                </div>
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
-					                <label for="centroEducativo" class="bmd-label-floating">Centro educativoOOO</label>
+					                <label for="centroEducativo" class="bmd-label-floating">Centro educativo</label>
 					                <input type="text" class="form-control" name="centroEducativo" id="centroEducativo">
 					            </div>
 						    </div>

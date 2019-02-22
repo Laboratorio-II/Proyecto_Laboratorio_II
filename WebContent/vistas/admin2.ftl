@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,15 +33,15 @@
     			 <div class="col-md-">
 		             <div class="description text-center">
 		             <h3> Modificar Entidades Basicas</h3>
-		         
+		       
 		           
     					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" onclick="" aria-pressed="true">Paises</a>
     					
-    					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cuidades</a>
+    					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ciudades</a>
     					
-    					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Areas Prof.</a>
+    					<a href="ControladorEntidades" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Areas profesionales</a>
     					
-    					<a href="ControladorEntidades"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Tipos Ded.</a>
+    					<a href="ControladorEntidades"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Tipos de dedicación</a>
     					
 				      		              </div>
 				      

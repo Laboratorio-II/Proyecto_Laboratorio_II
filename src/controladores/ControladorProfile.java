@@ -19,9 +19,12 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import controladores.utils.Utils;
 import modelos.dto.Users;
+import modelos.dto.Conocimiento;
 import modelos.dto.DatoLaboral;
 import modelos.dto.DatoPersonal;
 import modelos.dto.EstudioF;
+import modelos.servicio.ServicioCV_Empresa;
+import modelos.servicio.ServicioConocimiento;
 import modelos.servicio.ServicioDatoLaboral;
 import modelos.servicio.ServicioDatoPersonal;
 import modelos.servicio.ServicioEstudioF;
@@ -39,6 +42,8 @@ public class ControladorProfile extends HttpServlet {
 	private ServicioDatoPersonal servicioDatoPersonal;
 	private ServicioDatoLaboral servicioDatoLaboral;
 	private ServicioEstudioF servicioEstudioF;
+	private ServicioConocimiento servicioConocimiento;
+	private ServicioCV_Empresa servicioCV_Empresa;
 	
 	public ControladorProfile() {
 		super();
@@ -46,6 +51,8 @@ public class ControladorProfile extends HttpServlet {
 		this.servicioDatoPersonal = ServicioDatoPersonal.getInstancia();
 		this.servicioDatoLaboral = ServicioDatoLaboral.getInstancia();
 		this.servicioEstudioF = ServicioEstudioF.getInstancia();
+		this.servicioConocimiento = ServicioConocimiento.getInstancia();
+		this.servicioCV_Empresa = ServicioCV_Empresa.getInstancia();
 	}
 
 	@Override
@@ -73,6 +80,8 @@ public class ControladorProfile extends HttpServlet {
 		request.setAttribute("datospersonales", this.servicioDatoPersonal.getDatoPersonalPorField("usuario", myuser.getId()));
 		request.setAttribute("datoslaborales", this.servicioDatoLaboral.getDatosLaboralesPorField("usuario", myuser.getId()));
 		request.setAttribute("estudiosFormales", this.servicioEstudioF.getEstudiosFPorField("usuario", myuser.getId()));
+		request.setAttribute("conocimientos", this.servicioConocimiento.getConocimientosPorField("usuario", myuser.getId()));
+		request.setAttribute("cvs", this.servicioCV_Empresa.getCV_EmpresasPorField("usuario", myuser.getId()));
 		
 		request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		
@@ -105,6 +114,13 @@ public class ControladorProfile extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}else if(request.getParameter("operacion").equals("guardarConocimiento")){
+			try {
+				agregarConocimiento(request,response);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		
@@ -119,6 +135,12 @@ public class ControladorProfile extends HttpServlet {
 		}else if(parametros.get("op").equals("eliminarEstudios")){
 			Integer id = Integer.parseInt(parametros.get("id"));
 			response.getWriter().print(this.servicioEstudioF.eliminarEstudioF(id));
+		}else if(parametros.get("op").equals("eliminarConocimiento")){
+			Integer id = Integer.parseInt(parametros.get("id"));
+			response.getWriter().print(this.servicioConocimiento.eliminarConocimiento(id));
+		}else if(parametros.get("op").equals("eliminarCV_Empresa")){
+			Integer id = Integer.parseInt(parametros.get("id"));
+			response.getWriter().print(this.servicioCV_Empresa.eliminarCV_Empresa(id));
 		}
 	}
 	
@@ -135,15 +157,15 @@ public class ControladorProfile extends HttpServlet {
 			Users myuser = this.servicioUsers.getUserPorField("email", email);
 			
 			DatoPersonal datoPersonal = new DatoPersonal(myuser.getId(),
-					null,null,null,'U',null,null,null,null,'U',null,'A');
+					" "," ",new Date(),'S'," ",0,0,0,'M'," ",'A');
 			this.servicioDatoPersonal.incluirDatoPersonal(datoPersonal);
 			
 			DatoLaboral datoLaboral = new DatoLaboral(myuser.getId(),
-					null,null,null,'U',null);
+					" "," ",0,'A'," ");
 			this.servicioDatoLaboral.incluirDatoLaboral(datoLaboral);
 			
 			EstudioF estudioF = new EstudioF(myuser.getId(),
-					null,null,'U',null);
+					" ",0,'A'," ");
 			this.servicioEstudioF.incluirEstudioF(estudioF);
 			
 			
@@ -152,6 +174,13 @@ public class ControladorProfile extends HttpServlet {
 			misession.setAttribute("sessionUser",sessionUser);
 			
 			request.setAttribute("user", myuser);
+			
+			request.setAttribute("datospersonales", this.servicioDatoPersonal.getDatoPersonalPorField("usuario", myuser.getId()));
+			request.setAttribute("datoslaborales", this.servicioDatoLaboral.getDatosLaboralesPorField("usuario", myuser.getId()));
+			request.setAttribute("estudiosFormales", this.servicioEstudioF.getEstudiosFPorField("usuario", myuser.getId()));
+			
+			request.setAttribute("conocimientos", this.servicioConocimiento.getConocimientosPorField("usuario", myuser.getId()));
+			request.setAttribute("cvs", this.servicioCV_Empresa.getCV_EmpresasPorField("usuario", myuser.getId()));
 			
 			request.getRequestDispatcher("vistas/profile.ftl").forward(request, response);
 		//}
@@ -229,7 +258,7 @@ public class ControladorProfile extends HttpServlet {
 				String nombre = request.getParameter("nombre");
 				String apellido = request.getParameter("apellido");
 				DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-				Date fechaNac = dateFormat.parse(request.getParameter("fechaNac"));
+				Date fechaNac = dateFormat.parse(request.getParameter("fechaNac"));				
 				char estadoCivil = request.getParameter("estadoCivil").charAt(0);
 				String telefono = request.getParameter("telefono");
 				Integer pais = Integer.parseInt(request.getParameter("pais"));
@@ -243,6 +272,31 @@ public class ControladorProfile extends HttpServlet {
 				try {
 					ObjectMapper objectMapper = new ObjectMapper();				
 					response.getWriter().print(objectMapper.writeValueAsString(datoPersonal));
+				} 
+				catch (Exception e) {
+					response.getWriter().print("error:"+e.getMessage());
+				}
+			//}
+	}
+	
+	protected void agregarConocimiento(HttpServletRequest request, HttpServletResponse response) throws IOException, ParseException{
+		/*if (parametros.get("nombre").equals("")||
+				parametros.get("descripcion").equals("")||
+				parametros.get("idCategoria").equals("")||
+				parametros.get("cantidad").equals("")||
+				parametros.get("medida").equals("")||
+				parametros.get("precio").equals("")) {
+				response.getWriter().print("error:Debe indicar los valores requeridos");
+			}			
+			else {*/
+				Integer id = Integer.parseInt(request.getParameter("user"));
+				String nombre = request.getParameter("conocimiento");
+				
+				Conocimiento conocimiento = new Conocimiento(id, nombre, 'A');
+				this.servicioConocimiento.incluirConocimiento(conocimiento);
+				try {
+					ObjectMapper objectMapper = new ObjectMapper();				
+					response.getWriter().print(objectMapper.writeValueAsString(conocimiento));
 				} 
 				catch (Exception e) {
 					response.getWriter().print("error:"+e.getMessage());

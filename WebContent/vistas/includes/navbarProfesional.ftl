@@ -49,7 +49,7 @@
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <img src="assets/img/faces/christian.jpg" width="30px" class="img-raised rounded-circle img-fluid"/>
-              Usuario
+              ${user.email}
             </a>
             <div class="dropdown-menu dropdown-with-icons">
               <a href="perfil_profesional?user=nada" class="dropdown-item">

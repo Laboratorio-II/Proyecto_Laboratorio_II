@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.Dedicacion;
+import modelos.dto.Dedicacion;
 
 public class DedicacionDAO extends GenericDAO {
 	
@@ -45,6 +46,14 @@ public class DedicacionDAO extends GenericDAO {
 
 	public void delete(Dedicacion dedicacion) {
 		super.delete(dedicacion);
+	}
+	
+	public Dedicacion getByField(String field, Serializable value) {
+		return (Dedicacion)super.getByField(Dedicacion.class, field, value);
+	}
+	
+	public List<Dedicacion> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Dedicacion.class, field, value);
 	}
 
 }

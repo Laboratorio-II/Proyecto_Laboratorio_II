@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.AreaProfesional;
+import modelos.dto.DatoLaboral;
 
 public class AreaProfesionalDAO extends GenericDAO {
 	
@@ -45,6 +46,14 @@ public class AreaProfesionalDAO extends GenericDAO {
 
 	public void delete(AreaProfesional areaProfesional) {
 		super.delete(areaProfesional);
+	}
+	
+	public AreaProfesional getByField(String field, Serializable value) {
+		return (AreaProfesional)super.getByField(AreaProfesional.class, field, value);
+	}
+	
+	public List<AreaProfesional> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(AreaProfesional.class, field, value);
 	}
 
 }

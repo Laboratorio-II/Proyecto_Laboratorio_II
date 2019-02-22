@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.Cargo;
+import modelos.dto.Cargo;
 
 public class CargoDAO extends GenericDAO {
 	
@@ -45,6 +46,14 @@ public class CargoDAO extends GenericDAO {
 
 	public void delete(Cargo cargo) {
 		super.delete(cargo);
+	}
+	
+	public Cargo getByField(String field, Serializable value) {
+		return (Cargo)super.getByField(Cargo.class, field, value);
+	}
+	
+	public List<Cargo> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Cargo.class, field, value);
 	}
 
 }

@@ -14,7 +14,7 @@
 			                </div>
 			                <div class="col-sm-10">
 						      	<div class="form-group bmd-form-group">
-					                <label for="nombreEmpresa" class="bmd-label-floating">EmpresaaaA</label>
+					                <label for="nombreEmpresa" class="bmd-label-floating">Empresa</label>
 					                <input type="text" class="form-control" id="nombreEmpresa" name="nombreEmpresa">
 					            </div>
 						    </div>

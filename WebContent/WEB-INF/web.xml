@@ -165,6 +165,7 @@
     <servlet-name>controlador_admin</servlet-name>
     <url-pattern>/perfil_admin</url-pattern>
   </servlet-mapping>
+
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>FreeMarker MVC Views</web-resource-name>

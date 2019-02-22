@@ -1,16 +1,31 @@
 package modelos.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="Idioma")
+@Table(name="idiomas")
 public class Idioma {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
+	
+	@Column(name="nombre")
 	private String nombre;
+	
+	@Column(name="estatus")
 	private char estatus;
 	
 	public Idioma() {}
 	
-	public Idioma(Integer id, String nombre, char estatus) {
+	public Idioma(String nombre, char estatus) {
 		super();
-		this.id=id;
 		this.nombre=nombre;
 		this.estatus=estatus;
 	}

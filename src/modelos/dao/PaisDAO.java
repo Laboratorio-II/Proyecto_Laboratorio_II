@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
+import modelos.dto.DatoLaboral;
 import modelos.dto.Pais;
 
 public class PaisDAO extends GenericDAO {
@@ -45,6 +46,14 @@ public class PaisDAO extends GenericDAO {
 
 	public void delete(Pais pais) {
 		super.delete(pais);
+	}
+	
+	public Pais getByField(String field, Serializable value) {
+		return (Pais)super.getByField(Pais.class, field, value);
+	}
+	
+	public List<Pais> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Pais.class, field, value);
 	}
 
 }

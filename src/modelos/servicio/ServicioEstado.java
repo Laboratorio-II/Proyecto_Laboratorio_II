@@ -5,10 +5,11 @@ import java.util.List;
 
 import modelos.dao.EstadoDAO;
 import modelos.dto.Estado;
+import modelos.dto.Estado;
 
 public class ServicioEstado {
 	
-	private EstadoDAO estadoDAO;
+	private EstadoDAO servicioEstadoDAO;
 	
 	private static ServicioEstado instancia;	
 	public static ServicioEstado getInstancia() {
@@ -21,24 +22,24 @@ public class ServicioEstado {
 	
 	private ServicioEstado() {
 		super();
-		this.estadoDAO = estadoDAO.getInstancia();
+		this.servicioEstadoDAO = servicioEstadoDAO.getInstancia();
 	}
 	
 
 	public List<Estado> getEstados() {
-		List<Estado> estados = this.estadoDAO.queryAll(); 
+		List<Estado> estados = this.servicioEstadoDAO.queryAll(); 
 		return estados;
 	}
 	
 	public Estado getEstadoPorId(Serializable id) {
 		if (id != null) {
-			return this.estadoDAO.get(id);
+			return this.servicioEstadoDAO.get(id);
 		}
 		return null;
 	}
 	
 	public Estado incluirEstado(Estado estado) {
-		this.estadoDAO.save(estado);
+		this.servicioEstadoDAO.save(estado);
 		return estado;
 	}
 	
@@ -48,16 +49,30 @@ public class ServicioEstado {
 		estado.setPais(pais);
 		estado.setNombre(nombre);
 		estado.setEstatus(estatus);
-		this.estadoDAO.saveOrUpdate(estado);
+		this.servicioEstadoDAO.saveOrUpdate(estado);
 		return this.getEstadoPorId(id);
 	}
 	
 	public String eliminarEstado(Integer id) {
 		Estado estado = this.getEstadoPorId(id);
 		if (estado != null) {
-			this.estadoDAO.delete(estado);
+			this.servicioEstadoDAO.delete(estado);
 			return "ok";
 		}
 		return "No se pudo eliminar el producto";
+	}
+	
+	public Estado getEstadoPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.servicioEstadoDAO.getByField(field,value);
+		}
+		return null;
+	}
+
+	public List<Estado> getEstadosPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.servicioEstadoDAO.queryAllByField(field,value);
+		}
+		return null;
 	}
 }

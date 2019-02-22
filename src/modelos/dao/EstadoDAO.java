@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.Estado;
+import modelos.dto.Estado;
 
 public class EstadoDAO extends GenericDAO {
 	
@@ -45,6 +46,14 @@ public class EstadoDAO extends GenericDAO {
 
 	public void delete(Estado estado) {
 		super.delete(estado);
+	}
+	
+	public Estado getByField(String field, Serializable value) {
+		return (Estado)super.getByField(Estado.class, field, value);
+	}
+	
+	public List<Estado> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Estado.class, field, value);
 	}
 
 }

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import modelos.dao.PaisDAO;
+import modelos.dto.DatoLaboral;
 import modelos.dto.Pais;
 
 public class ServicioPais {
@@ -17,7 +18,6 @@ public class ServicioPais {
 		}
 		return instancia;
 	}
-
 	
 	private ServicioPais() {
 		super();
@@ -58,6 +58,20 @@ public class ServicioPais {
 			return "ok";
 		}
 		return "No se pudo eliminar el producto";
+	}
+	
+	public Pais getPaisPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.paisDAO.getByField(field,value);
+		}
+		return null;
+	}
+	
+	public List<Pais> getPaisesPorField(String field, Serializable value) {
+		if (field != null) {
+			return this.paisDAO.queryAllByField(field,value);
+		}
+		return null;
 	}
 
 }

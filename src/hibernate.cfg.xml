@@ -1,28 +1,23 @@
-<!DOCTYPE hibernate-configuration PUBLIC
-    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
-
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-
-    <session-factory> 
-    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-		<!--  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
-		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/proyecto_laboratorio_ii?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
-		<property name="connection.username">root</property>
-		<property name="connection.password"></property>		
-		<property name="cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>		
-		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
-		<!--  <property name="hibernate.transaction.coordinator_class">org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl</property>-->
-		<property name="current_session_context_class">thread</property>
-		<property name="hibernate.show_sql">true</property>
-		<property name="hibernate.format_sql">true</property>
-		        
-      <mapping class="modelos.dto.Users" />
-      <mapping class="modelos.dto.DatoPersonal" />
-      <mapping class="modelos.dto.DatoLaboral" />
-      <mapping class="modelos.dto.EstudioF" />
-       
-    </session-factory>
-
+ <session-factory name="">
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <!--  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
+  <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+  <property name="connection.url">jdbc:mysql://localhost:3306/proyecto_laboratorio_ii?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+  <property name="connection.username">root</property>
+  <property name="connection.password"/>
+  <property name="cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+  <property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+  <!--  <property name="hibernate.transaction.coordinator_class">org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl</property>-->
+  <property name="current_session_context_class">thread</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.format_sql">true</property>
+  <mapping class="modelos.dto.Users"/>
+  <mapping class="modelos.dto.DatoPersonal"/>
+  <mapping class="modelos.dto.DatoLaboral"/>
+  <mapping class="modelos.dto.EstudioF"/>
+ </session-factory>
 </hibernate-configuration>

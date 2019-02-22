@@ -36,23 +36,9 @@
 		              <!--<div class="description text-center">
 				        <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
 				      </div>-->
-				      <h6>Conocimientos
-				      	<span data-toggle="modal" data-target="#conocimientos">
-					      <button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
-					      data-toggle="tooltip" data-placement="top" title="Modificar">
-	  						<i class="material-icons">edit</i>
-						  </button>
-						</span>
-					  </h6>
-				      
-				      <div class="">
-				      	<span class="badge badge-info">Ingl&eacute;s</span>
-				      	<span class="badge badge-info">PHP</span>
-				      	<span class="badge badge-info">Java</span>
-				      	<span class="badge badge-info">Mercadeo</span>
-				      	<span class="badge badge-info">SQL</span>
-				      	<span class="badge badge-info">Redes</span>
-				      </div>
+				     
+				      <#include "/vistas/badges/conocimientos.ftl"> 
+				     
 				      <h6>&Aacute;reas
 				      	<span data-toggle="modal" data-target="#areas">
 					      	<button class="btn btn-warning btn-fab btn-fab-mini btn-round" 
@@ -82,6 +68,22 @@
 				      	<span class="badge badge-success">Pasant&iacute;a</span>
 				      </div>
 		            </div>
+		            <br>
+		            <hr>
+		            
+		            <a href="postulaciones"  class="btn btn-danger">
+	  					Postulaciones realizadas
+	  				</a> 
+		            
+		            
+		            
+		            
+		            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#cv_empresasModal">
+					  Mi lista de empresas
+					</button>
+		            
+		            
+		            
     			</div>
     			
     			<div class="col-md-8">
@@ -127,11 +129,11 @@
 						              <table id="tablaDatosLaborales" class="table table-striped table-bordered table-hover table-responsive">
 						                <thead>
 						                    <tr>
-						                        <th class="text-center">#</th>
-						                        <th>Correo</th>
-						                        <th>Rol</th>
-						                        <th>Estatus</th>
-						                        <th class="text-right">Opciones</th>
+						                        <th>Empresa</th>
+						                        <th>Cargo</th>
+						                        <th>Estado</th>
+						                        <th>Periodo</th>
+						                        <th class="text-right"></th>
 						                    </tr>
 						                </thead>
 						                <tbody>
@@ -149,7 +151,7 @@
 						  	  </div>
 							</div>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#laboralModal">
-							  AÃ±adir
+							  Añadir
 							</button>
 						</div>
 						<div class="tab-pane text-center gallery" id="favorite">
@@ -168,11 +170,11 @@
 							              <table id="tablaEstudiosFormales" class="table table-striped table-bordered table-hover table-responsive">
 						                <thead>
 						                    <tr>
-						                        <th class="text-center">#</th>
-						                        <th>Correo</th>
-						                        <th>Rol</th>
-						                        <th>Estatus</th>
-						                        <th class="text-right">Opciones</th>
+						                        <th>Centro</th>
+						                        <th>Nivel</th>
+						                        <th>Estado</th>
+						                        <th>Periodo</th>
+						                        <th class="text-right"></th>
 						                    </tr>
 						                </thead>
 						                <tbody>
@@ -185,7 +187,7 @@
 								</div>
 								
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estudiosModal">
-								  AÃ±adir
+								  Añadir
 								</button>
 			
 							</div>
@@ -201,7 +203,7 @@
     	</div>
     
   
-	<div class="row">
+	<!--<div class="row">
   		<div class="col-md-11 ml-auto mr-auto">
  			<div class="card">
   				<div class="card-body text-center">
@@ -212,16 +214,20 @@
 				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
 				  Mi lista de empresas
 				</button>
-    			<#include "/vistas/modals/estudios.ftl">
-    			<#include "/vistas/modals/laboral.ftl">
     			
-    			<#include "/vistas/modals/conocimientos.ftl">
-    			<#include "/vistas/modals/areas.ftl">
-    			<#include "/vistas/modals/dedicacion.ftl">
   				</div>
   			</div>
   		</div>
-	</div>
+	</div>-->
+	
+	<#include "/vistas/modals/conocimientos.ftl">
+	<#include "/vistas/modals/areas.ftl">
+	<#include "/vistas/modals/dedicacion.ftl">
+	
+		
+	<#include "/vistas/modals/cv_empresas.ftl">
+	<#include "/vistas/modals/estudios.ftl">
+	<#include "/vistas/modals/laboral.ftl">
     
   <#include "/vistas/includes/footer.html">
   
@@ -229,6 +235,8 @@
   <script src="assets/js/datosPersonales.js" type="text/javascript"></script>
   <script src="assets/js/datosLaborales.js" type="text/javascript"></script>
   <script src="assets/js/datosEstudios.js" type="text/javascript"></script>
+  <script src="assets/js/conocimientos.js" type="text/javascript"></script>
+  <script src="assets/js/cv_empresas.js" type="text/javascript"></script>
   
 </body>
 

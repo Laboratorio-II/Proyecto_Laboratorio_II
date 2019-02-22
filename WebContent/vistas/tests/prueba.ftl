@@ -17,7 +17,7 @@
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg');"></div>
   <h1>P&aacute;gina de prueba</h1>
   <#list usersList as user>
-	<p>${user.ucorreo}</p> 
+	<p>${user.email}</p> 
 	</#list>
     
     

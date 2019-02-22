@@ -8,6 +8,7 @@ import java.util.Map;
 
 import modelos.dao.utils.GenericDAO;
 import modelos.dto.Ciudad;
+import modelos.dto.Ciudad;
 
 public class CiudadDAO extends GenericDAO {
 	
@@ -45,6 +46,14 @@ public class CiudadDAO extends GenericDAO {
 
 	public void delete(Ciudad ciudad) {
 		super.delete(ciudad);
+	}
+	
+	public Ciudad getByField(String field, Serializable value) {
+		return (Ciudad)super.getByField(Ciudad.class, field, value);
+	}
+	
+	public List<Ciudad> queryAllByField(String field, Serializable value) {
+		return super.queryAllByField(Ciudad.class, field, value);
 	}
 
 }

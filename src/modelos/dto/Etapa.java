@@ -1,16 +1,31 @@
 package modelos.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="Etapa")
+@Table(name="etapas")
 public class Etapa {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Integer id;
+	
+	@Column(name="descripcion")
 	private String descripcion;
+	
+	@Column(name="estatus")
 	private char estatus;
 	
 	public Etapa() {}
 
-	public Etapa(Integer id, String descripcion, char estatus) {
+	public Etapa(String descripcion, char estatus) {
 		super();
-		this.id = id;
 		this.descripcion = descripcion;
 		this.estatus = estatus;
 	}

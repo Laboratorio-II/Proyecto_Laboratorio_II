@@ -42,16 +42,14 @@ public class ServicioDatoLaboral {
 		return datoLaboral;
 	}
 	
-	/*public DatoLaboral modificarDatoLaboral(Integer usuario,
-			String empresa, String cargo, Integer area, char estado, String periodo) {
+	/*public DatoLaboral modificarDatoLaboral(Integer usuario, String empresa, String cargo, 
+			Integer area, char estado, String periodo) {
 		DatoLaboral datoLaboral = this.getDatoLaboralPorField("usuario", usuario);
-		datoLaboral.setEmpresa(id);
-		datoLaboral.setIdCV(idCV);
-		datoLaboral.setFunciones(cargo);
-		datoLaboral.setFunciones(funciones);
-		datoLaboral.setFechaInicio(fechaInicio);
-		datoLaboral.setFechaFin(fechaFin);
-		datoLaboral.setEstatus(estatus);
+		datoLaboral.setEmpresa(empresa);
+		datoLaboral.setCargo(cargo);
+		datoLaboral.setArea(area);
+		datoLaboral.setEstado(estado);
+		datoLaboral.setPeriodo(periodo);
 		this.datoLaboralDAO.saveOrUpdate(datoLaboral);
 		return this.getDatoLaboralPorId(id);
 	}*/
